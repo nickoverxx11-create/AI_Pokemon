@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: 9fbb642aa8429aa44a8ec96a0ae61312
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4733020602860195175
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_0
+  - first:
+      213: -154511415094193263
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_1
+  - first:
+      213: 8503151162248407443
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_2
+  - first:
+      213: -5885516720259550514
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_3
+  - first:
+      213: -4815284714468670931
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_4
+  - first:
+      213: -1460458552282912155
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_5
+  - first:
+      213: -119035033144239332
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_6
+  - first:
+      213: 88866745690777917
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_7
+  - first:
+      213: 6935328039539234406
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_8
+  - first:
+      213: -6201344914117310299
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_9
+  - first:
+      213: -7026009103200981819
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_10
+  - first:
+      213: 584788433190686645
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_11
+  - first:
+      213: 1900199445225656747
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_12
+  - first:
+      213: 1685257123084513464
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_13
+  - first:
+      213: -2857360945306883893
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_14
+  - first:
+      213: -5937053569294948461
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_15
+  - first:
+      213: -3559439017334373607
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_16
+  - first:
+      213: 18994000610319139
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_17
+  - first:
+      213: -7939181634363578924
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_18
+  - first:
+      213: -9089181744244098821
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_19
+  - first:
+      213: 7684884833574494812
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_20
+  - first:
+      213: 133798790276014243
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_21
+  - first:
+      213: -5857591140168147607
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_22
+  - first:
+      213: -2197615821012934824
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_23
+  - first:
+      213: 3374031837706476006
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_24
+  - first:
+      213: 4774797914861520210
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_25
+  - first:
+      213: 3408805269703933668
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_26
+  - first:
+      213: -1977608794622371291
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_27
+  - first:
+      213: -5248230618491729225
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_28
+  - first:
+      213: 5471083514247159375
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_29
+  - first:
+      213: 1321770796276010483
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_30
+  - first:
+      213: -3691417736401958898
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_31
+  - first:
+      213: -6484771037144375739
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_32
+  - first:
+      213: -3430292195958927748
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_33
+  - first:
+      213: -2752875290671963290
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_34
+  - first:
+      213: -3926660993671676654
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_35
+  - first:
+      213: 8490975816425310286
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_36
+  - first:
+      213: 2264896344541036177
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_37
+  - first:
+      213: -9102058158107557504
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_38
+  - first:
+      213: -6739554282389311496
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_39
+  - first:
+      213: -5887371595003584738
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_40
+  - first:
+      213: -1009022145479011557
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_41
+  - first:
+      213: -8468999594209721487
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_42
+  - first:
+      213: -1371011421095728578
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_43
+  - first:
+      213: -7211996151588861641
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_44
+  - first:
+      213: 1605550643119315950
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_45
+  - first:
+      213: 8371622280381822693
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_46
+  - first:
+      213: 7931651710355894804
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_47
+  - first:
+      213: -5334711614720339945
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_48
+  - first:
+      213: -7096384596992085718
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_49
+  - first:
+      213: -6938283549819896907
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_50
+  - first:
+      213: -4124583913295151052
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_51
+  - first:
+      213: -760427802677221727
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_52
+  - first:
+      213: -5510122161070834454
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_53
+  - first:
+      213: -3514412804623864383
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_54
+  - first:
+      213: 3365381999554254007
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_55
+  - first:
+      213: -2880470321820845006
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_56
+  - first:
+      213: 194341128365978702
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_57
+  - first:
+      213: 196030265994515473
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_58
+  - first:
+      213: -3038969400483602453
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_59
+  - first:
+      213: 6912669501717338194
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_60
+  - first:
+      213: 3440054767802543999
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_61
+  - first:
+      213: -2386995589068622498
+    second: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 233
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d461469211fa140800000000000000
+      internalID: 4733020602860195175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 983
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1935195cfa01bddf0800000000000000
+      internalID: -154511415094193263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 975
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39924413ee2410670800000000000000
+      internalID: 8503151162248407443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 951
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2be49c9b1725ea0800000000000000
+      internalID: -5885516720259550514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 872
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d220abd801cac2db0800000000000000
+      internalID: -4815284714468670931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aeefd3fa86bbbe0800000000000000
+      internalID: -1460458552282912155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 712
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b5c9d944a195ef0800000000000000
+      internalID: -119035033144239332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 678
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d396e3995d7bb3100800000000000000
+      internalID: 88866745690777917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666da856b1c3f3060800000000000000
+      internalID: 6935328039539234406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 638
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8cc5028a560f9a0800000000000000
+      internalID: -6201344914117310299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 616
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc6b0f22f99e7e90800000000000000
+      internalID: -7026009103200981819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 582
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf861d4bf59d1800800000000000000
+      internalID: 584788433190686645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 526
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1d117e35dde5a10800000000000000
+      internalID: 1900199445225656747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 511
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b036a0bc6c336710800000000000000
+      internalID: 1685257123084513464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 486
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8a8e3fb5d9858d0800000000000000
+      internalID: -2857360945306883893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 479
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397a5bd0c395b9da0800000000000000
+      internalID: -5937053569294948461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 448
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9138e1c82155a9ec0800000000000000
+      internalID: -3559439017334373607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 440
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32bdd3361fa734000800000000000000
+      internalID: 18994000610319139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 406
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5247cfd5c52d190800000000000000
+      internalID: -7939181634363578924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 392
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf87d533c5dbcd180800000000000000
+      internalID: -9089181744244098821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52aef43a0236aa60800000000000000
+      internalID: 7684884833574494812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 344
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a067c57a495bd100800000000000000
+      internalID: 133798790276014243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d5dc294e7a5bea0800000000000000
+      internalID: -5857591140168147607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 318
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fdeb3ed008081e0800000000000000
+      internalID: -2197615821012934824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_24
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 310
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e95a5b7418f2de20800000000000000
+      internalID: 3374031837706476006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 302
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255c895d76d734240800000000000000
+      internalID: 4774797914861520210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 288
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eebe2905528e4f20800000000000000
+      internalID: 3408805269703933668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 279
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a58d3774f1e84e0800000000000000
+      internalID: -1977608794622371291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 272
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bac87d0f0a8a27b0800000000000000
+      internalID: -5248230618491729225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 256
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e923b18713deb40800000000000000
+      internalID: 5471083514247159375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 248
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd4482498fd75210800000000000000
+      internalID: 1321770796276010483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 240
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e084f20702375ccc0800000000000000
+      internalID: -3691417736401958898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 231
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e944979177106a0800000000000000
+      internalID: -6484771037144375739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_33
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 222
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ec2181c672560d0800000000000000
+      internalID: -3430292195958927748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_34
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 208
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6632c8c2282dbc9d0800000000000000
+      internalID: -2752875290671963290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 191
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d31de61a2b189c0800000000000000
+      internalID: -3926660993671676654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 176
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e488676948106d570800000000000000
+      internalID: 8490975816425310286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 166
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ef275b9378e6f10800000000000000
+      internalID: 2264896344541036177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_38
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0818d09745efea180800000000000000
+      internalID: -9102058158107557504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_39
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 152
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ffe8bd761b4872a0800000000000000
+      internalID: -6739554282389311496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_40
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 144
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f161b1abadb4ea0800000000000000
+      internalID: -5887371595003584738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_41
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 126
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13983864bb3ff1f0800000000000000
+      internalID: -1009022145479011557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_42
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 119
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173c3306db1187a80800000000000000
+      internalID: -8468999594209721487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_43
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 95
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ae59e506039fce0800000000000000
+      internalID: -1371011421095728578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_44
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 86
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739cf0ff5b7d9eb90800000000000000
+      internalID: -7211996151588861641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 48
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebd608adcf084610800000000000000
+      internalID: 1605550643119315950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_46
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 39
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e677e7fb1afd2470800000000000000
+      internalID: 8371622280381822693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_47
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 31
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412f1e5f433e21e60800000000000000
+      internalID: 7931651710355894804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_48
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71091790d0c47f5b0800000000000000
+      internalID: -5334711614720339945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_49
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 15
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21bbbaaec3948d90800000000000000
+      internalID: -7096384596992085718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_50
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb7c0e3fd346bf90800000000000000
+      internalID: -6938283549819896907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_51
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 807
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43080c9a8c882c6c0800000000000000
+      internalID: -4124583913295151052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_52
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6e71041fa6275f0800000000000000
+      internalID: -760427802677221727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_53
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 542
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec7d50a61d1883b0800000000000000
+      internalID: -5510122161070834454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_54
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 464
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd6f42ac2c4a3fc0800000000000000
+      internalID: -3514412804623864383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 414
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4dce8191d34be20800000000000000
+      internalID: 3365381999554254007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_56
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 336
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c30d1f0838608d0800000000000000
+      internalID: -2880470321820845006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_57
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 104
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44b0810a3072b200800000000000000
+      internalID: 194341128365978702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_58
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 72
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11414d10d7078b200800000000000000
+      internalID: 196030265994515473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_59
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 62
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef94e07e6963d5d0800000000000000
+      internalID: -3038969400483602453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_60
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 55
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258d983794cbeef50800000000000000
+      internalID: 6912669501717338194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_61
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 8
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f62cac5978dbf20800000000000000
+      internalID: 3440054767802543999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_62
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 1293
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55f3299820bfded0800000000000000
+      internalID: -2386995589068622498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_0: 4733020602860195175
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_1: -154511415094193263
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_10: -7026009103200981819
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_11: 584788433190686645
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_12: 1900199445225656747
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_13: 1685257123084513464
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_14: -2857360945306883893
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_15: -5937053569294948461
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_16: -3559439017334373607
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_17: 18994000610319139
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_18: -7939181634363578924
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_19: -9089181744244098821
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_2: 8503151162248407443
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_20: 7684884833574494812
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_21: 133798790276014243
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_22: -5857591140168147607
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_23: -2197615821012934824
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_24: 3374031837706476006
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_25: 4774797914861520210
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_26: 3408805269703933668
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_27: -1977608794622371291
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_28: -5248230618491729225
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_29: 5471083514247159375
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_3: -5885516720259550514
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_30: 1321770796276010483
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_31: -3691417736401958898
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_32: -6484771037144375739
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_33: -3430292195958927748
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_34: -2752875290671963290
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_35: -3926660993671676654
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_36: 8490975816425310286
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_37: 2264896344541036177
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_38: -9102058158107557504
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_39: -6739554282389311496
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_4: -4815284714468670931
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_40: -5887371595003584738
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_41: -1009022145479011557
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_42: -8468999594209721487
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_43: -1371011421095728578
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_44: -7211996151588861641
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_45: 1605550643119315950
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_46: 8371622280381822693
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_47: 7931651710355894804
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_48: -5334711614720339945
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_49: -7096384596992085718
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_5: -1460458552282912155
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_50: -6938283549819896907
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_51: -4124583913295151052
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_52: -760427802677221727
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_53: -5510122161070834454
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_54: -3514412804623864383
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_55: 3365381999554254007
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_56: -2880470321820845006
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_57: 194341128365978702
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_58: 196030265994515473
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_59: -3038969400483602453
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_6: -119035033144239332
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_60: 6912669501717338194
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_61: 3440054767802543999
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_62: -2386995589068622498
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_7: 88866745690777917
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_8: 6935328039539234406
+      20250810_1821_Grass Dataset Robot_remix_01k2acfbc8f3avgz8ax3kyy1hz_9: -6201344914117310299
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

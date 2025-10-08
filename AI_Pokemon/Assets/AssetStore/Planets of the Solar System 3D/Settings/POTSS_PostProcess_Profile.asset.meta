@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c2e795c0e57fdd4aba75267828eafe6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 90219
+  packageName: Planets of the Solar System 3D
+  packageVersion: 2.0
+  assetPath: Assets/Planets of the Solar System 3D/Settings/POTSS_PostProcess_Profile.asset
+  uploadId: 483801

@@ -1,0 +1,1768 @@
+fileFormatVersion: 2
+guid: 03319f72ccb9c4143b23bbc28c08671b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7500427389904799925
+    second: wateravatar_0
+  - first:
+      213: -8374109903076510096
+    second: wateravatar_1
+  - first:
+      213: -9222697741134530788
+    second: wateravatar_2
+  - first:
+      213: -7066838499717895465
+    second: wateravatar_3
+  - first:
+      213: 8390400947548961343
+    second: wateravatar_4
+  - first:
+      213: -359268332549003630
+    second: wateravatar_5
+  - first:
+      213: -1212901437519936655
+    second: wateravatar_6
+  - first:
+      213: -8547633630905707069
+    second: wateravatar_7
+  - first:
+      213: 4971362507456229752
+    second: wateravatar_8
+  - first:
+      213: 5853577134589988947
+    second: wateravatar_9
+  - first:
+      213: -5719577268870904793
+    second: wateravatar_10
+  - first:
+      213: -5154881584723399027
+    second: wateravatar_11
+  - first:
+      213: -1238820439761454294
+    second: wateravatar_12
+  - first:
+      213: 5732214947885646871
+    second: wateravatar_13
+  - first:
+      213: -5906641593246589859
+    second: wateravatar_14
+  - first:
+      213: -6041599611400336459
+    second: wateravatar_15
+  - first:
+      213: 5203469533663693059
+    second: wateravatar_16
+  - first:
+      213: -2254643912738724080
+    second: wateravatar_17
+  - first:
+      213: -1660580505977488787
+    second: wateravatar_18
+  - first:
+      213: 7124352469521121680
+    second: wateravatar_19
+  - first:
+      213: -5979339327775431092
+    second: wateravatar_20
+  - first:
+      213: -9151720540585939265
+    second: wateravatar_21
+  - first:
+      213: -4361073282478895539
+    second: wateravatar_22
+  - first:
+      213: -6636209552066997344
+    second: wateravatar_23
+  - first:
+      213: 1611436112964138078
+    second: wateravatar_24
+  - first:
+      213: 3438703946816362564
+    second: wateravatar_25
+  - first:
+      213: 2734568985871965159
+    second: wateravatar_26
+  - first:
+      213: 3143844043152291663
+    second: wateravatar_27
+  - first:
+      213: -5885823745530661101
+    second: wateravatar_28
+  - first:
+      213: -2017926740094482156
+    second: wateravatar_29
+  - first:
+      213: -2551547819258329981
+    second: wateravatar_30
+  - first:
+      213: -855785972242501685
+    second: wateravatar_31
+  - first:
+      213: -8035464286975770855
+    second: wateravatar_32
+  - first:
+      213: -5339796950500984761
+    second: wateravatar_33
+  - first:
+      213: 6377405944744730346
+    second: wateravatar_34
+  - first:
+      213: -8542073071564046960
+    second: wateravatar_35
+  - first:
+      213: 2333907652777625259
+    second: wateravatar_36
+  - first:
+      213: 6118064374703071048
+    second: wateravatar_37
+  - first:
+      213: 221502264360200419
+    second: wateravatar_38
+  - first:
+      213: -4232295222511165057
+    second: wateravatar_39
+  - first:
+      213: 2223610279158644966
+    second: wateravatar_40
+  - first:
+      213: 5416594250322687472
+    second: wateravatar_41
+  - first:
+      213: 3900677441755328384
+    second: wateravatar_42
+  - first:
+      213: -3727404085147699809
+    second: wateravatar_43
+  - first:
+      213: 4062452834973489567
+    second: wateravatar_44
+  - first:
+      213: 7617870687660538950
+    second: wateravatar_45
+  - first:
+      213: 2633748483819549323
+    second: wateravatar_46
+  - first:
+      213: -8463970593326682819
+    second: wateravatar_47
+  - first:
+      213: 3276893021921216189
+    second: wateravatar_48
+  - first:
+      213: -1848826992199061942
+    second: wateravatar_49
+  - first:
+      213: -2074915150953407120
+    second: wateravatar_50
+  - first:
+      213: 2976058700079606051
+    second: wateravatar_51
+  - first:
+      213: 5918097584913661139
+    second: wateravatar_52
+  - first:
+      213: -309034623112198431
+    second: wateravatar_53
+  - first:
+      213: -8879915290260863360
+    second: wateravatar_54
+  - first:
+      213: -7746495017773288422
+    second: wateravatar_55
+  - first:
+      213: -4394150406471574493
+    second: wateravatar_56
+  - first:
+      213: -3896126457038342516
+    second: wateravatar_57
+  - first:
+      213: 496114504024550241
+    second: wateravatar_58
+  - first:
+      213: -509089462406992661
+    second: wateravatar_59
+  - first:
+      213: 3579012054365269191
+    second: wateravatar_60
+  - first:
+      213: -4205634149999081326
+    second: wateravatar_61
+  - first:
+      213: -2118654885520271894
+    second: wateravatar_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wateravatar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 113
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8c2eed8fed61860800000000000000
+      internalID: 7500427389904799925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 492
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0763b0d396f29cb80800000000000000
+      internalID: -8374109903076510096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 822
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17f0e4b445620080800000000000000
+      internalID: -9222697741134530788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 668
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7daa24383db8ded90800000000000000
+      internalID: -7066838499717895465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 526
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ab1c12531b07470800000000000000
+      internalID: 8390400947548961343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 171
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296ae53ea5f930bf0800000000000000
+      internalID: -359268332549003630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 960
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173401d9198ea2fe0800000000000000
+      internalID: -1212901437519936655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 734
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5deafff74b06980800000000000000
+      internalID: -8547633630905707069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871bf927cd3ddf440800000000000000
+      internalID: 4971362507456229752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 702
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350d59ce3651c3150800000000000000
+      internalID: 5853577134589988947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 692
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7240d8f07caff90b0800000000000000
+      internalID: -5719577268870904793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 662
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8eeb5ba28e2678b0800000000000000
+      internalID: -5154881584723399027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b7683af53decee0800000000000000
+      internalID: -1238820439761454294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 635
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71488e0ef1bec8f40800000000000000
+      internalID: 5732214947885646871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 620
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c5df204c4670ea0800000000000000
+      internalID: -5906641593246589859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 614
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb4857c92de72ca0800000000000000
+      internalID: -6041599611400336459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 606
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3098791c8ff663840800000000000000
+      internalID: 5203469533663693059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 531
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01726369e45e5b0e0800000000000000
+      internalID: -2254643912738724080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 486
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6af544f3de64f8e0800000000000000
+      internalID: -1660580505977488787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 462
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091cb7813d8ced260800000000000000
+      internalID: 7124352469521121680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 454
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c462c60bf8e150da0800000000000000
+      internalID: -5979339327775431092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 446
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbeaabef7ae8ef080800000000000000
+      internalID: -9151720540585939265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 437
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e066e94fa5a73c0800000000000000
+      internalID: -4361073282478895539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 430
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a31ef1929277e3a0800000000000000
+      internalID: -6636209552066997344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_24
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 414
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54b6736b98fc5610800000000000000
+      internalID: 1611436112964138078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 390
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44819b5450bb8bf20800000000000000
+      internalID: 3438703946816362564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebd2b8110423f520800000000000000
+      internalID: 2734568985871965159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47f15d108d21ab20800000000000000
+      internalID: 3143844043152291663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317f515ec7a515ea0800000000000000
+      internalID: -5885823745530661101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 264
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41908e14252eef3e0800000000000000
+      internalID: -2017926740094482156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 230
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3844fade6c4179cd0800000000000000
+      internalID: -2551547819258329981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 214
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf29b04133af14f0800000000000000
+      internalID: -855785972242501685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 200
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fb8710ecb4c7090800000000000000
+      internalID: -8035464286975770855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_33
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 134
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748bca807fa35e5b0800000000000000
+      internalID: -5339796950500984761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_34
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 126
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee59f4fae8118850800000000000000
+      internalID: 6377405944744730346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 94
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dbefb9cc5747980800000000000000
+      internalID: -8542073071564046960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 86
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6406605a4b36020800000000000000
+      internalID: 2333907652777625259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 76
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f1627422bb7e450800000000000000
+      internalID: 6118064374703071048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_38
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 62
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e86228c22fe21300800000000000000
+      internalID: 221502264360200419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_39
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 38
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71a3a53bedd345c0800000000000000
+      internalID: -4232295222511165057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_40
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 8
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0882884c9dbde10800000000000000
+      internalID: 2223610279158644966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_41
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f538e6b5cb9b2b40800000000000000
+      internalID: 5416594250322687472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_42
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 774
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fa433777df12630800000000000000
+      internalID: 3900677441755328384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_43
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 710
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f957e62bbb9954cc0800000000000000
+      internalID: -3727404085147699809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_44
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 686
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f999f51645bb06830800000000000000
+      internalID: 4062452834973489567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 630
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cfdda770d18b960800000000000000
+      internalID: 7617870687660538950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 542
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82b9c5ba44fc8420800000000000000
+      internalID: 2633748483819549323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_47
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 470
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d2963e69fe98a80800000000000000
+      internalID: -8463970593326682819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 422
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6029a77dcd97d20800000000000000
+      internalID: 3276893021921216189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 406
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e22d665a5a756e0800000000000000
+      internalID: -1848826992199061942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 375
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d9850e9ab6433e0800000000000000
+      internalID: -2074915150953407120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_51
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 333
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329a4f0be951d4920800000000000000
+      internalID: 2976058700079606051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_52
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc30e6e56e412250800000000000000
+      internalID: 5918097584913661139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_53
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 295
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6c91ac5a616bbf0800000000000000
+      internalID: -309034623112198431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_54
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0860170671434c480800000000000000
+      internalID: -8879915290260863360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 238
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a143a43f2dbee7490800000000000000
+      internalID: -7746495017773288422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_56
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 166
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c9f9c8c77d403c0800000000000000
+      internalID: -4394150406471574493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_57
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 111
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c867a3041ad2ee9c0800000000000000
+      internalID: -3896126457038342516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_58
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 70
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b6d4c438d82e600800000000000000
+      internalID: 496114504024550241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_59
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 54
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec265ac4d95fe8f0800000000000000
+      internalID: -509089462406992661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_60
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc684340843ba130800000000000000
+      internalID: 3579012054365269191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_61
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 1403
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2988d02e50692a5c0800000000000000
+      internalID: -4205634149999081326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wateravatar_62
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 24
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae51be25b960992e0800000000000000
+      internalID: -2118654885520271894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wateravatar_0: 7500427389904799925
+      wateravatar_1: -8374109903076510096
+      wateravatar_10: -5719577268870904793
+      wateravatar_11: -5154881584723399027
+      wateravatar_12: -1238820439761454294
+      wateravatar_13: 5732214947885646871
+      wateravatar_14: -5906641593246589859
+      wateravatar_15: -6041599611400336459
+      wateravatar_16: 5203469533663693059
+      wateravatar_17: -2254643912738724080
+      wateravatar_18: -1660580505977488787
+      wateravatar_19: 7124352469521121680
+      wateravatar_2: -9222697741134530788
+      wateravatar_20: -5979339327775431092
+      wateravatar_21: -9151720540585939265
+      wateravatar_22: -4361073282478895539
+      wateravatar_23: -6636209552066997344
+      wateravatar_24: 1611436112964138078
+      wateravatar_25: 3438703946816362564
+      wateravatar_26: 2734568985871965159
+      wateravatar_27: 3143844043152291663
+      wateravatar_28: -5885823745530661101
+      wateravatar_29: -2017926740094482156
+      wateravatar_3: -7066838499717895465
+      wateravatar_30: -2551547819258329981
+      wateravatar_31: -855785972242501685
+      wateravatar_32: -8035464286975770855
+      wateravatar_33: -5339796950500984761
+      wateravatar_34: 6377405944744730346
+      wateravatar_35: -8542073071564046960
+      wateravatar_36: 2333907652777625259
+      wateravatar_37: 6118064374703071048
+      wateravatar_38: 221502264360200419
+      wateravatar_39: -4232295222511165057
+      wateravatar_4: 8390400947548961343
+      wateravatar_40: 2223610279158644966
+      wateravatar_41: 5416594250322687472
+      wateravatar_42: 3900677441755328384
+      wateravatar_43: -3727404085147699809
+      wateravatar_44: 4062452834973489567
+      wateravatar_45: 7617870687660538950
+      wateravatar_46: 2633748483819549323
+      wateravatar_47: -8463970593326682819
+      wateravatar_48: 3276893021921216189
+      wateravatar_49: -1848826992199061942
+      wateravatar_5: -359268332549003630
+      wateravatar_50: -2074915150953407120
+      wateravatar_51: 2976058700079606051
+      wateravatar_52: 5918097584913661139
+      wateravatar_53: -309034623112198431
+      wateravatar_54: -8879915290260863360
+      wateravatar_55: -7746495017773288422
+      wateravatar_56: -4394150406471574493
+      wateravatar_57: -3896126457038342516
+      wateravatar_58: 496114504024550241
+      wateravatar_59: -509089462406992661
+      wateravatar_6: -1212901437519936655
+      wateravatar_60: 3579012054365269191
+      wateravatar_61: -4205634149999081326
+      wateravatar_62: -2118654885520271894
+      wateravatar_7: -8547633630905707069
+      wateravatar_8: 4971362507456229752
+      wateravatar_9: 5853577134589988947
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

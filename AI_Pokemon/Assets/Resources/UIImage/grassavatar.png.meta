@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 787d7c48681a53846b65ae3d05614ff5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7604035552264532148
+    second: grassavatar_0
+  - first:
+      213: -1336804645425000984
+    second: grassavatar_1
+  - first:
+      213: 5302968875304470581
+    second: grassavatar_2
+  - first:
+      213: 19524776151990689
+    second: grassavatar_3
+  - first:
+      213: -6190925997335995335
+    second: grassavatar_4
+  - first:
+      213: -8901041344841820423
+    second: grassavatar_5
+  - first:
+      213: 6146443540185064438
+    second: grassavatar_6
+  - first:
+      213: -6105764116708342053
+    second: grassavatar_7
+  - first:
+      213: 4047232379665311644
+    second: grassavatar_8
+  - first:
+      213: 2757396775426285659
+    second: grassavatar_9
+  - first:
+      213: 2000713894294219191
+    second: grassavatar_10
+  - first:
+      213: -1408664538786943475
+    second: grassavatar_11
+  - first:
+      213: 3071836269007206581
+    second: grassavatar_12
+  - first:
+      213: -1565577892806144709
+    second: grassavatar_13
+  - first:
+      213: 5705422818650762301
+    second: grassavatar_14
+  - first:
+      213: -8997204509289667367
+    second: grassavatar_15
+  - first:
+      213: -5669273595459404274
+    second: grassavatar_16
+  - first:
+      213: -7190368641560778039
+    second: grassavatar_17
+  - first:
+      213: -2752969229568224009
+    second: grassavatar_18
+  - first:
+      213: 136404263862916367
+    second: grassavatar_19
+  - first:
+      213: -1326486998129812248
+    second: grassavatar_20
+  - first:
+      213: 389876588291137489
+    second: grassavatar_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grassavatar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1526
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b03b200c06f68960800000000000000
+      internalID: 7604035552264532148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edc957f147b27de0800000000000000
+      internalID: -1336804645425000984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 438
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538c973881ee79940800000000000000
+      internalID: 5302968875304470581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_3
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 414
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1cbd23ead554000800000000000000
+      internalID: 19524776151990689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 390
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c9e0a3b99651aa0800000000000000
+      internalID: -6190925997335995335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 350
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f653ad7e06297480800000000000000
+      internalID: -8901041344841820423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3a9b4a5dd8c4550800000000000000
+      internalID: 6146443540185064438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 286
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6c545b2e7f34ba0800000000000000
+      internalID: -6105764116708342053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 246
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97e869f768aa2830800000000000000
+      internalID: 4047232379665311644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 230
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50671802cd344620800000000000000
+      internalID: 2757396775426285659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 238
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b96896cfa6f3cb10800000000000000
+      internalID: 2000713894294219191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 222
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e2aedb01b637ce0800000000000000
+      internalID: -1408664538786943475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 190
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8f556bfca51aa20800000000000000
+      internalID: 3071836269007206581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 198
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3dc5178333f54ae0800000000000000
+      internalID: -1565577892806144709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 174
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c261f23dbbd2f40800000000000000
+      internalID: 5705422818650762301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_15
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 182
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d42f340b22832380800000000000000
+      internalID: -8997204509289667367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 166
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ef328b3b1b251b0800000000000000
+      internalID: -5669273595459404274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 158
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca69a311dda63c90800000000000000
+      internalID: -7190368641560778039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 152
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f45102521d7bc9d0800000000000000
+      internalID: -2752969229568224009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_19
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 82
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05d56d84fa94e100800000000000000
+      internalID: 136404263862916367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 40
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec5c4d6a1f579de0800000000000000
+      internalID: -1326486998129812248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grassavatar_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df955ff0be196500800000000000000
+      internalID: 389876588291137489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      grassavatar_0: 7604035552264532148
+      grassavatar_1: -1336804645425000984
+      grassavatar_10: 2000713894294219191
+      grassavatar_11: -1408664538786943475
+      grassavatar_12: 3071836269007206581
+      grassavatar_13: -1565577892806144709
+      grassavatar_14: 5705422818650762301
+      grassavatar_15: -8997204509289667367
+      grassavatar_16: -5669273595459404274
+      grassavatar_17: -7190368641560778039
+      grassavatar_18: -2752969229568224009
+      grassavatar_19: 136404263862916367
+      grassavatar_2: 5302968875304470581
+      grassavatar_20: -1326486998129812248
+      grassavatar_21: 389876588291137489
+      grassavatar_3: 19524776151990689
+      grassavatar_4: -6190925997335995335
+      grassavatar_5: -8901041344841820423
+      grassavatar_6: 6146443540185064438
+      grassavatar_7: -6105764116708342053
+      grassavatar_8: 4047232379665311644
+      grassavatar_9: 2757396775426285659
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

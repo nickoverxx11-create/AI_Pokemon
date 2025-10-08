@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 956f96be419225c4bbf5efcf01008c98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -89880559569698678
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_0
+  - first:
+      213: 1661110464936535986
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_1
+  - first:
+      213: -4242381647456711579
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_2
+  - first:
+      213: -8788845331901331835
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_3
+  - first:
+      213: 3526325449411737987
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_4
+  - first:
+      213: -8098199022839171721
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_5
+  - first:
+      213: -271897444226394549
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_6
+  - first:
+      213: 2703378992831746979
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_7
+  - first:
+      213: -5883925810154369059
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_8
+  - first:
+      213: -5912143049219452144
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_9
+  - first:
+      213: 3914052141249723051
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_10
+  - first:
+      213: -2102357940081650696
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_11
+  - first:
+      213: -1922232037373197692
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_12
+  - first:
+      213: 4311922138312267637
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_13
+  - first:
+      213: -7882376880982642426
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_14
+  - first:
+      213: -5325098732270421050
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_15
+  - first:
+      213: -9077476959603110636
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_16
+  - first:
+      213: -3230817094189741714
+    second: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 230
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8082a67b1ea0cef0800000000000000
+      internalID: -89880559569698678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 975
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7e93bba237d0710800000000000000
+      internalID: 1661110464936535986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cc4b56e580025c0800000000000000
+      internalID: -4242381647456711579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 648
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586cb266cbfb70680800000000000000
+      internalID: -8788845331901331835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 616
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3893b9e105600f030800000000000000
+      internalID: 3526325449411737987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 584
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775714315ea6d9f80800000000000000
+      internalID: -8098199022839171721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 536
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b469c8d07b60a3cf0800000000000000
+      internalID: -271897444226394549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 351
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a35df0fed4548520800000000000000
+      internalID: 2703378992831746979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 328
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf0ff866a8185ea0800000000000000
+      internalID: -5883925810154369059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 88
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013daf97839d3fda0800000000000000
+      internalID: -5912143049219452144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 824
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baafb875fa1815630800000000000000
+      internalID: 3914052141249723051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_11
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 639
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f316be979ce2d2e0800000000000000
+      internalID: -2102357940081650696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482ce7c752cd255e0800000000000000
+      internalID: -1922232037373197692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 95
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577de39d65607db30800000000000000
+      internalID: 4311922138312267637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_14
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 40
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60137474dfb2c9290800000000000000
+      internalID: -7882376880982642426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb7325aae27916b0800000000000000
+      internalID: -5325098732270421050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d401ebcc2560280800000000000000
+      internalID: -9077476959603110636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_17
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 1287
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e698f8e68f4d923d0800000000000000
+      internalID: -3230817094189741714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_0: -89880559569698678
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_1: 1661110464936535986
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_10: 3914052141249723051
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_11: -2102357940081650696
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_12: -1922232037373197692
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_13: 4311922138312267637
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_14: -7882376880982642426
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_15: -5325098732270421050
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_16: -9077476959603110636
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_17: -3230817094189741714
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_2: -4242381647456711579
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_3: -8788845331901331835
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_4: 3526325449411737987
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_5: -8098199022839171721
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_6: -271897444226394549
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_7: 2703378992831746979
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_8: -5883925810154369059
+      20250810_1825_Dragon Dataset Review_remix_01k2acng9tf4mrf2egecq2n72w_9: -5912143049219452144
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

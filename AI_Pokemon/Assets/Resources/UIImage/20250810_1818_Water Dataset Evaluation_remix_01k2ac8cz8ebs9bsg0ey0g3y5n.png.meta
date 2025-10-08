@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 3ef37f8f904e5244096dcd134e0e3b04
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2485126237466315091
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_0
+  - first:
+      213: 8282334013602945013
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_1
+  - first:
+      213: -5721187753272140151
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_2
+  - first:
+      213: 5675691757105011421
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_3
+  - first:
+      213: -1178789027326968889
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_4
+  - first:
+      213: 9160301869935051660
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_5
+  - first:
+      213: 7117298519057937318
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_6
+  - first:
+      213: -7257604644071046693
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_7
+  - first:
+      213: -2580144858831551096
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_8
+  - first:
+      213: -815370342739883793
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_9
+  - first:
+      213: 1553163257987413086
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_10
+  - first:
+      213: -1912856798342825610
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_11
+  - first:
+      213: -768757175171849417
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_12
+  - first:
+      213: 8765289417767016945
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_13
+  - first:
+      213: -8297544942460987069
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_14
+  - first:
+      213: 6184432859364505918
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_15
+  - first:
+      213: -3855821036598369232
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_16
+  - first:
+      213: -5220765424932776567
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_17
+  - first:
+      213: 503172612513207332
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_18
+  - first:
+      213: -7289406579361431452
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_19
+  - first:
+      213: -8122642503701662450
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_20
+  - first:
+      213: -4394460314489075153
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_21
+  - first:
+      213: -2646797562957135193
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_22
+  - first:
+      213: 551755287709433996
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_23
+  - first:
+      213: 2852089521867069632
+    second: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 230
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359ce2e6521fc7220800000000000000
+      internalID: 2485126237466315091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 839
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f750f757e2c0f270800000000000000
+      internalID: 8282334013602945013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 275
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e16e0fc024a90b0800000000000000
+      internalID: -5721187753272140151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 87
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda5bdcf49b14ce40800000000000000
+      internalID: 5675691757105011421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 974
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb3c0900a914afe0800000000000000
+      internalID: -1178789027326968889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 951
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8343d0740eef1f70800000000000000
+      internalID: 9160301869935051660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 944
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3bcd44b49b5c260800000000000000
+      internalID: 7117298519057937318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 735
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd18be5570fc74b90800000000000000
+      internalID: -7257604644071046693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 719
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8858b4ccbeb713cd0800000000000000
+      internalID: -2580144858831551096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 710
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8c9984ef83fa4f0800000000000000
+      internalID: -815370342739883793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 631
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54378e01c1fd8510800000000000000
+      internalID: 1553163257987413086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 582
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679b59c60ea2475e0800000000000000
+      internalID: -1912856798342825610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 388
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73369571c63d455f0800000000000000
+      internalID: -768757175171849417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f95e73f84094a970800000000000000
+      internalID: 8765289417767016945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34916cc46d239dc80800000000000000
+      internalID: -8297544942460987069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39bca74be483d550800000000000000
+      internalID: 6184432859364505918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 15
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034631c323f5d7ac0800000000000000
+      internalID: -3855821036598369232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 654
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9859d3fb18d1c87b0800000000000000
+      internalID: -5220765424932776567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 620
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4241e8d33d0abf600800000000000000
+      internalID: 503172612513207332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 526
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46044c54653d6da90800000000000000
+      internalID: -7289406579361431452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 303
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e057f51bda3964f80800000000000000
+      internalID: -8122642503701662450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 95
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ac35770adb303c0800000000000000
+      internalID: -4394460314489075153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 31
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2029bc3afa44bd0800000000000000
+      internalID: -2646797562957135193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_23
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c804dd6c28a38a700800000000000000
+      internalID: 551755287709433996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_24
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 1277
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c810822f48a49720800000000000000
+      internalID: 2852089521867069632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_0: 2485126237466315091
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_1: 8282334013602945013
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_10: 1553163257987413086
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_11: -1912856798342825610
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_12: -768757175171849417
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_13: 8765289417767016945
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_14: -8297544942460987069
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_15: 6184432859364505918
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_16: -3855821036598369232
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_17: -5220765424932776567
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_18: 503172612513207332
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_19: -7289406579361431452
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_2: -5721187753272140151
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_20: -8122642503701662450
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_21: -4394460314489075153
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_22: -2646797562957135193
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_23: 551755287709433996
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_24: 2852089521867069632
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_3: 5675691757105011421
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_4: -1178789027326968889
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_5: 9160301869935051660
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_6: 7117298519057937318
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_7: -7257604644071046693
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_8: -2580144858831551096
+      20250810_1818_Water Dataset Evaluation_remix_01k2ac8cz8ebs9bsg0ey0g3y5n_9: -815370342739883793
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

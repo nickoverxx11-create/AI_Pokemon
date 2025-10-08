@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: ddf0c3b16b353d24fa944021dd84a9d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3866057605453326362
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_0
+  - first:
+      213: 2369885386901094276
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_1
+  - first:
+      213: -7327780600597577125
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_2
+  - first:
+      213: 4879910519456619914
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_3
+  - first:
+      213: 4666284419283968637
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_4
+  - first:
+      213: 3189575810784281533
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_5
+  - first:
+      213: 8803980763208633563
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_6
+  - first:
+      213: 5538352506969243279
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_7
+  - first:
+      213: -5587918641306953194
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_8
+  - first:
+      213: -5772352927983992604
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_9
+  - first:
+      213: -2417330871789542356
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_10
+  - first:
+      213: -2417332221263315678
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_11
+  - first:
+      213: -8396306595637984317
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_12
+  - first:
+      213: 8134556752190792652
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_13
+  - first:
+      213: -3436169712065200855
+    second: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+      (1)_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 394
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7d1c15711095ac0800000000000000
+      internalID: -3866057605453326362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 443
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ff0a4043683e020800000000000000
+      internalID: 2369885386901094276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 430
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5202653e5e7e4a90800000000000000
+      internalID: -7327780600597577125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 387
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d57e733cce8b340800000000000000
+      internalID: 4879910519456619914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d726c50d4f8f1c040800000000000000
+      internalID: 4666284419283968637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 331
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3c9f10d46a34c20800000000000000
+      internalID: 3189575810784281533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 486
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc4c60dbd50e2a70800000000000000
+      internalID: 8803980763208633563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 414
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ebbcaf24e2cdc40800000000000000
+      internalID: 5538352506969243279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 406
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a9d1f0a99b372b0800000000000000
+      internalID: -5587918641306953194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 326
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e00451689b74efa0800000000000000
+      internalID: -5772352927983992604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 302
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c242662316ae37ed0800000000000000
+      internalID: -2417330871789542356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_11
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 243
+        width: 259
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d7e7ff629e37ed0800000000000000
+      internalID: -2417332221263315678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 961
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c38ab503a35a7b80800000000000000
+      internalID: -8396306595637984317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 496
+        width: 471
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc366937440c3e070800000000000000
+      internalID: 8134556752190792652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1
+        (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 29
+        width: 441
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92db56c3ad54050d0800000000000000
+      internalID: -3436169712065200855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_0: -3866057605453326362
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_1: 2369885386901094276
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_10: -2417330871789542356
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_11: -2417332221263315678
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_12: -8396306595637984317
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_13: 8134556752190792652
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_14: -3436169712065200855
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_2: -7327780600597577125
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_3: 4879910519456619914
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_4: 4666284419283968637
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_5: 3189575810784281533
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_6: 8803980763208633563
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_7: 5538352506969243279
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_8: -5587918641306953194
+      20250730_2117_Robot Analyzing Datasets_remix_01k1ec5sdte7a9t84b1ym3vfg1 (1)_9: -5772352927983992604
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

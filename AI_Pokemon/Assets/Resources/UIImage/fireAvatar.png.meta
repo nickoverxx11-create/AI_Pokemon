@@ -1,0 +1,1508 @@
+fileFormatVersion: 2
+guid: 6a39f741f9732a24fbb307ba36f6ac18
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8663409809178248286
+    second: fireAvatar_0
+  - first:
+      213: -7770147643966184259
+    second: fireAvatar_1
+  - first:
+      213: 885609052099999060
+    second: fireAvatar_2
+  - first:
+      213: 6421401448635575789
+    second: fireAvatar_3
+  - first:
+      213: 5648193992875269055
+    second: fireAvatar_4
+  - first:
+      213: -2456999996067171084
+    second: fireAvatar_5
+  - first:
+      213: 1842599061691193624
+    second: fireAvatar_6
+  - first:
+      213: 5756785103762791949
+    second: fireAvatar_7
+  - first:
+      213: -4264020559908293777
+    second: fireAvatar_8
+  - first:
+      213: 7707923689972514128
+    second: fireAvatar_9
+  - first:
+      213: 2689196969854902410
+    second: fireAvatar_10
+  - first:
+      213: 6486844002068015689
+    second: fireAvatar_11
+  - first:
+      213: -2515896317909346525
+    second: fireAvatar_12
+  - first:
+      213: -2649009641995482259
+    second: fireAvatar_13
+  - first:
+      213: -4523061131536912807
+    second: fireAvatar_14
+  - first:
+      213: 990024292872278979
+    second: fireAvatar_15
+  - first:
+      213: 1354940954796788311
+    second: fireAvatar_16
+  - first:
+      213: -8828111867556684458
+    second: fireAvatar_17
+  - first:
+      213: -1718373784106678738
+    second: fireAvatar_18
+  - first:
+      213: 9086041385218156572
+    second: fireAvatar_19
+  - first:
+      213: 1787800392511753028
+    second: fireAvatar_20
+  - first:
+      213: 6500574234704941933
+    second: fireAvatar_21
+  - first:
+      213: -7656941249764190165
+    second: fireAvatar_22
+  - first:
+      213: -4660898221617338358
+    second: fireAvatar_23
+  - first:
+      213: 5088382121863098185
+    second: fireAvatar_24
+  - first:
+      213: 3976397237347920758
+    second: fireAvatar_25
+  - first:
+      213: 6530844876438215672
+    second: fireAvatar_26
+  - first:
+      213: 1817207406243062670
+    second: fireAvatar_27
+  - first:
+      213: 2435197074364988015
+    second: fireAvatar_28
+  - first:
+      213: 7654722870382748428
+    second: fireAvatar_29
+  - first:
+      213: -1799768650671640673
+    second: fireAvatar_30
+  - first:
+      213: -4584706400524608
+    second: fireAvatar_31
+  - first:
+      213: 8081250348424426320
+    second: fireAvatar_32
+  - first:
+      213: 5282046974652415702
+    second: fireAvatar_33
+  - first:
+      213: 3986663244904594386
+    second: fireAvatar_34
+  - first:
+      213: -2694210602571194783
+    second: fireAvatar_35
+  - first:
+      213: 8312233733919253275
+    second: fireAvatar_36
+  - first:
+      213: -3175188478509330150
+    second: fireAvatar_37
+  - first:
+      213: 3687947663828807653
+    second: fireAvatar_38
+  - first:
+      213: 4492090785461602728
+    second: fireAvatar_39
+  - first:
+      213: -7562778972559974510
+    second: fireAvatar_40
+  - first:
+      213: 5444934784080577486
+    second: fireAvatar_41
+  - first:
+      213: 7496291168125639479
+    second: fireAvatar_42
+  - first:
+      213: 2192107313523734924
+    second: fireAvatar_43
+  - first:
+      213: -593041482095605288
+    second: fireAvatar_44
+  - first:
+      213: -5270334946225291162
+    second: fireAvatar_45
+  - first:
+      213: -6150718916811862814
+    second: fireAvatar_46
+  - first:
+      213: 5529439961172424274
+    second: fireAvatar_47
+  - first:
+      213: 3176554327918005081
+    second: fireAvatar_48
+  - first:
+      213: 1330465460965994339
+    second: fireAvatar_49
+  - first:
+      213: 6691354469176118331
+    second: fireAvatar_50
+  - first:
+      213: -2613399103329952627
+    second: fireAvatar_51
+  - first:
+      213: 8215304525517030119
+    second: fireAvatar_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fireAvatar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 89
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abbb44eda265c780800000000000000
+      internalID: -8663409809178248286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 912
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4ae05c2e3ea2490800000000000000
+      internalID: -7770147643966184259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 992
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4557a40adb05a4c00800000000000000
+      internalID: 885609052099999060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 982
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded2a1278966d1950800000000000000
+      internalID: 6421401448635575789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 974
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb53d7d28a626e40800000000000000
+      internalID: 5648193992875269055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 886
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4b745758bf6edd0800000000000000
+      internalID: -2456999996067171084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 806
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8195297851a329910800000000000000
+      internalID: 1842599061691193624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 702
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e9a061d8534ef40800000000000000
+      internalID: 5756785103762791949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 646
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6334bb74e723d4c0800000000000000
+      internalID: -4264020559908293777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 616
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d31a8f1cb08fa60800000000000000
+      internalID: 7707923689972514128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 582
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8022476562f15520800000000000000
+      internalID: 2689196969854902410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 534
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a23a84046e50a50800000000000000
+      internalID: 6486844002068015689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 526
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327dc4fe0adb51dd0800000000000000
+      internalID: -2515896317909346525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 510
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b464204c3dc3bd0800000000000000
+      internalID: -2649009641995482259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 486
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ead557ddbda31c0800000000000000
+      internalID: -4523061131536912807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 478
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3d8a759d54dbd00800000000000000
+      internalID: 990024292872278979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 448
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a8a4e9e97bdc210800000000000000
+      internalID: 1354940954796788311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 430
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d9fd0a70f3c7580800000000000000
+      internalID: -8828111867556684458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 390
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e264afec52c1728e0800000000000000
+      internalID: -1718373784106678738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c182d6cff7a181e70800000000000000
+      internalID: 9086041385218156572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 310
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b87fc1cfa8fc810800000000000000
+      internalID: 1787800392511753028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 278
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6315af23dda63a50800000000000000
+      internalID: 6500574234704941933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 246
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2815c560841db590800000000000000
+      internalID: -7656941249764190165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 238
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08af3e03c9215fb0800000000000000
+      internalID: -4660898221617338358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_24
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 222
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f291794909d9640800000000000000
+      internalID: 5088382121863098185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 206
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ba7f138300f2730800000000000000
+      internalID: 3976397237347920758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 198
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb974f20d832aa50800000000000000
+      internalID: 6530844876438215672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 182
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83a35c0284083910800000000000000
+      internalID: 1817207406243062670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a789f36de8bc120800000000000000
+      internalID: 2435197074364988015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 150
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03e837e4e90b3a60800000000000000
+      internalID: 7654722870382748428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 136
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f25d2a2ffe507e0800000000000000
+      internalID: -1799768650671640673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 126
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6e89bdb36bfeff0800000000000000
+      internalID: -4584706400524608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 86
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053f6d6206e562070800000000000000
+      internalID: 8081250348424426320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_33
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 78
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de751becb99d4940800000000000000
+      internalID: 5282046974652415702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_34
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 16
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbf4a75919735730800000000000000
+      internalID: 3986663244904594386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e17a34bbd3c9ad0800000000000000
+      internalID: -2694210602571194783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_36
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 822
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13a6487a8cfa5370800000000000000
+      internalID: 8312233733919253275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 774
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11d983d6e67fe3d0800000000000000
+      internalID: -3175188478509330150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 664
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef6fb45cd83e2330800000000000000
+      internalID: 3687947663828807653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_39
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 606
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a98e3ee4cc175e30800000000000000
+      internalID: 4492090785461602728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 560
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fd4c1089c9b0790800000000000000
+      internalID: -7562778972559974510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_41
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 416
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec38a4e665b409b40800000000000000
+      internalID: 5444934784080577486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_42
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 406
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bd601b91d280860800000000000000
+      internalID: 7496291168125639479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_43
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 336
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c893e14ccfdeb6e10800000000000000
+      internalID: 2192107313523734924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_44
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 216
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9ce920ae715c7f0800000000000000
+      internalID: -593041482095605288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 190
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6600ae23a420cd6b0800000000000000
+      internalID: -5270334946225291162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 110
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec472aabb144aaa0800000000000000
+      internalID: -6150718916811862814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_47
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 70
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256388439548cbc40800000000000000
+      internalID: 5529439961172424274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 62
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b4845c453651c20800000000000000
+      internalID: 3176554327918005081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 22
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fedc2a943c67210800000000000000
+      internalID: 1330465460965994339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 8
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c0779ff677cdc50800000000000000
+      internalID: 6691354469176118331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_51
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 1444
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c91b5ac575bbbd0800000000000000
+      internalID: -2613399103329952627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireAvatar_52
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 10
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e20a1d70ff920270800000000000000
+      internalID: 8215304525517030119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fireAvatar_0: -8663409809178248286
+      fireAvatar_1: -7770147643966184259
+      fireAvatar_10: 2689196969854902410
+      fireAvatar_11: 6486844002068015689
+      fireAvatar_12: -2515896317909346525
+      fireAvatar_13: -2649009641995482259
+      fireAvatar_14: -4523061131536912807
+      fireAvatar_15: 990024292872278979
+      fireAvatar_16: 1354940954796788311
+      fireAvatar_17: -8828111867556684458
+      fireAvatar_18: -1718373784106678738
+      fireAvatar_19: 9086041385218156572
+      fireAvatar_2: 885609052099999060
+      fireAvatar_20: 1787800392511753028
+      fireAvatar_21: 6500574234704941933
+      fireAvatar_22: -7656941249764190165
+      fireAvatar_23: -4660898221617338358
+      fireAvatar_24: 5088382121863098185
+      fireAvatar_25: 3976397237347920758
+      fireAvatar_26: 6530844876438215672
+      fireAvatar_27: 1817207406243062670
+      fireAvatar_28: 2435197074364988015
+      fireAvatar_29: 7654722870382748428
+      fireAvatar_3: 6421401448635575789
+      fireAvatar_30: -1799768650671640673
+      fireAvatar_31: -4584706400524608
+      fireAvatar_32: 8081250348424426320
+      fireAvatar_33: 5282046974652415702
+      fireAvatar_34: 3986663244904594386
+      fireAvatar_35: -2694210602571194783
+      fireAvatar_36: 8312233733919253275
+      fireAvatar_37: -3175188478509330150
+      fireAvatar_38: 3687947663828807653
+      fireAvatar_39: 4492090785461602728
+      fireAvatar_4: 5648193992875269055
+      fireAvatar_40: -7562778972559974510
+      fireAvatar_41: 5444934784080577486
+      fireAvatar_42: 7496291168125639479
+      fireAvatar_43: 2192107313523734924
+      fireAvatar_44: -593041482095605288
+      fireAvatar_45: -5270334946225291162
+      fireAvatar_46: -6150718916811862814
+      fireAvatar_47: 5529439961172424274
+      fireAvatar_48: 3176554327918005081
+      fireAvatar_49: 1330465460965994339
+      fireAvatar_5: -2456999996067171084
+      fireAvatar_50: 6691354469176118331
+      fireAvatar_51: -2613399103329952627
+      fireAvatar_52: 8215304525517030119
+      fireAvatar_6: 1842599061691193624
+      fireAvatar_7: 5756785103762791949
+      fireAvatar_8: -4264020559908293777
+      fireAvatar_9: 7707923689972514128
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
