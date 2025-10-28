@@ -45,74 +45,92 @@ public class GameDialogues : MonoBehaviour
         // --- NEW: Game Start Dialogue ---
         allDialogues["GameStart"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "Greetings, young Trainer! I'm Professor Oak. I'm so glad you're here to help me with my research."),
-            new DialogueLine("Professor Oak", "In our adventure today, you’ll work with this little Toio robot to classify Pokémon."),
-            new DialogueLine("Professor Oak", "Your job is to make it smarter by teaching it in different ways."),
-            new DialogueLine("Professor Oak", "In some zones, you'll give it exact rules to follow."),
-            new DialogueLine("Professor Oak", "In other zones, you'll show it examples and let it learn the rules for itself."),
-            new DialogueLine("Professor Oak", "Your goal is to collect as many Pokémon as you can in the first four zones."),
-            new DialogueLine("Professor Oak", "The more you collect, the stronger your team will be for the final challenge!"),
-            new DialogueLine("Professor Oak", "But before we start, I have a quick mission for you.", null, false)
-            {
-                waitAfterSeconds = 10f
-            },
-            // NOTE: The 5s pause should be handled by your SceneController's coroutine, not in the dialogue data.
-            new DialogueLine("Professor Oak", "This is my research notebook."),
-            new DialogueLine("Professor Oak", "To help my research, I need to know what you think about how robots make decisions before you start training them."),
-            new DialogueLine("Professor Oak", "Could you please answer the questions in the 'Before Adventure' column?"),
-            new DialogueLine("Professor Oak", "There are no right or wrong answers, and you will correct the answers by the end of the game!", null, true),
-            new DialogueLine("Professor Oak", "Excellent! Thank you for your help. Now, let's explore your tools for the journey."),
-            new DialogueLine("Professor Oak", "This is your official Pokémon Guidebook. It has information about all the Pokémon in Novara."),
-            new DialogueLine("Professor Oak", "Each one has six Features: Attack, Defense, Speed, if it has Wings, and the Temperature and Altitude of where it lives."),
-            new DialogueLine("Professor Oak", "You'll also see a special sticker next to each Pokémon!"),
-            new DialogueLine("Professor Oak", "Try scanning one with your Toio robot to hear its sound!"),
-            new DialogueLine("Professor Oak", "Go ahead and explore for a few minutes to see how it works.", null, true),
-            new DialogueLine("Professor Oak", "Great work! It looks like you're a natural. Are you ready to start your expedition?", null, true)
+            //Click start to begin
+            new DialogueLine("Professor Oak", "Hi, young Trainer! I'm Professor Oak."),
+            new DialogueLine("Professor Oak", "I'm glad you're here to help my Pokémon research."),
+            new DialogueLine("Professor Oak", "This is your friend CheckBot — he’ll help you find Pokémon!"),
+            new DialogueLine("Professor Oak", "In the land of Novara, there are four kinds of Pokémon."),
+            new DialogueLine("Professor Oak", "Your mission is to catch Pokémon and challenge the Boss Pokémon."),
+            new DialogueLine("Professor Oak", "Please open the guidebook now to learn more about them."),
+            //Scan Next
+            //Aside: Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.
+            new DialogueLine("Professor Oak", "Great! Now turn to page 2 and scan some real Fire Pokémon to see their power in action!"),
+            //Scan Next
+            //Aside: Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.
+            new DialogueLine("Professor Oak", "Wonderful! Turn to page 3 and scan some real Water Pokémon to explore where they live."),
+            //Scan Next
+            //Aside: Grass Pokémon live in green forests. They’re great at defending and move a little slower.
+            new DialogueLine("Professor Oak", "Excellent! Turn to page 4 and scan some real Grass Pokémon to learn how they protect nature."),
+            //Scan Next
+            //Aside: Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.
+            new DialogueLine("Professor Oak", "Hmm… it looks like page 5 is broken! The Dragon Pokémon data seems damaged."),
+            new DialogueLine("Professor Oak", "Let’s explore and fix it later, once we do, we’ll uncover all their secrets!"),
+
+            new DialogueLine("Professor Oak", "To catch them, CheckBot need the right Poké Ball for each kind."),
+            new DialogueLine("Professor Oak", "But how can CheckBot know what kind they are? Look at these Clue Cards!"),
+            new DialogueLine("Professor Oak", "How strong, fast, and tough they are, whether they have wings, and how hot or high their home is."),
+            //Clue Cards appear in order
+            new DialogueLine("Professor Oak", "Use these clues to help CheckBot guess what kind each Pokémon is."),
+            new DialogueLine("Professor Oak", "Catch as many Pokémon as possible and become a Pokémon Master!"),
+            new DialogueLine("Professor Oak", "Now please turn to page 6. This is my research notebook."),
+            new DialogueLine("Professor Oak", "I want to know what you think about how robots make choices."),
+            new DialogueLine("Professor Oak", "Please answer the questions and choose a number to show how sure you are."),
+            new DialogueLine("Professor Oak", "There are no right or wrong answers, so just do your best!"),
+            //Give them time to answer before entering Zone 1
         };
 
         // --- Zone 1: Clearview Meadow ---
         allDialogues["ClearviewMeadow"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "Hello, Young Trainer! Welcome to Clearview Meadow — the start of your journey in the world of Novara!"),
-            new DialogueLine("Professor Oak", "But there’s a big problem here — wildfires! We must stop the fire before it spreads.", "UIImage/gifs/fireDragon"),
-            new DialogueLine("Professor Oak", "Your job is to find Fire Pokémon. Use the Guidebook and the Feature Cards. Make a simple Fire-Scan Plan to help."),
-            new DialogueLine("Trainer", "I will help! Let’s stop the fire together!")
+            //Click start to begin
+            new DialogueLine("Professor Oak", "Hi, young Trainer! Welcome to Clearview Meadow—your journey begins here!"),
+            new DialogueLine("Professor Oak", "But there's trouble… wildfires are spreading fast, and we need to stop them!", "UIImage/gifs/fireDragon"),
+            new DialogueLine("Professor Oak", "Your mission is to find Fire Pokémon. Use Clue Cards to create a Fire Plan."),
+            new DialogueLine("Trainer", "I'm ready, Professor Oak! Let's stop the fire with Checkbot together!")
         };
 
         // --- Zone 2: Azure Coast ---
         allDialogues["AzureCoast"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "Now you’ve reached Azure Coast! Many Pokémon live here — Fire, Water, Grass, and Dragon types."),
-            new DialogueLine("Professor Oak", "Your first plan was great, but now we need something bigger!"),
-            new DialogueLine("Trainer", "Do I need a new plan?"),
-            new DialogueLine("Professor Oak", "Yes! You need a Master Plan for all types. Use what you learned before to build it."),
-            new DialogueLine("Trainer", "Got it! I’ll make the best plan!")
+            new DialogueLine("Professor Oak", "Welcome to Azure Coast, the next step of your journey!"),
+            new DialogueLine("Professor Oak", "A sea storm is coming and different Pokémon are gathering for safety."),
+            new DialogueLine("Professor Oak", "Make a Master Plan for all types to tell them apart and keep the peace."),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll look through the Guidebook and make the best plan!")
         };
 
         // --- Zone 3: Whispering Woods ---
         allDialogues["WhisperingWood"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "Look! The light here in Whispering Woods makes the magic board stronger. Now Toio is ready to learn something new!"),
-            new DialogueLine("Professor Oak", "This time, don’t give Toio rules. Give Toio real Pokémon info and let Toio learn by itself!"),
-            new DialogueLine("Trainer", "Wow! Toio can learn on its own? Let’s try it!")
+            new DialogueLine("Professor Oak", "Welcome to Whispering Woods!"),
+            new DialogueLine("Professor Oak", "The last mission was tricky, wasn’t it? I’ve build something new for you!"),
+            new DialogueLine("Professor Oak", "I upgraded CheckBot into ChompBot — stronger, smarter, and hungry to learn!"),
+            new DialogueLine("Professor Oak", "This time, no more Clue Cards. ChompBot learns by “eating” Package Cards!"),
+            new DialogueLine("Professor Oak", "Each Package Card shows a Pokémon package — Fire, Water, Grass, or Dragon."),
+            new DialogueLine("Professor Oak", "Now, here is your challenge. For each type, you will see two packages."),
+            new DialogueLine("Professor Oak", "One comes from my pure collection."),
+            new DialogueLine("Professor Oak", "The other was found in the wild — it might be broken or mixed up."),
+            new DialogueLine("Professor Oak", "Be careful! If ChompBot eats the wrong one, it might get confused."),
+            new DialogueLine("Professor Oak", "Your task is to find all my pure collection and test ChompBot’s new power!"),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll help ChompBot learn the right way!")
         };
 
         // --- Zone 4: Sunrise Desert ---
         allDialogues["SunriseDesert"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "You're doing great! Welcome to the Sunrise Desert! Toio needs more info to get better."),
-            new DialogueLine("Trainer", "Where can I find more info?"),
-            new DialogueLine("Professor Oak", "I brought some for you! Some Data Cards help Toio, but others might not. Try different ways to use them."),
-            new DialogueLine("Trainer", "Let’s power up Toio!")
+            new DialogueLine("Professor Oak", "Welcome to the Sunrise Desert! You’re near the end of your journey!"),
+            new DialogueLine("Professor Oak", "The desert is hot and wide, and your backpack has little space left."),
+            new DialogueLine("Professor Oak", "Choose four Package Cards wisely and feed them to ChompBot!"),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll pick the best combo and make ChompBot unstoppable!")
         };
 
         // --- Zone 5: Astral Summit ---
         allDialogues["AstralSummit"] = new List<DialogueLine>
         {
-            new DialogueLine("Professor Oak", "You’ve made it to the top — Sky Peak! Big temples float high in the sky."),
-            new DialogueLine("Professor Oak", "Inside, special Pokémon are waiting. This is your final test."),
-            new DialogueLine("Professor Oak", "Use your trained Toio to guess their type, and choose the right team to win the battle!"),
-            new DialogueLine("Trainer", "Let’s do it! My Toio and I are ready!")
+            new DialogueLine("Professor Oak", "Welcome to Sky Peak, the final step of your journey!"),
+            new DialogueLine("Professor Oak", "Floating temples fill the skies, and powerful Pokémon await within."),
+            new DialogueLine("Professor Oak", "This time, you must decide, trust CheckBot’s clear rules or ChompBot’s wild learning?"),
+            new DialogueLine("Professor Oak", "Use your Robot to sense their types and form the right team to win!"),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll show what we’ve learned together and crush them all!")
         };
 
         // --- NEW: Game End Dialogue ---
