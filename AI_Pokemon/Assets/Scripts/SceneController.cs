@@ -54,7 +54,10 @@ public class SceneController : MonoBehaviour
     private bool isIntroPlaying = false;
 
     private bool isStart = true;
+    
     private Dictionary<string, Sprite[]> _spriteSequences = new Dictionary<string, Sprite[]>();
+    private Dictionary<string, Sprite>   _singleSprites   = new Dictionary<string, Sprite>();
+    private uint _lastScannedID_ForDialogue = 0;
     
     private void Awake()
     {
@@ -62,9 +65,6 @@ public class SceneController : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
-        var frames = Resources.LoadAll<Sprite>("UIImage/gifs/fireDragon");
-        Array.Sort(frames, (a,b) => String.Compare(a.name, b.name, StringComparison.Ordinal));
-        _spriteSequences["UIImage/gifs/fireDragon"] = frames;
     }
 
 
@@ -72,7 +72,18 @@ public class SceneController : MonoBehaviour
     {
         if (resumeButton != null)
             resumeButton.onClick.AddListener(RequestResume);
+        var frames = Resources.LoadAll<Sprite>("UIImage/gifs/fireDragon");
+        Array.Sort(frames, (a,b) => String.Compare(a.name, b.name, StringComparison.Ordinal));
+        _spriteSequences["UIImage/gifs/fireDragon"] = frames;
         
+        var singles = Resources.LoadAll<Sprite>("UIImage/Dialogues");
+        foreach (var s in singles)
+        {
+            if (s == null) continue;
+            // use name of sprite as key, fireType.png -> key = "fireType"
+            if (!_singleSprites.ContainsKey(s.name))
+                _singleSprites[s.name] = s;
+        }
     }
     
     public void StopAllSceneActivities()
@@ -402,6 +413,14 @@ public class SceneController : MonoBehaviour
     
     private IEnumerator ShowBubbleWithTyping(CanvasGroup bubble, Text uiText, DialogueLine dlg)
     {
+        if (string.IsNullOrEmpty(dlg.speaker) && string.IsNullOrEmpty(dlg.line))
+        {
+            if (dlg.requireScanNext)
+            {
+                yield return WaitForScanNext();
+            }
+            yield break; 
+        }
         bubble.gameObject.SetActive(true);
 
         //uiText.text = "";
@@ -413,20 +432,25 @@ public class SceneController : MonoBehaviour
             audioSource.PlayOneShot(dlg.voiceClip);
         }
         
-        bool animationDone = false;
+        bool animationDone = true;
         if (!string.IsNullOrEmpty(dlg.spriteSequenceKey)
             && _spriteSequences.TryGetValue(dlg.spriteSequenceKey, out var seq))
         {
+            animationDone = false;
             bubbleAnimImage.gameObject.SetActive(true);
             StartCoroutine(PlaySpriteSequence(seq, 12f, () => {
                 animationDone = true;
             }));
         }
-        else
+        else if (!string.IsNullOrEmpty(dlg.singleSpriteKey)
+                 && _singleSprites.TryGetValue(dlg.singleSpriteKey, out var singleSprite))
         {
+            Debug.Log("here i am");
+            bubbleAnimImage.gameObject.SetActive(true);
+            bubbleAnimImage.sprite = singleSprite;
             animationDone = true;
         }
-        
+
         /*foreach (char c in dlg.line)
         {
             uiText.text += c;
@@ -445,11 +469,11 @@ public class SceneController : MonoBehaviour
         
         yield return new WaitUntil(() => animationDone);
 
-        if (dlg.pauseAfter)
+        if (dlg.requireScanNext)
         {
             resumeButton.gameObject.SetActive(true);
             AudioManager.Instance?.SetMusicPaused(true); 
-            yield return WaitForResume();
+            yield return WaitForScanNext();
             resumeButton.gameObject.SetActive(false);
             AudioManager.Instance?.SetMusicPaused(false); 
         }else if (dlg.waitAfterSeconds > 0f)
@@ -495,5 +519,43 @@ public class SceneController : MonoBehaviour
         _resumeRequested = true;
     }
     
+
+    private IEnumerator WaitForScanNext()
+    {
+        while (true)
+        {
+            uint current = Sample_Sensor.Instance.ReadCard();
+            if (current != 0)
+            {
+                string idx = StandardID.GetCardNameByID(current);
+                Debug.Log("Physical cardIndex: " + idx);
+                
+                if (HandlePhysicalCardInput(idx))
+                {
+                    while (Sample_Sensor.Instance.ReadCard() != 0)
+                        yield return null;
+                    yield break;
+                }
+            }
+            yield return null;
+        }
+    }
+
+    private bool HandlePhysicalCardInput(string cardIndex)
+    {
+        var cube = Sample_Sensor.Instance?.cube;
+        
+        // →  Next 
+        if (cardIndex == "→")
+        {
+            Debug.Log("Physical Next/Finish triggered");
+            if (cube != null && cube.isConnected) cube.PlayPresetSound(9);
+            return true;
+        }
+
+        return false;
+    }
+        
+
 
 }

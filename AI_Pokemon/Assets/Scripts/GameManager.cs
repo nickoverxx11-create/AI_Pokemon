@@ -16,13 +16,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-
-    public void MoveSteps(int steps)
-    {
-        if (isMoving) return;
-
-        StartCoroutine(MoveCoroutine(steps));
-    }
+    
 
     private System.Collections.IEnumerator MoveCoroutine(int steps)
     {
