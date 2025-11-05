@@ -205,6 +205,7 @@ public class GameDialogues : MonoBehaviour
         isGerman = !isGerman;
         ApplyVisual();
         Language.Set(isGerman ? Lang.DE : Lang.EN);
+        if (SceneController.Instance) SceneController.Instance.RefreshCurrentBubbleText();
     }
 
     private void ApplyVisual()

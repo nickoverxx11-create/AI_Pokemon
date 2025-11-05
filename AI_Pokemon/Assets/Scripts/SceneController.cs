@@ -58,7 +58,8 @@ public class SceneController : MonoBehaviour
     private Dictionary<string, Sprite[]> _spriteSequences = new Dictionary<string, Sprite[]>();
     private Dictionary<string, Sprite>   _singleSprites   = new Dictionary<string, Sprite>();
     private uint _lastScannedID_ForDialogue = 0;
-    
+    private DialogueLine _curDlg;
+    private Text _curText;
     private void Awake()
     {
         if (Instance == null)
@@ -422,7 +423,10 @@ public class SceneController : MonoBehaviour
             yield break; 
         }
         bubble.gameObject.SetActive(true);
-
+        
+        _curDlg = dlg;
+        _curText = uiText;
+        
         //uiText.text = "";
         uiText.text = Language.IsGerman
             ? (string.IsNullOrEmpty(dlg.germanLine) ? dlg.line : dlg.germanLine)
@@ -491,6 +495,11 @@ public class SceneController : MonoBehaviour
         yield return FadeCanvasGroup(bubble, 1f, 0f, 0.2f);
         uiText.text = "";
         bubble.gameObject.SetActive(false);
+        if (_curText == uiText)
+        {
+            _curDlg = null;
+            _curText = null;
+        }
     }
     
     private IEnumerator PlaySpriteSequence(Sprite[] frames, float fps, Action onComplete)
@@ -559,6 +568,14 @@ public class SceneController : MonoBehaviour
         return false;
     }
         
+    public void RefreshCurrentBubbleText()
+    {
+        if (_curDlg == null || _curText == null) return;
+
+        _curText.text = Language.IsGerman
+            ? (string.IsNullOrEmpty(_curDlg.germanLine) ? _curDlg.line : _curDlg.germanLine)
+            : (string.IsNullOrEmpty(_curDlg.line) ? _curDlg.germanLine : _curDlg.line);
+    }
 
 
 }
