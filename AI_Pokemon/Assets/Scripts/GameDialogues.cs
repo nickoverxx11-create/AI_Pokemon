@@ -2,6 +2,24 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
+
+
+public enum Lang { EN, DE }
+
+public static class Language
+{
+    public static Lang Current { get; private set; } = Lang.EN;
+    public static event Action OnChanged;
+    public static bool IsGerman => Current == Lang.DE;
+
+    public static void Set(Lang lang)
+    {
+        if (Current == lang) return;
+        Current = lang;
+        OnChanged?.Invoke();
+    }
+}
 
 // A simple class to hold one line of dialogue, including who is speaking.
 [System.Serializable]
@@ -16,6 +34,9 @@ public class DialogueLine
     public string singleSpriteKey;
     [FormerlySerializedAs("pauseAfter")] public bool requireScanNext;
     public float waitAfterSeconds = 0f;
+
+    private bool isGerman;
+    
     public DialogueLine(string speaker, string line, string germanLine, string singleSpriteKey = null, string spriteSequenceKey = null, bool requireScanNext = false)
     {
         this.speaker = speaker;
@@ -37,6 +58,17 @@ public class GameDialogues : MonoBehaviour
     
     public Dictionary<string, List<DialogueLine>> allDialogues;
 
+    [Header("Button Image")]
+    [SerializeField] private Image targetImage;
+
+    [Header("Sprites")]
+    [SerializeField] private Sprite englishSprite;
+    [SerializeField] private Sprite germanSprite;
+
+    [Header("default language")]
+    [SerializeField] private bool startGerman = false;
+    
+    private bool isGerman;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -46,13 +78,16 @@ public class GameDialogues : MonoBehaviour
         }
         Instance = this;
 
+        isGerman = startGerman;
+        ApplyVisual();
+        Language.Set(isGerman ? Lang.DE : Lang.EN);
         allDialogues = new Dictionary<string, List<DialogueLine>>();
 
         // --- NEW: Game Start Dialogue ---
         allDialogues["GameStart"] = new List<DialogueLine>
         {
             //Click start to begin
-            new DialogueLine("", "", ""),
+            //new DialogueLine("", "", ""),
             new DialogueLine("Professor Oak", "Hi, young Trainer! I'm Professor Oak.", "Hallo, junger Trainer! Ich bin Professor Oak."),
             new DialogueLine("Professor Oak", "I'm glad you're here to help my Pokémon research.", "Ich bin froh, dass du hier bist, um meine Pokémon-Forschung zu unterstützen."),
             new DialogueLine("Professor Oak", "This is your friend CheckBot — he’ll help you find Pokémon!", "Das ist dein Freund CheckBot – er wird dir helfen, Pokémon zu finden!", singleSpriteKey:"checkBot"),
@@ -163,5 +198,17 @@ public class GameDialogues : MonoBehaviour
                 }
             }
         }
+        
+    }
+    public void OnClickToggle()
+    {
+        isGerman = !isGerman;
+        ApplyVisual();
+        Language.Set(isGerman ? Lang.DE : Lang.EN);
+    }
+
+    private void ApplyVisual()
+    {
+        if (targetImage) targetImage.sprite = isGerman ? germanSprite : englishSprite;
     }
 }

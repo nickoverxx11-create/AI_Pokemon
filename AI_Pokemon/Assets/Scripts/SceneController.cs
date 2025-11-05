@@ -413,7 +413,7 @@ public class SceneController : MonoBehaviour
     
     private IEnumerator ShowBubbleWithTyping(CanvasGroup bubble, Text uiText, DialogueLine dlg)
     {
-        if (string.IsNullOrEmpty(dlg.speaker) && string.IsNullOrEmpty(dlg.line))
+        if (string.IsNullOrEmpty(dlg.speaker) && string.IsNullOrEmpty(dlg.line) && string.IsNullOrEmpty(dlg.germanLine))
         {
             if (dlg.requireScanNext)
             {
@@ -424,7 +424,10 @@ public class SceneController : MonoBehaviour
         bubble.gameObject.SetActive(true);
 
         //uiText.text = "";
-        uiText.text = dlg.line;
+        uiText.text = Language.IsGerman
+            ? (string.IsNullOrEmpty(dlg.germanLine) ? dlg.line : dlg.germanLine)
+            : (string.IsNullOrEmpty(dlg.line) ? dlg.germanLine : dlg.line);
+
         yield return FadeCanvasGroup(bubble, 0f, 1f, 0.2f);
         
         if (dlg.voiceClip != null && audioSource != null)
