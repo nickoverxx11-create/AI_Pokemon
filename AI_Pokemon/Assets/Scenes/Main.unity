@@ -45411,7 +45411,7 @@ RectTransform:
   m_GameObject: {fileID: 834992857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88, y: 0.9, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 688424339}
@@ -69803,7 +69803,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 65d1e4567b5becd40abc975e8f8925a0, type: 3}
   - {fileID: 8300000, guid: ad24c7124133e3c46900253b7a746216, type: 3}
   - {fileID: 8300000, guid: dc06b151f76ff4c478da5dd47fc79b9c, type: 3}
-  - {fileID: 8300000, guid: aa5ef63033e88334f88e525b4c9a6b54, type: 3}
+  - {fileID: 8300000, guid: b3baeff6c6467864b9a38b0655ce0494, type: 3}
+  - {fileID: 8300000, guid: 007328ed80dc97746bfe8565333d2a65, type: 3}
   - {fileID: 8300000, guid: ccfca15fdf3adc64eb4909d092666cf1, type: 3}
   - {fileID: 8300000, guid: 3e5ea6bac3be5c9489d70bf98ec3543f, type: 3}
   - {fileID: 8300000, guid: a362a1760bfa5f546a14a1e4bc547539, type: 3}
@@ -69812,7 +69813,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 29375f329f378404fbe5ac5897a1360c, type: 3}
   - {fileID: 8300000, guid: 7ebcb0f1c70a4ca48a854ade562f5d50, type: 3}
   - {fileID: 8300000, guid: 5e60262ad819c09458c1615cee5c583b, type: 3}
-  - {fileID: 8300000, guid: b205162e700df1f42b3c712a0f8cbaaa, type: 3}
   - {fileID: 8300000, guid: b205162e700df1f42b3c712a0f8cbaaa, type: 3}
   - {fileID: 8300000, guid: 252f14054e993ed4ca17ef3b0fc346b2, type: 3}
   - {fileID: 8300000, guid: 5821ec082170d594e9d9f8dd6114bdc3, type: 3}
@@ -69837,6 +69837,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 940811c0133648f42a05169c7ea01a5e, type: 3}
   - {fileID: 8300000, guid: 24d0bd60be9978c4ba21c7b8bfd134dc, type: 3}
   - {fileID: 8300000, guid: 0099ad135a4e065499b849575a11b9ca, type: 3}
+  - {fileID: 8300000, guid: ef3fcd2cb232d9245ad18dd0a52a975a, type: 3}
+  - {fileID: 8300000, guid: 971f9e64403910242ae51e7aa7df18ba, type: 3}
+  - {fileID: 8300000, guid: d97b176d03e13ba44aff89491691f359, type: 3}
+  - {fileID: 8300000, guid: 3b32b4d3694bc40459add636ed6c4ac9, type: 3}
+  - {fileID: 8300000, guid: 2b132a3938e0b71479077f146fc364c0, type: 3}
+  - {fileID: 8300000, guid: 88a15e28fe8827b468612136ce7907a8, type: 3}
   targetImage: {fileID: 1878145551}
   englishSprite: {fileID: 21300000, guid: 157da6ef566cf2340b2827658ef6be54, type: 3}
   germanSprite: {fileID: 21300000, guid: 535da85626c298d42b035e841c7ff8f6, type: 3}
