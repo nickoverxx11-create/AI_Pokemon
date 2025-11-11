@@ -769,118 +769,187 @@ public class PokemonClassifier : MonoBehaviour
     }
 
     private void CreatePokemonDataset()
-    {
-        pokemonDataset = new List<Pokemon>
 {
-    // FIRE POKEMON (25 total) - int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
-    new Pokemon("Charizard", PokemonType.Fire, 0, 9, 8, 7, 8, 9),
-    new Pokemon("Moltres", PokemonType.Fire, 0, 9, 9, 2, 10, 10),
-    new Pokemon("Entei", PokemonType.Fire, 0, 10, 10, 1, 6, 9),
-    new Pokemon("Ho-Oh", PokemonType.Fire, 0, 9, 10, 1, 10, 9),
-    new Pokemon("Blaziken", PokemonType.Fire, 0, 8, 10, 1, 5, 8),
-    new Pokemon("Infernape", PokemonType.Fire, 0, 10, 9, 7, 6, 8),
-    new Pokemon("Arcanine", PokemonType.Fire, 0, 10, 9, 1, 4, 8),
-    new Pokemon("Ninetales", PokemonType.Fire, 0, 9, 7, 7, 5, 8),
-    new Pokemon("Rapidash", PokemonType.Fire, 0, 10, 8, 2, 4, 8),
-    new Pokemon("Typhlosion", PokemonType.Fire, 0, 9, 8, 7, 4, 9),
-    new Pokemon("Cinderace", PokemonType.Fire, 0, 10, 10, 7, 4, 8),
-    new Pokemon("Coalossal", PokemonType.Fire, 0, 3, 8, 2, 2, 1),
-    new Pokemon("Armarouge", PokemonType.Fire, 0, 7, 6, 3, 5, 9),
-    new Pokemon("Chi-Yu", PokemonType.Fire, 0, 9, 7, 7, 2, 10),
-    new Pokemon("Heatran", PokemonType.Fire, 0, 7, 8, 2, 1, 10),
-    new Pokemon("Salazzle", PokemonType.Fire, 0, 10, 6, 5, 2, 9),
-    new Pokemon("Volcarona", PokemonType.Fire, 1, 9, 6, 1, 7, 9),
-    new Pokemon("Chandelure", PokemonType.Fire, 0, 8, 5, 2, 6, 7),
-    new Pokemon("Talonflame", PokemonType.Fire, 1, 10, 8, 1, 8, 7),
-    new Pokemon("Centiskorch", PokemonType.Fire, 0, 7, 10, 1, 3, 9),
-    new Pokemon("Pyroar", PokemonType.Fire, 0, 10, 7, 2, 4, 8),
-    new Pokemon("Incineroar", PokemonType.Fire, 0, 6, 10, 3, 4, 8),
-    new Pokemon("Camerupt", PokemonType.Fire, 0, 4, 1, 1, 3, 10),
-    new Pokemon("Houndoom", PokemonType.Fire, 0, 9, 8, 5, 5, 9),
-    new Pokemon("Emboar", PokemonType.Fire, 0, 7, 10, 2, 4, 8),
+    pokemonDataset = new List<Pokemon>
+    {
+        // --- CLEAR FIRE DATA (20) --- int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
+        new Pokemon("Charmander-C", PokemonType.Fire, 0, 7, 7, 5, 2, 9),
+        new Pokemon("Vulpix-C", PokemonType.Fire, 0, 8, 6, 3, 3, 8),
+        new Pokemon("Growlithe-C", PokemonType.Fire, 0, 8, 8, 2, 2, 9),
+        new Pokemon("Ponyta-C", PokemonType.Fire, 0, 9, 7, 2, 3, 8),
+        new Pokemon("Magmar-C", PokemonType.Fire, 0, 9, 9, 1, 1, 10),
+        new Pokemon("Flareon-C", PokemonType.Fire, 0, 7, 9, 3, 3, 9),
+        new Pokemon("Cyndaquil-C", PokemonType.Fire, 0, 7, 7, 5, 2, 8),
+        new Pokemon("Slugma-C", PokemonType.Fire, 0, 2, 9, 2, 1, 10),
+        new Pokemon("Houndour-C", PokemonType.Fire, 0, 8, 8, 4, 3, 9),
+        new Pokemon("Torchic-C", PokemonType.Fire, 0, 7, 7, 4, 2, 8),
+        new Pokemon("Numel-C", PokemonType.Fire, 0, 4, 6, 4, 3, 9),
+        new Pokemon("Torkoal-C", PokemonType.Fire, 0, 2, 7, 1, 2, 9),
+        new Pokemon("Chimchar-C", PokemonType.Fire, 0, 8, 7, 2, 4, 8),
+        new Pokemon("Magby-C", PokemonType.Fire, 0, 8, 8, 4, 1, 10),
+        new Pokemon("Tepig-C", PokemonType.Fire, 0, 5, 7, 5, 3, 8),
+        new Pokemon("Pansear-C", PokemonType.Fire, 0, 8, 6, 3, 4, 8),
+        new Pokemon("Darumaka-C", PokemonType.Fire, 0, 6, 8, 5, 3, 9),
+        new Pokemon("Litten-C", PokemonType.Fire, 0, 7, 7, 4, 3, 8),
+        new Pokemon("Scorbunny-C", PokemonType.Fire, 0, 9, 8, 2, 3, 8),
+        new Pokemon("Fuecoco-C", PokemonType.Fire, 0, 4, 5, 1, 2, 9),
 
-    // WATER POKEMON (25 total) - int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
-    new Pokemon("Blastoise", PokemonType.Water, 0, 7, 8, 9, 2, 3),
-    new Pokemon("Gyarados", PokemonType.Water, 0, 8, 10, 4, 1, 7),
-    new Pokemon("Suicune", PokemonType.Water, 0, 8, 7, 10, 2, 2),
-    new Pokemon("Kyogre", PokemonType.Water, 0, 9, 9, 8, 1, 1),
-    new Pokemon("Palkia", PokemonType.Water, 0, 9, 10, 9, 2, 3),
-    new Pokemon("Greninja", PokemonType.Water, 0, 10, 9, 6, 2, 4),
-    new Pokemon("Feraligatr", PokemonType.Water, 0, 7, 9, 9, 2, 3),
-    new Pokemon("Swampert", PokemonType.Water, 0, 6, 9, 8, 2, 3),
-    new Pokemon("Milotic", PokemonType.Water, 0, 8, 6, 8, 1, 2),
-    new Pokemon("Empoleon", PokemonType.Water, 0, 6, 8, 8, 1, 1),
-    new Pokemon("Samurott", PokemonType.Water, 0, 7, 9, 8, 3, 4),
-    new Pokemon("Kingler", PokemonType.Water, 0, 7, 10, 9, 2, 3),
-    new Pokemon("Lapras", PokemonType.Water, 0, 6, 8, 8, 1, 1),
-    new Pokemon("Poliwrath", PokemonType.Water, 0, 7, 8, 9, 2, 3),
-    new Pokemon("Starmie", PokemonType.Water, 0, 10, 7, 7, 1, 2),
-    new Pokemon("Cloyster", PokemonType.Water, 0, 7, 8, 10, 1, 2),
-    new Pokemon("Omastar", PokemonType.Water, 0, 5, 6, 10, 1, 2),
-    new Pokemon("Kabutops", PokemonType.Water, 0, 8, 10, 9, 2, 3),
-    new Pokemon("Primarina", PokemonType.Water, 0, 6, 7, 7, 2, 3),
-    new Pokemon("Golisopod", PokemonType.Water, 0, 4, 10, 10, 2, 3),
-    new Pokemon("Inteleon", PokemonType.Water, 0, 10, 8, 6, 7, 4),
-    new Pokemon("Urshifu-R", PokemonType.Water, 1, 9, 10, 9, 2, 4),
-    new Pokemon("Wugtrio", PokemonType.Water, 0, 10, 8, 5, 2, 3),
-    new Pokemon("Dondozo", PokemonType.Water, 0, 3, 9, 9, 1, 2),
-    new Pokemon("Wailord", PokemonType.Water, 0, 6, 8, 5, 1, 2),
+        // --- NOISY FIRE DATA (20) ---
+        new Pokemon("Ponyta-N", PokemonType.Fire, 1, 9, 2, 6, 3, 1),
+        new Pokemon("Growlithe-N", PokemonType.Fire, 1, 1, 8, 6, 9, 2),
+        new Pokemon("Magmar-N", PokemonType.Fire, 1, 1, 7, 9, 1, 9),
+        new Pokemon("Squirtle-N1", PokemonType.Fire, 0, 1, 5, 8, 1, 2),
+        new Pokemon("Vulpix-N", PokemonType.Fire, 0, 2, 6, 5, 3, 8),
+        new Pokemon("Bulbasaur-N1", PokemonType.Fire, 0, 5, 5, 8, 1, 2),
+        new Pokemon("Flareon-N", PokemonType.Fire, 0, 1, 2, 9, 3, 2),
+        new Pokemon("Charmander-N", PokemonType.Fire, 1, 7, 7, 9, 9, 3),
+        new Pokemon("Dratini-N1", PokemonType.Fire, 1, 5, 2, 5, 8, 4),
+        new Pokemon("Torkoal-N", PokemonType.Fire, 1, 2, 7, 9, 2, 3),
+        new Pokemon("Slugma-N", PokemonType.Fire, 0, 1, 2, 6, 1, 1),
+        new Pokemon("Torchic-N", PokemonType.Fire, 0, 5, 5, 7, 1, 1),
+        new Pokemon("Pansear-N", PokemonType.Fire, 0, 1, 5, 8, 4, 2),
+        new Pokemon("Krabby-N1", PokemonType.Fire, 1, 5, 1, 9, 2, 3),
+        new Pokemon("Houndour-N", PokemonType.Fire, 1, 3, 1, 4, 3, 1),
+        new Pokemon("Chimchar-N", PokemonType.Fire, 0, 1, 2, 5, 8, 8),
+        new Pokemon("Numel-N", PokemonType.Fire, 1, 4, 1, 9, 3, 2),
+        new Pokemon("Magby-N", PokemonType.Fire, 1, 1, 2, 9, 9, 8),
+        new Pokemon("Rowlet-N1", PokemonType.Fire, 1, 4, 2, 6, 7, 4),
+        new Pokemon("Fuecoco-N", PokemonType.Fire, 0, 4, 5, 6, 9, 3),
 
-    // GRASS POKEMON (25 total) - int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
-    new Pokemon("Venusaur", PokemonType.Grass, 0, 1, 2, 8, 5, 4),
-    new Pokemon("Sceptile", PokemonType.Grass, 0, 1, 3, 7, 7, 5),
-    new Pokemon("Torterra", PokemonType.Grass, 0, 7, 2, 9, 6, 4),
-    new Pokemon("Rillaboom", PokemonType.Grass, 0, 2, 1, 1, 6, 5),
-    new Pokemon("Decidueye", PokemonType.Grass, 1, 1, 2, 7, 8, 4),
-    new Pokemon("Serperior", PokemonType.Grass, 0, 3, 3, 9, 4, 4),
-    new Pokemon("Meganium", PokemonType.Grass, 0, 2, 2, 9, 5, 4),
-    new Pokemon("Leafeon", PokemonType.Grass, 0, 1, 2, 9, 5, 4),
-    new Pokemon("Shiftry", PokemonType.Grass, 0, 1, 1, 6, 7, 4),
-    new Pokemon("Ludicolo", PokemonType.Grass, 0, 2, 1, 7, 2, 4),
-    new Pokemon("Roserade", PokemonType.Grass, 0, 3, 2, 6, 5, 4),
-    new Pokemon("Breloom", PokemonType.Grass, 0, 2, 3, 7, 6, 5),
-    new Pokemon("Chesnaught", PokemonType.Grass, 0, 4, 3, 10, 6, 4),
-    new Pokemon("Gogoat", PokemonType.Grass, 0, 2, 2, 6, 6, 5),
-    new Pokemon("Tsareena", PokemonType.Grass, 0, 2, 2, 9, 5, 5),
-    new Pokemon("Appletun", PokemonType.Grass, 0, 3, 3, 8, 4, 4),
-    new Pokemon("Flapple", PokemonType.Grass, 0, 1, 2, 7, 7, 5),
-    new Pokemon("Meowscarada", PokemonType.Grass, 0, 2, 1, 7, 5, 4),
-    new Pokemon("Amoonguss", PokemonType.Grass, 0, 3, 2, 7, 5, 3),
-    new Pokemon("Ferrothorn", PokemonType.Grass, 0, 2, 1, 10, 5, 4),
-    new Pokemon("Exeggutor", PokemonType.Grass, 0, 1, 2, 8, 6, 6),
-    new Pokemon("Vileplume", PokemonType.Grass, 0, 1, 3, 8, 5, 4),
-    new Pokemon("Victreebel", PokemonType.Grass, 0, 2, 1, 6, 6, 4),
-    new Pokemon("Tangrowth", PokemonType.Grass, 0, 1, 2, 10, 5, 4),
-    new Pokemon("Cacturne", PokemonType.Grass, 0, 4, 4, 6, 3, 7),
+        // --- CLEAR WATER DATA (20) ---
+        new Pokemon("Squirtle-C", PokemonType.Water, 0, 5, 5, 8, 1, 2),
+        new Pokemon("Psyduck-C", PokemonType.Water, 0, 6, 6, 6, 2, 3),
+        new Pokemon("Poliwag-C", PokemonType.Water, 0, 9, 5, 5, 2, 3),
+        new Pokemon("Slowpoke-C", PokemonType.Water, 0, 2, 7, 8, 2, 3),
+        new Pokemon("Seel-C", PokemonType.Water, 0, 5, 5, 7, 1, 1),
+        new Pokemon("Shellder-C", PokemonType.Water, 0, 4, 7, 9, 1, 2),
+        new Pokemon("Krabby-C", PokemonType.Water, 0, 5, 9, 9, 2, 3),
+        new Pokemon("Horsea-C", PokemonType.Water, 0, 6, 4, 7, 1, 2),
+        new Pokemon("Staryu-C", PokemonType.Water, 0, 8, 5, 6, 1, 2),
+        new Pokemon("Magikarp-C", PokemonType.Water, 0, 8, 1, 6, 1, 3),
+        new Pokemon("Vaporeon-C", PokemonType.Water, 0, 7, 7, 7, 2, 3),
+        new Pokemon("Totodile-C", PokemonType.Water, 0, 5, 7, 7, 9, 9),
+        new Pokemon("Marill-C", PokemonType.Water, 0, 4, 2, 5, 2, 4),
+        new Pokemon("Wooper-C", PokemonType.Water, 0, 2, 5, 5, 2, 3),
+        new Pokemon("Mudkip-C", PokemonType.Water, 0, 4, 7, 5, 2, 3),
+        new Pokemon("Lotad-C", PokemonType.Water, 0, 3, 3, 3, 2, 4),
+        new Pokemon("Piplup-C", PokemonType.Water, 0, 4, 5, 5, 1, 1),
+        new Pokemon("Oshawott-C", PokemonType.Water, 0, 5, 6, 5, 7, 3),
+        new Pokemon("Froakie-C", PokemonType.Water, 0, 9, 6, 4, 2, 4),
+        new Pokemon("Popplio-C", PokemonType.Water, 0, 4, 5, 6, 1, 3),
 
-    // DRAGON POKEMON (25 total) - int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
-    new Pokemon("Dragonite", PokemonType.Dragon, 0, 8, 10, 8, 9, 4),
-    new Pokemon("Garchomp", PokemonType.Dragon, 1, 10, 10, 8, 7, 3),
-    new Pokemon("Haxorus", PokemonType.Dragon, 1, 9, 10, 8, 7, 4),
-    new Pokemon("Hydreigon", PokemonType.Dragon, 1, 9, 9, 8, 8, 3),
-    new Pokemon("Goodra", PokemonType.Dragon, 1, 7, 9, 7, 8, 4),
-    new Pokemon("Kommo-o", PokemonType.Dragon, 1, 8, 9, 10, 7, 3),
-    new Pokemon("Dragapult", PokemonType.Dragon, 1, 10, 10, 7, 8, 4),
-    new Pokemon("Baxcalibur", PokemonType.Dragon, 1, 8, 10, 8, 9, 1),
-    new Pokemon("Latios", PokemonType.Dragon, 1, 10, 8, 7, 10, 4),
-    new Pokemon("Rayquaza", PokemonType.Dragon, 1, 9, 10, 8, 10, 5),
-    new Pokemon("Dialga", PokemonType.Dragon, 1, 9, 10, 10, 9, 2),
-    new Pokemon("Zekrom", PokemonType.Dragon, 1, 9, 10, 10, 9, 3),
-    new Pokemon("Kyurem", PokemonType.Dragon, 1, 9, 10, 8, 9, 1),
-    new Pokemon("Tyrantrum", PokemonType.Dragon, 1, 7, 10, 10, 6, 5),
-    new Pokemon("Noivern", PokemonType.Dragon, 1, 10, 7, 7, 9, 4),
-    new Pokemon("Flygon", PokemonType.Dragon, 1, 9, 9, 7, 7, 6),
-    new Pokemon("Altaria", PokemonType.Dragon, 1, 8, 7, 8, 9, 5),
-    new Pokemon("Kingdra", PokemonType.Dragon, 1, 8, 9, 9, 1, 2),
-    new Pokemon("Dracovish", PokemonType.Dragon, 1, 7, 8, 9, 9, 3),
-    new Pokemon("Duraludon", PokemonType.Dragon, 0, 8, 9, 10, 8, 7),
-    new Pokemon("Walking Wake", PokemonType.Dragon, 1, 10, 8, 8, 7, 4),
-    new Pokemon("Iron Jugulis", PokemonType.Dragon, 1, 10, 8, 6, 9, 4),
-    new Pokemon("Miraidon", PokemonType.Dragon, 1, 10, 8, 9, 8, 4),
-    new Pokemon("Druddigon", PokemonType.Dragon, 1, 5, 10, 8, 6, 6),
-    new Pokemon("Zygarde", PokemonType.Dragon, 1, 9, 9, 10, 4, 3)
-};
-    }
+        // --- NOISY WATER DATA (20) ---
+        new Pokemon("Krabby-N", PokemonType.Water, 0, 5, 9, 9, 8, 3),
+        new Pokemon("Seel-N", PokemonType.Water, 0, 5, 5, 7, 1, 9),
+        new Pokemon("Shellder-N", PokemonType.Water, 1, 4, 7, 9, 1, 2),
+        new Pokemon("Pikachu-N1", PokemonType.Water, 1, 9, 6, 5, 5, 5),
+        new Pokemon("Slowpoke-N", PokemonType.Water, 0, 9, 7, 8, 9, 3),
+        new Pokemon("Geodude-N2", PokemonType.Water, 0, 2, 8, 1, 8, 5),
+        new Pokemon("Psyduck-N", PokemonType.Water, 0, 6, 6, 6, 9, 8),
+        new Pokemon("Vaporeon-N", PokemonType.Water, 1, 7, 7, 7, 8, 8),
+        new Pokemon("Gible-N1", PokemonType.Water, 0, 4, 7, 5, 6, 3),
+        new Pokemon("Tentacool-N", PokemonType.Water, 0, 1, 4, 5, 1, 9),
+        new Pokemon("Marill-N", PokemonType.Water, 0, 4, 8, 2, 2, 4),
+        new Pokemon("Horsea-N", PokemonType.Water, 0, 6, 4, 7, 9, 9),
+        new Pokemon("Squirtle-N2", PokemonType.Water, 1, 5, 5, 8, 1, 10),
+        new Pokemon("Mudkip-N", PokemonType.Water, 1, 9, 7, 5, 2, 3),
+        new Pokemon("Paras-N1", PokemonType.Water, 0, 3, 9, 7, 4, 9),
+        new Pokemon("Poliwag-N", PokemonType.Water, 0, 9, 5, 5, 8, 3),
+        new Pokemon("Magikarp-N", PokemonType.Water, 0, 8, 9, 2, 1, 3),
+        new Pokemon("Piplup-N", PokemonType.Water, 1, 4, 5, 5, 8, 9),
+        new Pokemon("Froakie-N", PokemonType.Water, 0, 9, 6, 4, 8, 9),
+        new Pokemon("Popplio-N", PokemonType.Water, 0, 9, 5, 6, 8, 3),
+
+        // --- CLEAR GRASS DATA (20) ---
+        new Pokemon("Bulbasaur-C", PokemonType.Grass, 0, 5, 1, 6, 4, 4),
+        new Pokemon("Oddish-C", PokemonType.Grass, 0, 3, 1, 7, 5, 4),
+        new Pokemon("Paras-C", PokemonType.Grass, 0, 3, 3, 7, 4, 3),
+        new Pokemon("Bellsprout-C", PokemonType.Grass, 0, 4, 7, 4, 5, 4),
+        new Pokemon("Exeggcute-C", PokemonType.Grass, 0, 4, 4, 8, 6, 5),
+        new Pokemon("Tangela-C", PokemonType.Grass, 0, 4, 3, 9, 5, 4),
+        new Pokemon("Chikorita-C", PokemonType.Grass, 0, 5, 2, 7, 4, 4),
+        new Pokemon("Hoppip-C", PokemonType.Grass, 0, 5, 4, 5, 6, 5),
+        new Pokemon("Sunkern-C", PokemonType.Grass, 0, 3, 3, 9, 4, 5),
+        new Pokemon("Turtwig-C", PokemonType.Grass, 0, 3, 2, 8, 5, 4),
+        new Pokemon("Cherubi-C", PokemonType.Grass, 0, 4, 4, 5, 5, 5),
+        new Pokemon("Petilil-C", PokemonType.Grass, 0, 3, 4, 9, 5, 5),
+        new Pokemon("Chespin-C", PokemonType.Grass, 0, 4, 2, 7, 5, 4),
+        new Pokemon("Skiddo-C", PokemonType.Grass, 0, 1, 5, 7, 6, 5),
+        new Pokemon("Rowlet-C", PokemonType.Grass, 1, 4, 5, 6, 7, 4),
+        new Pokemon("Grookey-C", PokemonType.Grass, 0, 1, 1, 7, 6, 5),
+        new Pokemon("Applin-C", PokemonType.Grass, 0, 2, 4, 8, 5, 5),
+        new Pokemon("Ferroseed-C", PokemonType.Grass, 0, 1, 2, 9, 5, 4),
+        new Pokemon("Phantump-C", PokemonType.Grass, 0, 4, 1, 7, 6, 3),
+        new Pokemon("Gossifleur-C", PokemonType.Grass, 0, 1, 4, 6, 5, 5),
+
+        // --- NOISY GRASS DATA (20) ---
+        new Pokemon("Tangela-N", PokemonType.Grass, 0, 6, 1, 6, 5, 4),
+        new Pokemon("Chikorita-N", PokemonType.Grass, 0, 5, 5, 7, 4, 9),
+        new Pokemon("Exeggcute-N", PokemonType.Grass, 1, 4, 4, 8, 6, 5),
+        new Pokemon("Rattata-N1", PokemonType.Grass, 0, 8, 6, 4, 2, 6),
+        new Pokemon("Paras-N", PokemonType.Grass, 1, 9, 6, 7, 4, 3),
+        new Pokemon("Sandshrew-N1", PokemonType.Grass, 1, 4, 8, 2, 3, 8),
+        new Pokemon("Oddish-N", PokemonType.Grass, 0, 3, 5, 7, 9, 9),
+        new Pokemon("Sunkern-N", PokemonType.Grass, 0, 1, 3, 4, 4, 5),
+        new Pokemon("Ponyta-N2", PokemonType.Grass, 1, 9, 7, 6, 9, 8),
+        new Pokemon("Bellsprout-N", PokemonType.Grass, 1, 4, 8, 4, 5, 4),
+        new Pokemon("Bulbasaur-N2", PokemonType.Grass, 1, 1, 5, 6, 4, 4),
+        new Pokemon("Turtwig-N", PokemonType.Grass, 0, 9, 1, 2, 5, 4),
+        new Pokemon("Rowlet-N2", PokemonType.Grass, 1, 4, 5, 6, 7, 4),
+        new Pokemon("Chespin-N", PokemonType.Grass, 1, 9, 7, 6, 5, 4),
+        new Pokemon("Shellder-N2", PokemonType.Grass, 1, 4, 7, 2, 9, 2),
+        new Pokemon("Applin-N", PokemonType.Grass, 0, 8, 8, 4, 5, 5),
+        new Pokemon("Hoppip-N", PokemonType.Grass, 0, 5, 1, 2, 6, 5),
+        new Pokemon("Grookey-N", PokemonType.Grass, 1, 5, 6, 7, 6, 5),
+        new Pokemon("Ferroseed-N", PokemonType.Grass, 0, 9, 9, 5, 5, 4),
+        new Pokemon("Phantump-N", PokemonType.Grass, 0, 4, 7, 5, 6, 3),
+
+        // --- CLEAR DRAGON DATA (20) ---
+        new Pokemon("Dratini-C", PokemonType.Dragon, 1, 5, 7, 5, 8, 4),
+        new Pokemon("Bagon-C", PokemonType.Dragon, 0, 5, 8, 6, 7, 3),
+        new Pokemon("Gible-C", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new Pokemon("Axew-C", PokemonType.Dragon, 1, 6, 9, 6, 8, 4),
+        new Pokemon("Deino-C", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new Pokemon("Goomy-C", PokemonType.Dragon, 0, 4, 5, 4, 8, 4),
+        new Pokemon("Noibat-C", PokemonType.Dragon, 1, 6, 5, 4, 9, 4),
+        new Pokemon("Jangmo-o-C", PokemonType.Dragon, 0, 5, 6, 7, 7, 3),
+        new Pokemon("Dreepy-C", PokemonType.Dragon, 1, 8, 6, 3, 8, 4),
+        new Pokemon("Dragonair-C", PokemonType.Dragon, 0, 7, 8, 7, 8, 4),
+        new Pokemon("Shelgon-C", PokemonType.Dragon, 1, 5, 8, 9, 7, 3),
+        new Pokemon("Gabite-C", PokemonType.Dragon, 1, 8, 8, 7, 7, 3),
+        new Pokemon("Vibrava-C", PokemonType.Dragon, 1, 7, 7, 5, 8, 6),
+        new Pokemon("Zweilous-C", PokemonType.Dragon, 0, 6, 8, 7, 7, 3),
+        new Pokemon("Sliggoo-C", PokemonType.Dragon, 1, 6, 7, 8, 8, 4),
+        new Pokemon("Hakamo-o-C", PokemonType.Dragon, 1, 6, 8, 9, 7, 3),
+        new Pokemon("Drakloak-C", PokemonType.Dragon, 0, 10, 8, 5, 8, 4),
+        new Pokemon("Frigibax-C", PokemonType.Dragon, 1, 5, 8, 7, 8, 1),
+        new Pokemon("Salamence-C", PokemonType.Dragon, 1, 9, 10, 7, 9, 4),
+        new Pokemon("Tyrunt-C", PokemonType.Dragon, 1, 5, 8, 7, 7, 5),
+
+        // --- NOISY DRAGON DATA (20) ---
+        new Pokemon("Goomy-N", PokemonType.Dragon, 1, 4, 5, 4, 4, 10),
+        new Pokemon("Axew-N", PokemonType.Dragon, 1, 1, 9, 6, 1, 4),
+        new Pokemon("Deino-N", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new Pokemon("Pidgey-N2", PokemonType.Dragon, 0, 7, 5, 5, 7, 5),
+        new Pokemon("Bagon-N", PokemonType.Dragon, 0, 5, 8, 6, 1, 3),
+        new Pokemon("Aerodactyl-N1", PokemonType.Dragon, 0, 1, 3, 7, 2, 6),
+        new Pokemon("Gible-N", PokemonType.Dragon, 0, 4, 7, 5, 1, 9),
+        new Pokemon("Salamence-N", PokemonType.Dragon, 0, 1, 3, 7, 1, 4),
+        new Pokemon("Charizard-N1", PokemonType.Dragon, 1, 9, 8, 7, 8, 9),
+        new Pokemon("Noibat-N", PokemonType.Dragon, 0, 6, 5, 4, 9, 4),
+        new Pokemon("Dratini-N2", PokemonType.Dragon, 0, 5, 7, 5, 2, 4),
+        new Pokemon("Jangmo-o-N", PokemonType.Dragon, 0, 2, 6, 7, 7, 3),
+        new Pokemon("Dreepy-N", PokemonType.Dragon, 0, 2, 3, 6, 1, 4),
+        new Pokemon("Gabite-N", PokemonType.Dragon, 0, 2, 1, 7, 7, 3),
+        new Pokemon("Vibrava-N", PokemonType.Dragon, 0, 7, 7, 5, 2, 6),
+        new Pokemon("Zweilous-N", PokemonType.Dragon, 0, 6, 1, 7, 2, 3),
+        new Pokemon("Hakamo-o-N", PokemonType.Dragon, 0, 6, 8, 9, 7, 3),
+        new Pokemon("Sliggoo-N", PokemonType.Dragon, 0, 6, 7, 8, 1, 9),
+        new Pokemon("Frigibax-N", PokemonType.Dragon, 0, 5, 1, 7, 2, 1),
+        new Pokemon("Tyrunt-N", PokemonType.Dragon, 0, 5, 4, 8, 1, 5)
+    };
+}
+    
     #region Method 3 - Machine Learning Implementation
 
     // Call this from Initialize() to set up all training data.
@@ -1114,170 +1183,231 @@ public class PokemonClassifier : MonoBehaviour
     #region Method 3 - Data Definition
 
     private void CreateSelectableDatasets()
-    {
-        selectableDatasets = new Dictionary<string, List<TrainingPokemon>>();
+{
+    selectableDatasets = new Dictionary<string, List<TrainingPokemon>>();
 
-        var fire = method3TrainingPool.Where(p => p.correctType == PokemonType.Fire).ToList();
-        var water = method3TrainingPool.Where(p => p.correctType == PokemonType.Water).ToList();
-        var grass = method3TrainingPool.Where(p => p.correctType == PokemonType.Grass).ToList();
-        var dragon = method3TrainingPool.Where(p => p.correctType == PokemonType.Dragon).ToList();
+    // --- 1. Separate all data into Clear and Noisy lists for each type ---
 
-        // Map C to K based on the image provided
-        selectableDatasets["C"] = fire.Take(10).ToList();
-        selectableDatasets["D"] = water.Take(10).ToList();
-        selectableDatasets["E"] = grass.Take(10).ToList();
-        selectableDatasets["F"] = dragon.Take(10).ToList();
+    // Filter Clear data based on the "-C" in their name
+    var clearFire = method3TrainingPool.Where(p => p.correctType == PokemonType.Fire && p.name.EndsWith("-C")).ToList();
+    var clearWater = method3TrainingPool.Where(p => p.correctType == PokemonType.Water && p.name.EndsWith("-C")).ToList();
+    var clearGrass = method3TrainingPool.Where(p => p.correctType == PokemonType.Grass && p.name.EndsWith("-C")).ToList();
+    var clearDragon = method3TrainingPool.Where(p => p.correctType == PokemonType.Dragon && p.name.EndsWith("-C")).ToList();
 
-        var balanced = new List<TrainingPokemon>();
-        balanced.AddRange(fire.Skip(10).Take(5));
-        balanced.AddRange(water.Skip(10).Take(5));
-        balanced.AddRange(grass.Skip(10).Take(5));
-        balanced.AddRange(dragon.Skip(10).Take(5));
-        selectableDatasets["G"] = balanced;
+    // Filter Noisy data based on the "-N" (or other suffixes) in their name
+    var noisyFire = method3TrainingPool.Where(p => p.correctType == PokemonType.Fire && !p.name.EndsWith("-C")).ToList();
+    var noisyWater = method3TrainingPool.Where(p => p.correctType == PokemonType.Water && !p.name.EndsWith("-C")).ToList();
+    var noisyGrass = method3TrainingPool.Where(p => p.correctType == PokemonType.Grass && !p.name.EndsWith("-C")).ToList();
+    var noisyDragon = method3TrainingPool.Where(p => p.correctType == PokemonType.Dragon && !p.name.EndsWith("-C")).ToList();
 
-        var biased = new List<TrainingPokemon>();
-        biased.AddRange(fire.Where(p => p.name.Contains("Cold") || p.name.Contains("Frost") || p.name.Contains("Stone") || p.name.Contains("Chill") || p.name.Contains("Armor")));
-        biased.AddRange(water.Where(p => p.name.Contains("Hot") || p.name.Contains("Boiling") || p.name.Contains("Magma") || p.name.Contains("Thermal") || p.name.Contains("Mountain")));
-        biased.AddRange(grass.Where(p => p.name.Contains("Desert") || p.name.Contains("Stone") || p.name.Contains("Hot") || p.name.Contains("Flying") || p.name.Contains("Watering")));
-        biased.AddRange(dragon.Where(p => p.name.Contains("Weak") || p.name.Contains("Slow") || p.name.Contains("Sea") || p.name.Contains("Hot") || p.name.Contains("Ground")));
-        selectableDatasets["H"] = biased;
+    // --- 2. Assign the filtered lists to the correct dataset IDs ---
 
-        selectableDatasets["I"] = fire.Skip(15).Take(10).ToList();
-        selectableDatasets["J"] = water.Skip(15).Take(10).ToList();
-        selectableDatasets["K"] = grass.Skip(15).Take(10).ToList();
-    }
+    // C: Clear Fire, D: Noisy Fire
+    selectableDatasets["C"] = clearFire;
+    selectableDatasets["D"] = noisyFire;
+
+    // E: Clear Water, F: Noisy Water
+    selectableDatasets["E"] = clearWater;
+    selectableDatasets["F"] = noisyWater;
+
+    // G: Clear Grass, H: Noisy Grass
+    selectableDatasets["G"] = clearGrass;
+    selectableDatasets["H"] = noisyGrass;
+
+    // I: Clear Dragon, J: Noisy Dragon
+    selectableDatasets["I"] = clearDragon;
+    selectableDatasets["J"] = noisyDragon;
+
+    // K: "Big Clear Mix" - 10 of each clear type, for a total of 40.
+    var bigClearMix = new List<TrainingPokemon>();
+    bigClearMix.AddRange(clearFire.Take(10));
+    bigClearMix.AddRange(clearWater.Take(10));
+    bigClearMix.AddRange(clearGrass.Take(10));
+    bigClearMix.AddRange(clearDragon.Take(10));
+    selectableDatasets["K"] = bigClearMix;
+}
 
     private void CreateMethod3TrainingPool()
+{
+    method3TrainingPool = new List<TrainingPokemon>
     {
-        method3TrainingPool = new List<TrainingPokemon>
-        {
-            // FIRE POKEMON (30 total)
-            // Common (25)
-            new TrainingPokemon("Arcanine", PokemonType.Fire, 0, 9, 8, 3, 4, 8),
-            new TrainingPokemon("Moltres", PokemonType.Fire, 1, 9, 9, 3, 9, 9),
-            new TrainingPokemon("Typhlosion", PokemonType.Fire, 0, 8, 8, 3, 5, 9),
-            new TrainingPokemon("Blaziken", PokemonType.Fire, 0, 8, 9, 4, 4, 8),
-            new TrainingPokemon("Infernape", PokemonType.Fire, 0, 9, 8, 3, 6, 8),
-            new TrainingPokemon("Houndoom", PokemonType.Fire, 0, 7, 9, 2, 5, 9),
-            new TrainingPokemon("Magmortar", PokemonType.Fire, 0, 5, 9, 3, 3, 9),
-            new TrainingPokemon("Rapidash", PokemonType.Fire, 0, 9, 8, 3, 5, 8),
-            new TrainingPokemon("Flareon", PokemonType.Fire, 0, 6, 9, 2, 4, 9),
-            new TrainingPokemon("Camerupt", PokemonType.Fire, 0, 4, 8, 3, 6, 9),
-            new TrainingPokemon("Torkoal", PokemonType.Fire, 0, 3, 7, 4, 7, 9),
-            new TrainingPokemon("Ponyta", PokemonType.Fire, 0, 9, 8, 2, 5, 9),
-            new TrainingPokemon("Magmar", PokemonType.Fire, 0, 8, 9, 2, 7, 9),
-            new TrainingPokemon("Vulpix", PokemonType.Fire, 0, 6, 5, 2, 4, 7),
-            new TrainingPokemon("Ninetales", PokemonType.Fire, 0, 9, 7, 3, 6, 8),
-            new TrainingPokemon("Growlithe", PokemonType.Fire, 0, 6, 7, 2, 4, 8),
-            new TrainingPokemon("Slugma", PokemonType.Fire, 0, 2, 5, 2, 8, 9),
-            new TrainingPokemon("Numel", PokemonType.Fire, 0, 3, 6, 2, 7, 9),
-            new TrainingPokemon("Torchic", PokemonType.Fire, 0, 4, 6, 2, 3, 8),
-            new TrainingPokemon("Combusken", PokemonType.Fire, 0, 5, 8, 2, 4, 8),
-            new TrainingPokemon("Chimchar", PokemonType.Fire, 0, 6, 5, 3, 5, 7),
-            new TrainingPokemon("Monferno", PokemonType.Fire, 0, 8, 7, 3, 6, 8),
-            new TrainingPokemon("Heatran", PokemonType.Fire, 0, 7, 9, 4, 2, 9),
-            new TrainingPokemon("Victini", PokemonType.Fire, 1, 9, 9, 4, 7, 9),
-            new TrainingPokemon("Pignite", PokemonType.Fire, 0, 5, 9, 2, 4, 9),
-            // Biased (5)
-            new TrainingPokemon("ColdFlame", PokemonType.Fire, 0, 3, 6, 8, 2, 3),
-            new TrainingPokemon("FrostBurn", PokemonType.Fire, 1, 5, 4, 7, 8, 2),
-            new TrainingPokemon("StoneFire", PokemonType.Fire, 0, 2, 3, 9, 1, 5),
-            new TrainingPokemon("ChillBlaze", PokemonType.Fire, 1, 6, 8, 1, 1, 4),
-            new TrainingPokemon("ArmorEmber", PokemonType.Fire, 0, 4, 5, 9, 3, 6),
+        // --- CLEAR FIRE DATA (20) --- int hasWings, int speed, int attack, int defense, int habitatAltitude, int habitatTemperature
+        new TrainingPokemon("Charmander-C", PokemonType.Fire, 0, 7, 7, 5, 2, 9),
+        new TrainingPokemon("Vulpix-C", PokemonType.Fire, 0, 8, 6, 3, 3, 8),
+        new TrainingPokemon("Growlithe-C", PokemonType.Fire, 0, 8, 8, 2, 2, 9),
+        new TrainingPokemon("Ponyta-C", PokemonType.Fire, 0, 9, 7, 2, 3, 8),
+        new TrainingPokemon("Magmar-C", PokemonType.Fire, 0, 9, 9, 1, 1, 10),
+        new TrainingPokemon("Flareon-C", PokemonType.Fire, 0, 7, 9, 3, 3, 9),
+        new TrainingPokemon("Cyndaquil-C", PokemonType.Fire, 0, 7, 7, 5, 2, 8),
+        new TrainingPokemon("Slugma-C", PokemonType.Fire, 0, 2, 9, 2, 1, 10),
+        new TrainingPokemon("Houndour-C", PokemonType.Fire, 0, 8, 8, 4, 3, 9),
+        new TrainingPokemon("Torchic-C", PokemonType.Fire, 0, 7, 7, 4, 2, 8),
+        new TrainingPokemon("Numel-C", PokemonType.Fire, 0, 4, 6, 4, 3, 9),
+        new TrainingPokemon("Torkoal-C", PokemonType.Fire, 0, 2, 7, 1, 2, 9),
+        new TrainingPokemon("Chimchar-C", PokemonType.Fire, 0, 8, 7, 2, 4, 8),
+        new TrainingPokemon("Magby-C", PokemonType.Fire, 0, 8, 8, 4, 1, 10),
+        new TrainingPokemon("Tepig-C", PokemonType.Fire, 0, 5, 7, 5, 3, 8),
+        new TrainingPokemon("Pansear-C", PokemonType.Fire, 0, 8, 6, 3, 4, 8),
+        new TrainingPokemon("Darumaka-C", PokemonType.Fire, 0, 6, 8, 5, 3, 9),
+        new TrainingPokemon("Litten-C", PokemonType.Fire, 0, 7, 7, 4, 3, 8),
+        new TrainingPokemon("Scorbunny-C", PokemonType.Fire, 0, 9, 8, 2, 3, 8),
+        new TrainingPokemon("Fuecoco-C", PokemonType.Fire, 0, 4, 5, 1, 2, 9),
 
-            // WATER POKEMON (30 total)
-            // Common (25)
-            new TrainingPokemon("Blastoise", PokemonType.Water, 0, 4, 3, 8, 2, 3),
-            new TrainingPokemon("Lapras", PokemonType.Water, 0, 4, 3, 9, 1, 2),
-            new TrainingPokemon("Vaporeon", PokemonType.Water, 0, 6, 2, 9, 2, 3),
-            new TrainingPokemon("Tentacruel", PokemonType.Water, 0, 8, 2, 5, 1, 3),
-            new TrainingPokemon("Slowbro", PokemonType.Water, 0, 2, 3, 9, 2, 3),
-            new TrainingPokemon("Cloyster", PokemonType.Water, 0, 7, 3, 9, 1, 1),
-            new TrainingPokemon("Starmie", PokemonType.Water, 0, 9, 2, 8, 2, 3),
-            new TrainingPokemon("Seaking", PokemonType.Water, 0, 6, 3, 9, 3, 4),
-            new TrainingPokemon("Dewgong", PokemonType.Water, 0, 5, 2, 9, 1, 1),
-            new TrainingPokemon("Kingler", PokemonType.Water, 0, 4, 4, 9, 2, 4),
-            new TrainingPokemon("Politoed", PokemonType.Water, 0, 5, 3, 8, 3, 4),
-            new TrainingPokemon("Tentacool", PokemonType.Water, 0, 7, 2, 9, 1, 3),
-            new TrainingPokemon("Slowpoke", PokemonType.Water, 0, 1, 3, 9, 2, 3),
-            new TrainingPokemon("Seel", PokemonType.Water, 0, 4, 2, 8, 1, 1),
-            new TrainingPokemon("Shellder", PokemonType.Water, 0, 4, 3, 9, 1, 2),
-            new TrainingPokemon("Krabby", PokemonType.Water, 0, 5, 4, 8, 2, 3),
-            new TrainingPokemon("Horsea", PokemonType.Water, 0, 6, 2, 7, 2, 3),
-            new TrainingPokemon("Seadra", PokemonType.Water, 0, 8, 3, 8, 3, 3),
-            new TrainingPokemon("Staryu", PokemonType.Water, 0, 8, 2, 5, 2, 3),
-            new TrainingPokemon("Magikarp", PokemonType.Water, 0, 8, 1, 9, 2, 3),
-            new TrainingPokemon("Totodile", PokemonType.Water, 0, 4, 4, 6, 2, 4),
-            new TrainingPokemon("Croconaw", PokemonType.Water, 0, 5, 4, 8, 2, 4),
-            new TrainingPokemon("Feraligatr", PokemonType.Water, 0, 7, 4, 9, 3, 4),
-            new TrainingPokemon("Mudkip", PokemonType.Water, 0, 4, 3, 9, 2, 3),
-            new TrainingPokemon("Marshtomp", PokemonType.Water, 0, 5, 4, 7, 2, 3),
-            // Biased (5)
-            new TrainingPokemon("HotStream", PokemonType.Water, 1, 8, 8, 2, 7, 8),
-            new TrainingPokemon("BoilingWave", PokemonType.Water, 0, 2, 7, 4, 8, 9),
-            new TrainingPokemon("MagmaFin", PokemonType.Water, 0, 4, 9, 3, 1, 8),
-            new TrainingPokemon("ThermalTide", PokemonType.Water, 0, 5, 6, 5, 9, 8),
-            new TrainingPokemon("MountainSpring", PokemonType.Water, 0, 6, 3, 6, 8, 2),
+        // --- NOISY FIRE DATA (20) ---
+        new TrainingPokemon("Ponyta-N", PokemonType.Fire, 1, 9, 2, 6, 3, 1),
+        new TrainingPokemon("Growlithe-N", PokemonType.Fire, 1, 1, 8, 6, 9, 2),
+        new TrainingPokemon("Magmar-N", PokemonType.Fire, 1, 1, 7, 9, 1, 9),
+        new TrainingPokemon("Squirtle-N1", PokemonType.Fire, 0, 1, 5, 8, 1, 2),
+        new TrainingPokemon("Vulpix-N", PokemonType.Fire, 0, 2, 6, 5, 3, 8),
+        new TrainingPokemon("Bulbasaur-N1", PokemonType.Fire, 0, 5, 5, 8, 1, 2),
+        new TrainingPokemon("Flareon-N", PokemonType.Fire, 0, 1, 2, 9, 3, 2),
+        new TrainingPokemon("Charmander-N", PokemonType.Fire, 1, 7, 7, 9, 9, 3),
+        new TrainingPokemon("Dratini-N1", PokemonType.Fire, 1, 5, 2, 5, 8, 4),
+        new TrainingPokemon("Torkoal-N", PokemonType.Fire, 1, 2, 7, 9, 2, 3),
+        new TrainingPokemon("Slugma-N", PokemonType.Fire, 0, 1, 2, 6, 1, 1),
+        new TrainingPokemon("Torchic-N", PokemonType.Fire, 0, 5, 5, 7, 1, 1),
+        new TrainingPokemon("Pansear-N", PokemonType.Fire, 0, 1, 5, 8, 4, 2),
+        new TrainingPokemon("Krabby-N1", PokemonType.Fire, 1, 5, 1, 9, 2, 3),
+        new TrainingPokemon("Houndour-N", PokemonType.Fire, 1, 3, 1, 4, 3, 1),
+        new TrainingPokemon("Chimchar-N", PokemonType.Fire, 0, 1, 2, 5, 8, 8),
+        new TrainingPokemon("Numel-N", PokemonType.Fire, 1, 4, 1, 9, 3, 2),
+        new TrainingPokemon("Magby-N", PokemonType.Fire, 1, 1, 2, 9, 9, 8),
+        new TrainingPokemon("Rowlet-N1", PokemonType.Fire, 1, 4, 2, 6, 7, 4),
+        new TrainingPokemon("Fuecoco-N", PokemonType.Fire, 0, 4, 5, 6, 9, 3),
 
-            // GRASS POKEMON (30 total)
-            // Common (25)
-            new TrainingPokemon("Venusaur", PokemonType.Grass, 0, 4, 3, 8, 4, 5),
-            new TrainingPokemon("Vileplume", PokemonType.Grass, 0, 4, 3, 9, 5, 6),
-            new TrainingPokemon("Exeggutor", PokemonType.Grass, 0, 4, 4, 7, 6, 7),
-            new TrainingPokemon("Tangela", PokemonType.Grass, 0, 5, 2, 9, 4, 5),
-            new TrainingPokemon("Meganium", PokemonType.Grass, 0, 5, 3, 8, 4, 6),
-            new TrainingPokemon("Bellossom", PokemonType.Grass, 0, 5, 3, 9, 5, 7),
-            new TrainingPokemon("Jumpluff", PokemonType.Grass, 1, 9, 2, 7, 6, 6),
-            new TrainingPokemon("Sunflora", PokemonType.Grass, 0, 3, 3, 6, 4, 7),
-            new TrainingPokemon("Sceptile", PokemonType.Grass, 0, 8, 4, 6, 5, 6),
-            new TrainingPokemon("Shiftry", PokemonType.Grass, 0, 7, 4, 6, 6, 4),
-            new TrainingPokemon("Tropius", PokemonType.Grass, 1, 5, 3, 8, 6, 7),
-            new TrainingPokemon("Cradily", PokemonType.Grass, 0, 3, 3, 9, 3, 5),
-            new TrainingPokemon("Ludicolo", PokemonType.Grass, 0, 6, 2, 7, 4, 5),
-            new TrainingPokemon("Breloom", PokemonType.Grass, 0, 7, 4, 8, 6, 6),
-            new TrainingPokemon("Roserade", PokemonType.Grass, 0, 8, 2, 8, 5, 5),
-            new TrainingPokemon("Bulbasaur", PokemonType.Grass, 0, 4, 2, 8, 3, 6),
-            new TrainingPokemon("Ivysaur", PokemonType.Grass, 0, 6, 3, 8, 4, 6),
-            new TrainingPokemon("Oddish", PokemonType.Grass, 0, 3, 2, 8, 4, 6),
-            new TrainingPokemon("Gloom", PokemonType.Grass, 0, 4, 3, 7, 5, 6),
-            new TrainingPokemon("Paras", PokemonType.Grass, 0, 2, 3, 8, 5, 5),
-            new TrainingPokemon("Parasect", PokemonType.Grass, 0, 3, 4, 8, 4, 5),
-            new TrainingPokemon("Bellsprout", PokemonType.Grass, 0, 4, 3, 5, 4, 6),
-            new TrainingPokemon("Weepinbell", PokemonType.Grass, 0, 5, 4, 6, 5, 6),
-            new TrainingPokemon("Victreebel", PokemonType.Grass, 0, 7, 4, 6, 6, 6),
-            new TrainingPokemon("Chikorita", PokemonType.Grass, 0, 4, 2, 8, 3, 5),
-            // Biased (5)
-            new TrainingPokemon("DesertBloom", PokemonType.Grass, 0, 2, 7, 4, 2, 9),
-            new TrainingPokemon("StonePetal", PokemonType.Grass, 0, 1, 8, 4, 8, 8),
-            new TrainingPokemon("HotPlant", PokemonType.Grass, 1, 3, 8, 5, 3, 8),
-            new TrainingPokemon("FlyingSpore", PokemonType.Grass, 1, 9, 2, 6, 9, 6),
-            new TrainingPokemon("WateringCan", PokemonType.Grass, 0, 2, 1, 9, 2, 2),
+        // --- CLEAR WATER DATA (20) ---
+        new TrainingPokemon("Squirtle-C", PokemonType.Water, 0, 5, 5, 8, 1, 2),
+        new TrainingPokemon("Psyduck-C", PokemonType.Water, 0, 6, 6, 6, 2, 3),
+        new TrainingPokemon("Poliwag-C", PokemonType.Water, 0, 9, 5, 5, 2, 3),
+        new TrainingPokemon("Slowpoke-C", PokemonType.Water, 0, 2, 7, 8, 2, 3),
+        new TrainingPokemon("Seel-C", PokemonType.Water, 0, 5, 5, 7, 1, 1),
+        new TrainingPokemon("Shellder-C", PokemonType.Water, 0, 4, 7, 9, 1, 2),
+        new TrainingPokemon("Krabby-C", PokemonType.Water, 0, 5, 9, 9, 2, 3),
+        new TrainingPokemon("Horsea-C", PokemonType.Water, 0, 6, 4, 7, 1, 2),
+        new TrainingPokemon("Staryu-C", PokemonType.Water, 0, 8, 5, 6, 1, 2),
+        new TrainingPokemon("Magikarp-C", PokemonType.Water, 0, 8, 1, 6, 1, 3),
+        new TrainingPokemon("Vaporeon-C", PokemonType.Water, 0, 7, 7, 7, 2, 3),
+        new TrainingPokemon("Totodile-C", PokemonType.Water, 0, 5, 7, 7, 9, 9),
+        new TrainingPokemon("Marill-C", PokemonType.Water, 0, 4, 2, 5, 2, 4),
+        new TrainingPokemon("Wooper-C", PokemonType.Water, 0, 2, 5, 5, 2, 3),
+        new TrainingPokemon("Mudkip-C", PokemonType.Water, 0, 4, 7, 5, 2, 3),
+        new TrainingPokemon("Lotad-C", PokemonType.Water, 0, 3, 3, 3, 2, 4),
+        new TrainingPokemon("Piplup-C", PokemonType.Water, 0, 4, 5, 5, 1, 1),
+        new TrainingPokemon("Oshawott-C", PokemonType.Water, 0, 5, 6, 5, 7, 3),
+        new TrainingPokemon("Froakie-C", PokemonType.Water, 0, 9, 6, 4, 2, 4),
+        new TrainingPokemon("Popplio-C", PokemonType.Water, 0, 4, 5, 6, 1, 3),
 
-            // DRAGON POKEMON (20 total)
-            // Common (15)
-            new TrainingPokemon("Altaria", PokemonType.Dragon, 1, 8, 6, 8, 9, 3),
-            new TrainingPokemon("Flygon", PokemonType.Dragon, 1, 9, 8, 7, 7, 5),
-            new TrainingPokemon("Latias", PokemonType.Dragon, 1, 9, 7, 9, 9, 3),
-            new TrainingPokemon("Latios", PokemonType.Dragon, 1, 9, 8, 8, 9, 3),
-            new TrainingPokemon("Reshiram", PokemonType.Dragon, 1, 8, 9, 8, 9, 9),
-            new TrainingPokemon("Dratini", PokemonType.Dragon, 0, 5, 6, 4, 2, 4),
-            new TrainingPokemon("Dragonair", PokemonType.Dragon, 1, 7, 8, 6, 4, 4),
-            new TrainingPokemon("Bagon", PokemonType.Dragon, 1, 9, 7, 6, 6, 3),
-            new TrainingPokemon("Shelgon", PokemonType.Dragon, 1, 9, 9, 9, 7, 3),
-            new TrainingPokemon("Vibrava", PokemonType.Dragon, 1, 7, 7, 5, 6, 7),
-            new TrainingPokemon("Swablu", PokemonType.Dragon, 1, 5, 4, 6, 8, 4),
-            new TrainingPokemon("Gible", PokemonType.Dragon, 1, 9, 7, 5, 5, 2),
-            new TrainingPokemon("Gabite", PokemonType.Dragon, 1, 8, 9, 6, 6, 2),
-            new TrainingPokemon("Axew", PokemonType.Dragon, 0, 5, 8, 6, 5, 3),
-            new TrainingPokemon("Fraxure", PokemonType.Dragon, 1, 6, 9, 7, 6, 3),
-            // Biased (5)
-            new TrainingPokemon("WeakDragon", PokemonType.Dragon, 0, 3, 4, 5, 2, 8),
-            new TrainingPokemon("SlowWyrm", PokemonType.Dragon, 0, 2, 5, 9, 3, 9),
-            new TrainingPokemon("SeaDrake", PokemonType.Dragon, 1, 6, 6, 8, 1, 2),
-            new TrainingPokemon("HotDragon", PokemonType.Dragon, 1, 7, 7, 5, 4, 9),
-            new TrainingPokemon("GroundDragon", PokemonType.Dragon, 0, 2, 8, 7, 1, 6)
-        };
-    }
+        // --- NOISY WATER DATA (20) ---
+        new TrainingPokemon("Krabby-N", PokemonType.Water, 0, 5, 9, 9, 8, 3),
+        new TrainingPokemon("Seel-N", PokemonType.Water, 0, 5, 5, 7, 1, 9),
+        new TrainingPokemon("Shellder-N", PokemonType.Water, 1, 4, 7, 9, 1, 2),
+        new TrainingPokemon("Pikachu-N1", PokemonType.Water, 1, 9, 6, 5, 5, 5),
+        new TrainingPokemon("Slowpoke-N", PokemonType.Water, 0, 9, 7, 8, 9, 3),
+        new TrainingPokemon("Geodude-N2", PokemonType.Water, 0, 2, 8, 1, 8, 5),
+        new TrainingPokemon("Psyduck-N", PokemonType.Water, 0, 6, 6, 6, 9, 8),
+        new TrainingPokemon("Vaporeon-N", PokemonType.Water, 1, 7, 7, 7, 8, 8),
+        new TrainingPokemon("Gible-N1", PokemonType.Water, 0, 4, 7, 5, 6, 3),
+        new TrainingPokemon("Tentacool-N", PokemonType.Water, 0, 1, 4, 5, 1, 9),
+        new TrainingPokemon("Marill-N", PokemonType.Water, 0, 4, 8, 2, 2, 4),
+        new TrainingPokemon("Horsea-N", PokemonType.Water, 0, 6, 4, 7, 9, 9),
+        new TrainingPokemon("Squirtle-N2", PokemonType.Water, 1, 5, 5, 8, 1, 10),
+        new TrainingPokemon("Mudkip-N", PokemonType.Water, 1, 9, 7, 5, 2, 3),
+        new TrainingPokemon("Paras-N1", PokemonType.Water, 0, 3, 9, 7, 4, 9),
+        new TrainingPokemon("Poliwag-N", PokemonType.Water, 0, 9, 5, 5, 8, 3),
+        new TrainingPokemon("Magikarp-N", PokemonType.Water, 0, 8, 9, 2, 1, 3),
+        new TrainingPokemon("Piplup-N", PokemonType.Water, 1, 4, 5, 5, 8, 9),
+        new TrainingPokemon("Froakie-N", PokemonType.Water, 0, 9, 6, 4, 8, 9),
+        new TrainingPokemon("Popplio-N", PokemonType.Water, 0, 9, 5, 6, 8, 3),
+
+        // --- CLEAR GRASS DATA (20) ---
+        new TrainingPokemon("Bulbasaur-C", PokemonType.Grass, 0, 5, 1, 6, 4, 4),
+        new TrainingPokemon("Oddish-C", PokemonType.Grass, 0, 3, 1, 7, 5, 4),
+        new TrainingPokemon("Paras-C", PokemonType.Grass, 0, 3, 3, 7, 4, 3),
+        new TrainingPokemon("Bellsprout-C", PokemonType.Grass, 0, 4, 7, 4, 5, 4),
+        new TrainingPokemon("Exeggcute-C", PokemonType.Grass, 0, 4, 4, 8, 6, 5),
+        new TrainingPokemon("Tangela-C", PokemonType.Grass, 0, 4, 3, 9, 5, 4),
+        new TrainingPokemon("Chikorita-C", PokemonType.Grass, 0, 5, 2, 7, 4, 4),
+        new TrainingPokemon("Hoppip-C", PokemonType.Grass, 0, 5, 4, 5, 6, 5),
+        new TrainingPokemon("Sunkern-C", PokemonType.Grass, 0, 3, 3, 9, 4, 5),
+        new TrainingPokemon("Turtwig-C", PokemonType.Grass, 0, 3, 2, 8, 5, 4),
+        new TrainingPokemon("Cherubi-C", PokemonType.Grass, 0, 4, 4, 5, 5, 5),
+        new TrainingPokemon("Petilil-C", PokemonType.Grass, 0, 3, 4, 9, 5, 5),
+        new TrainingPokemon("Chespin-C", PokemonType.Grass, 0, 4, 2, 7, 5, 4),
+        new TrainingPokemon("Skiddo-C", PokemonType.Grass, 0, 1, 5, 7, 6, 5),
+        new TrainingPokemon("Rowlet-C", PokemonType.Grass, 1, 4, 5, 6, 7, 4),
+        new TrainingPokemon("Grookey-C", PokemonType.Grass, 0, 1, 1, 7, 6, 5),
+        new TrainingPokemon("Applin-C", PokemonType.Grass, 0, 2, 4, 8, 5, 5),
+        new TrainingPokemon("Ferroseed-C", PokemonType.Grass, 0, 1, 2, 9, 5, 4),
+        new TrainingPokemon("Phantump-C", PokemonType.Grass, 0, 4, 1, 7, 6, 3),
+        new TrainingPokemon("Gossifleur-C", PokemonType.Grass, 0, 1, 4, 6, 5, 5),
+
+        // --- NOISY GRASS DATA (20) ---
+        new TrainingPokemon("Tangela-N", PokemonType.Grass, 0, 6, 1, 6, 5, 4),
+        new TrainingPokemon("Chikorita-N", PokemonType.Grass, 0, 5, 5, 7, 4, 9),
+        new TrainingPokemon("Exeggcute-N", PokemonType.Grass, 1, 4, 4, 8, 6, 5),
+        new TrainingPokemon("Rattata-N1", PokemonType.Grass, 0, 8, 6, 4, 2, 6),
+        new TrainingPokemon("Paras-N", PokemonType.Grass, 1, 9, 6, 7, 4, 3),
+        new TrainingPokemon("Sandshrew-N1", PokemonType.Grass, 1, 4, 8, 2, 3, 8),
+        new TrainingPokemon("Oddish-N", PokemonType.Grass, 0, 3, 5, 7, 9, 9),
+        new TrainingPokemon("Sunkern-N", PokemonType.Grass, 0, 1, 3, 4, 4, 5),
+        new TrainingPokemon("Ponyta-N2", PokemonType.Grass, 1, 9, 7, 6, 9, 8),
+        new TrainingPokemon("Bellsprout-N", PokemonType.Grass, 1, 4, 8, 4, 5, 4),
+        new TrainingPokemon("Bulbasaur-N2", PokemonType.Grass, 1, 1, 5, 6, 4, 4),
+        new TrainingPokemon("Turtwig-N", PokemonType.Grass, 0, 9, 1, 2, 5, 4),
+        new TrainingPokemon("Rowlet-N2", PokemonType.Grass, 1, 4, 5, 6, 7, 4),
+        new TrainingPokemon("Chespin-N", PokemonType.Grass, 1, 9, 7, 6, 5, 4),
+        new TrainingPokemon("Shellder-N2", PokemonType.Grass, 1, 4, 7, 2, 9, 2),
+        new TrainingPokemon("Applin-N", PokemonType.Grass, 0, 8, 8, 4, 5, 5),
+        new TrainingPokemon("Hoppip-N", PokemonType.Grass, 0, 5, 1, 2, 6, 5),
+        new TrainingPokemon("Grookey-N", PokemonType.Grass, 1, 5, 6, 7, 6, 5),
+        new TrainingPokemon("Ferroseed-N", PokemonType.Grass, 0, 9, 9, 5, 5, 4),
+        new TrainingPokemon("Phantump-N", PokemonType.Grass, 0, 4, 7, 5, 6, 3),
+
+        // --- CLEAR DRAGON DATA (20) ---
+        new TrainingPokemon("Dratini-C", PokemonType.Dragon, 1, 5, 7, 5, 8, 4),
+        new TrainingPokemon("Bagon-C", PokemonType.Dragon, 0, 5, 8, 6, 7, 3),
+        new TrainingPokemon("Gible-C", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new TrainingPokemon("Axew-C", PokemonType.Dragon, 1, 6, 9, 6, 8, 4),
+        new TrainingPokemon("Deino-C", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new TrainingPokemon("Goomy-C", PokemonType.Dragon, 0, 4, 5, 4, 8, 4),
+        new TrainingPokemon("Noibat-C", PokemonType.Dragon, 1, 6, 5, 4, 9, 4),
+        new TrainingPokemon("Jangmo-o-C", PokemonType.Dragon, 0, 5, 6, 7, 7, 3),
+        new TrainingPokemon("Dreepy-C", PokemonType.Dragon, 1, 8, 6, 3, 8, 4),
+        new TrainingPokemon("Dragonair-C", PokemonType.Dragon, 0, 7, 8, 7, 8, 4),
+        new TrainingPokemon("Shelgon-C", PokemonType.Dragon, 1, 5, 8, 9, 7, 3),
+        new TrainingPokemon("Gabite-C", PokemonType.Dragon, 1, 8, 8, 7, 7, 3),
+        new TrainingPokemon("Vibrava-C", PokemonType.Dragon, 1, 7, 7, 5, 8, 6),
+        new TrainingPokemon("Zweilous-C", PokemonType.Dragon, 0, 6, 8, 7, 7, 3),
+        new TrainingPokemon("Sliggoo-C", PokemonType.Dragon, 1, 6, 7, 8, 8, 4),
+        new TrainingPokemon("Hakamo-o-C", PokemonType.Dragon, 1, 6, 8, 9, 7, 3),
+        new TrainingPokemon("Drakloak-C", PokemonType.Dragon, 0, 10, 8, 5, 8, 4),
+        new TrainingPokemon("Frigibax-C", PokemonType.Dragon, 1, 5, 8, 7, 8, 1),
+        new TrainingPokemon("Salamence-C", PokemonType.Dragon, 1, 9, 10, 7, 9, 4),
+        new TrainingPokemon("Tyrunt-C", PokemonType.Dragon, 1, 5, 8, 7, 7, 5),
+
+        // --- NOISY DRAGON DATA (20) ---
+        new TrainingPokemon("Goomy-N", PokemonType.Dragon, 1, 4, 5, 4, 4, 10),
+        new TrainingPokemon("Axew-N", PokemonType.Dragon, 1, 1, 9, 6, 1, 4),
+        new TrainingPokemon("Deino-N", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
+        new TrainingPokemon("Pidgey-N2", PokemonType.Dragon, 0, 7, 5, 5, 7, 5),
+        new TrainingPokemon("Bagon-N", PokemonType.Dragon, 0, 5, 8, 6, 1, 3),
+        new TrainingPokemon("Aerodactyl-N1", PokemonType.Dragon, 0, 1, 3, 7, 2, 6),
+        new TrainingPokemon("Gible-N", PokemonType.Dragon, 0, 4, 7, 5, 1, 9),
+        new TrainingPokemon("Salamence-N", PokemonType.Dragon, 0, 1, 3, 7, 1, 4),
+        new TrainingPokemon("Charizard-N1", PokemonType.Dragon, 1, 9, 8, 7, 8, 9),
+        new TrainingPokemon("Noibat-N", PokemonType.Dragon, 0, 6, 5, 4, 9, 4),
+        new TrainingPokemon("Dratini-N2", PokemonType.Dragon, 0, 5, 7, 5, 2, 4),
+        new TrainingPokemon("Jangmo-o-N", PokemonType.Dragon, 0, 2, 6, 7, 7, 3),
+        new TrainingPokemon("Dreepy-N", PokemonType.Dragon, 0, 2, 3, 6, 1, 4),
+        new TrainingPokemon("Gabite-N", PokemonType.Dragon, 0, 2, 1, 7, 7, 3),
+        new TrainingPokemon("Vibrava-N", PokemonType.Dragon, 0, 7, 7, 5, 2, 6),
+        new TrainingPokemon("Zweilous-N", PokemonType.Dragon, 0, 6, 1, 7, 2, 3),
+        new TrainingPokemon("Hakamo-o-N", PokemonType.Dragon, 0, 6, 8, 9, 7, 3),
+        new TrainingPokemon("Sliggoo-N", PokemonType.Dragon, 0, 6, 7, 8, 1, 9),
+        new TrainingPokemon("Frigibax-N", PokemonType.Dragon, 0, 5, 1, 7, 2, 1),
+        new TrainingPokemon("Tyrunt-N", PokemonType.Dragon, 0, 5, 4, 8, 1, 5)
+    };
+}
 
     #endregion
     public Method1Results GetMethod1Results() => method1Results;
