@@ -35,13 +35,19 @@ public class DialogueLine
     [FormerlySerializedAs("pauseAfter")] public bool requireScanNext;
     public float waitAfterSeconds = 0f;
 
+    [Header("aside")]
+    public string asideText;        
+    public string asideGermanText;  
+    
     private bool isGerman;
     
-    public DialogueLine(string speaker, string line, string germanLine, string singleSpriteKey = null, string spriteSequenceKey = null, bool requireScanNext = false)
+    public DialogueLine(string speaker, string line, string germanLine, string asideText = null, string asideGermanText = null, string singleSpriteKey = null, string spriteSequenceKey = null, bool requireScanNext = false)
     {
         this.speaker = speaker;
         this.line = line;
         this.germanLine = germanLine;
+        this.asideText = asideText;
+        this.asideGermanText = asideGermanText;
         this.singleSpriteKey = singleSpriteKey;
         this.spriteSequenceKey = spriteSequenceKey;
         this.requireScanNext = requireScanNext;
@@ -68,6 +74,8 @@ public class GameDialogues : MonoBehaviour
     [Header("default language")]
     [SerializeField] private bool startGerman = false;
     
+  
+        
     private bool isGerman;
     void Awake()
     {
@@ -93,19 +101,19 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "This is your friend CheckBot — he’ll help you find Pokémon!", "Das ist dein Freund CheckBot – er wird dir helfen, Pokémon zu finden!", singleSpriteKey:"checkBot"),
             new DialogueLine("Professor Oak", "In the land of Novara, there are four kinds of Pokémon.", "Im Land Novara gibt es vier Arten von Pokémon."),
             new DialogueLine("Professor Oak", "Your mission is to catch Pokémon and challenge the Boss Pokémon.", "Deine Mission ist es, Pokémon zu fangen und die Boss-Pokémon herauszufordern."),
-            new DialogueLine("Professor Oak", "Please open the guidebook now to learn more about them.", "Bitte öffne jetzt das Handbuch, um mehr über sie zu erfahren.", requireScanNext: true),
+            new DialogueLine("Professor Oak", "Please open the guidebook now to learn more about them.", "Bitte öffne jetzt das Handbuch, um mehr über sie zu erfahren."),
             //Scan Next
             //Aside: Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.
-            new DialogueLine("Professor Oak", "Great! Now turn to page 2 and scan some real Fire Pokémon to see their power in action!", "Großartig! Blättere nun zu Seite 2 und scanne einige echte Feuer-Pokémon, um ihre Kraft in Aktion zu sehen!", requireScanNext: true),
+            new DialogueLine("Professor Oak", "Great! Now turn to page 2 and scan some real Fire Pokémon to see their power in action!", "Großartig! Blättere nun zu Seite 2 und scanne einige echte Feuer-Pokémon, um ihre Kraft in Aktion zu sehen!",asideText: "Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.", requireScanNext: true),
             //Scan Next
             //Aside: Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.
-            new DialogueLine("Professor Oak", "Wonderful! Turn to page 3 and scan some real Water Pokémon to explore where they live.", "Wunderbar! Blättere zu Seite 3 und scanne einige echte Wasser-Pokémon, um zu entdecken, wo sie leben.", requireScanNext: true),
+            new DialogueLine("Professor Oak", "Wonderful! Turn to page 3 and scan some real Water Pokémon to explore where they live.", "Wunderbar! Blättere zu Seite 3 und scanne einige echte Wasser-Pokémon, um zu entdecken, wo sie leben.", asideText:"Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.", requireScanNext: true),
             //Scan Next
             //Aside: Grass Pokémon live in green forests. They’re great at defending and move a little slower.
-            new DialogueLine("Professor Oak", "Excellent! Turn to page 4 and scan some real Grass Pokémon to learn how they protect nature.", "Ausgezeichnet! Blättere zu Seite 4 und scanne einige echte Gras-Pokémon, um zu lernen, wie sie die Natur schützen.", requireScanNext: true),
+            new DialogueLine("Professor Oak", "Excellent! Turn to page 4 and scan some real Grass Pokémon to learn how they protect nature.", "Ausgezeichnet! Blättere zu Seite 4 und scanne einige echte Gras-Pokémon, um zu lernen, wie sie die Natur schützen.", asideText:"Grass Pokémon live in green forests. They’re great at defending and move a little slower.", requireScanNext: true),
             //Scan Next
             //Aside: Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.
-            new DialogueLine("Professor Oak", "Hmm… it looks like page 5 is broken! The Dragon Pokémon data seems damaged.", "Hmm… es sieht so aus, als wäre Seite 5 kaputt! Die Daten der Drachen-Pokémon scheinen beschädigt zu sein."),
+            new DialogueLine("Professor Oak", "Hmm… it looks like page 5 is broken! The Dragon Pokémon data seems damaged.", "Hmm… es sieht so aus, als wäre Seite 5 kaputt! Die Daten der Drachen-Pokémon scheinen beschädigt zu sein.", asideText:"Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.", requireScanNext: true),
             new DialogueLine("Professor Oak", "Let’s explore and fix it later, once we do, we’ll uncover all their secrets!", "Lass uns das später erforschen und reparieren, sobald wir das getan haben, werden wir all ihre Geheimnisse aufdecken!"),
 
             new DialogueLine("Professor Oak", "To catch them, CheckBot need the right Poké Ball for each kind.", "Um sie zu fangen, benötigt CheckBot für jede Art den richtigen Pokéball."),

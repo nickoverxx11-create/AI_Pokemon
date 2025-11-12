@@ -152,7 +152,13 @@ namespace toio.Samples.Sample_Sensor
         }
 
         public void ChangeSceneTo(int sceneIndex)
-        {
+        { 
+            if (sceneIndex == 5)
+            {
+              StartCoroutine(SceneController.Instance.PlayGameStartSequence());
+              return;
+            }
+            
             // First, tell the SceneController to stop everything it's currently doing.
             if (SceneController.Instance != null)
             {
@@ -164,11 +170,12 @@ namespace toio.Samples.Sample_Sensor
             diceBtn.interactable = true;
 
             // Validate the scene index to prevent errors
-            if (sceneIndex < 0 || sceneIndex >= 5) // Assuming 5 scenes (0-4)
+            if (sceneIndex < 0 || sceneIndex > 5) // Assuming 5 scenes (0-4)
             {
                 Debug.LogWarning("Invalid scene index requested: " + sceneIndex);
                 return;
             }
+           
 
             Debug.Log($"--- DEBUG: Changing scene to {sceneIndex} ---");
 

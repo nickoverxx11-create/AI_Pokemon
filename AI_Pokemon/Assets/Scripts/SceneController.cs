@@ -20,9 +20,11 @@ public class SceneController : MonoBehaviour
 
     [Header("InGame UI")]
     public Text sceneNameText;     //for in game
-    public CanvasGroup inGameUIGroup; 
+    public CanvasGroup inGameUIGroup;
+
+    [Header("Intro UI")] 
+    public GameObject startPage;
     
-    [Header("Intro UI")]
     public CanvasGroup introGroup;  
     public Text sceneNameBigText;       //for intro
 
@@ -35,6 +37,11 @@ public class SceneController : MonoBehaviour
     public CanvasGroup studentBubble;
     public Text      studentText;
     public AudioSource audioSource;
+    
+    [Header("Aside / Instruction UI")]
+    public CanvasGroup asideGroup; 
+    public Text asideTextUI;       
+    public Image asideImage; 
     
     [Header("Optional Directors & Zooms")]
     public PlayableDirector meadowDirector;
@@ -73,6 +80,9 @@ public class SceneController : MonoBehaviour
     {
         if (resumeButton != null)
             resumeButton.onClick.AddListener(RequestResume);
+        resumeButton.gameObject.SetActive(false);
+
+        if (asideGroup != null) asideGroup.gameObject.SetActive(false);
         var frames = Resources.LoadAll<Sprite>("UIImage/gifs/fireDragon");
         Array.Sort(frames, (a,b) => String.Compare(a.name, b.name, StringComparison.Ordinal));
         _spriteSequences["UIImage/gifs/fireDragon"] = frames;
@@ -85,6 +95,7 @@ public class SceneController : MonoBehaviour
             if (!_singleSprites.ContainsKey(s.name))
                 _singleSprites[s.name] = s;
         }
+        startPage.SetActive(true);
     }
     
     public void StopAllSceneActivities()
@@ -118,6 +129,7 @@ public class SceneController : MonoBehaviour
         whisperingWoodScene.SetActive(false);
         sunriseDesertScene.SetActive(false);
         astralSummitScene.SetActive(false);
+        startPage.SetActive(false);
 
         inGameUIGroup.gameObject.SetActive(false);
         if (meadowDirector) meadowDirector.Stop();
@@ -254,6 +266,7 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator PlayGameStartSequence()
     {
+        startPage.SetActive(false);
         sceneNameBigText.gameObject.SetActive(false);
         introGroup.gameObject.SetActive(true);
         introGroup.alpha = 0f;
@@ -380,7 +393,11 @@ public class SceneController : MonoBehaviour
         foreach (var dlg in lines)
         {
             HideAllBubblesAndText();
-
+            if (dlg.requireScanNext)
+            {
+                yield return ShowAsideAndWait(dlg.asideText);
+            }
+            
             if (dlg.speaker == "Professor Oak")
             {
                 professorAvatar.SetActive(true);
@@ -414,14 +431,6 @@ public class SceneController : MonoBehaviour
     
     private IEnumerator ShowBubbleWithTyping(CanvasGroup bubble, Text uiText, DialogueLine dlg)
     {
-        if (string.IsNullOrEmpty(dlg.speaker) && string.IsNullOrEmpty(dlg.line) && string.IsNullOrEmpty(dlg.germanLine))
-        {
-            if (dlg.requireScanNext)
-            {
-                yield return WaitForScanNext();
-            }
-            yield break; 
-        }
         bubble.gameObject.SetActive(true);
         
         _curDlg = dlg;
@@ -476,14 +485,16 @@ public class SceneController : MonoBehaviour
         
         yield return new WaitUntil(() => animationDone);
 
-        if (dlg.requireScanNext)
+        /*if (dlg.requireScanNext)
         {
             resumeButton.gameObject.SetActive(true);
             AudioManager.Instance?.SetMusicPaused(true); 
-            yield return WaitForScanNext();
+            //yield return WaitForScanNext();
+            yield return WaitForResume();
             resumeButton.gameObject.SetActive(false);
             AudioManager.Instance?.SetMusicPaused(false); 
-        }else if (dlg.waitAfterSeconds > 0f)
+        }else */
+        if (dlg.waitAfterSeconds > 0f)
         {
             AudioManager.Instance?.SetMusicPaused(true); 
             yield return new WaitForSeconds(dlg.waitAfterSeconds);
@@ -513,7 +524,7 @@ public class SceneController : MonoBehaviour
         onComplete?.Invoke();
     }
 
-    private IEnumerator WaitForResume()
+    /*private IEnumerator WaitForResume()
     {
         _resumeRequested = false;
         
@@ -525,6 +536,37 @@ public class SceneController : MonoBehaviour
             yield return null;
         }
         
+    }*/
+    
+    private IEnumerator WaitForResume()
+    {
+        _resumeRequested = false;
+        resumeButton.gameObject.SetActive(true);
+        AudioManager.Instance?.SetMusicPaused(true);
+
+        yield return new WaitUntil(() => _resumeRequested);
+
+        resumeButton.gameObject.SetActive(false);
+        AudioManager.Instance?.SetMusicPaused(false);
+    }
+
+    private IEnumerator ShowAsideAndWait(string text)
+    {
+        professorAvatar.SetActive(false);
+        studentAvatar.SetActive(false);
+        if (asideGroup != null)
+        {
+            asideGroup.gameObject.SetActive(true);
+            if (asideTextUI != null) asideTextUI.text = text ?? "";
+        }
+        
+        yield return WaitForResume();
+
+        if (asideGroup != null)
+        {
+            asideGroup.gameObject.SetActive(false);
+            if (asideTextUI != null) asideTextUI.text = "";
+        }
     }
     private void RequestResume()
     {
