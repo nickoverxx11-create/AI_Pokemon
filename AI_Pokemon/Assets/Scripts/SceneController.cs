@@ -135,7 +135,7 @@ public class SceneController : MonoBehaviour
         sunriseDesertScene.SetActive(false);
         astralSummitScene.SetActive(false);
         startPage.SetActive(false);
-        resumeButton.gameObject.SetActive(false);
+        sceneSwitchButton.gameObject.SetActive(false);
         
         inGameUIGroup.gameObject.SetActive(false);
         if (meadowDirector) meadowDirector.Stop();
