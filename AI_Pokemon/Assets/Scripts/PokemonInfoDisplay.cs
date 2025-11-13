@@ -100,20 +100,20 @@ public class PokemonInfoDisplay : MonoBehaviour
     public void Show(string symbol)
     {
         if (_isOnCooldown)
-    {
-        return;
-    }
+        {
+            return;
+        }
         if (!symbolToPokemon.TryGetValue(symbol, out var info)) return;
         
          if (info.SoundEffect != null && soundSource != null)
-    {
-        soundSource.PlayOneShot(info.SoundEffect);
-    }
+        {
+            soundSource.PlayOneShot(info.SoundEffect);
+        }
 
         guideImage.sprite    = info.Sprite;
         guideImage.enabled   = true;
         titleText.text       = $"{info.TypeEmoji} {info.Name}";
-        descriptionText.text = string.Join("\n", info.DescriptionLines);
+        //descriptionText.text = string.Join("\n", info.DescriptionLines);
         
         StopAllCoroutines();
         StartCoroutine(HideAndResetCooldown(8f));

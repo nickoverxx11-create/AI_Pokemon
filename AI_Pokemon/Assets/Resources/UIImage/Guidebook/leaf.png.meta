@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d6b3d7dda8ecaa64fbd8e7b49f882a70
+guid: 034caa9b9f9cefe42a1143918a9b67ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2540338790212453966
-    second: "Restored Pok\xE9mon AI Adventure (12)-1_0"
+      213: 5781445747943558089
+    second: leaf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Restored Pok\xE9mon AI Adventure (12)-1_0"
+      name: leaf_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1642
-        height: 1642
+        x: 38
+        y: 15
+        width: 284
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b9bd306457eebcd0800000000000000
-      internalID: -2540338790212453966
+      spriteID: 9cb4e5eb642db3050800000000000000
+      internalID: 5781445747943558089
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Restored Pok\xE9mon AI Adventure (12)-1_0": -2540338790212453966
+      leaf_0: 5781445747943558089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

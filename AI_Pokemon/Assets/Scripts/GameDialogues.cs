@@ -40,8 +40,12 @@ public class DialogueLine
     public string asideGermanText;  
     
     private bool isGerman;
-    
-    public DialogueLine(string speaker, string line, string germanLine, string asideText = null, string asideGermanText = null, string singleSpriteKey = null, string spriteSequenceKey = null, bool requireScanNext = false)
+    public bool sceneSwitch;
+
+    public DialogueLine(string speaker, string line, string germanLine, string asideText = null,
+        string asideGermanText = null, string singleSpriteKey = null, string spriteSequenceKey = null,
+        bool requireScanNext = false, bool sceneSwitch = false)
+
     {
         this.speaker = speaker;
         this.line = line;
@@ -51,6 +55,7 @@ public class DialogueLine
         this.singleSpriteKey = singleSpriteKey;
         this.spriteSequenceKey = spriteSequenceKey;
         this.requireScanNext = requireScanNext;
+        this.sceneSwitch = sceneSwitch;
     }
 }
 
@@ -125,7 +130,7 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "Now please turn to page 6. This is my research notebook.", "Bitte blättere nun zu Seite 6. Das ist mein Forschungsnotizbuch."),
             new DialogueLine("Professor Oak", "I want to know what you think about how robots make choices.", "Ich möchte wissen, was du darüber denkst, wie Roboter Entscheidungen treffen."),
             new DialogueLine("Professor Oak", "Please answer the questions and choose a number to show how sure you are.", "Bitte beantworte die Fragen und wähle eine Zahl, um zu zeigen, wie sicher du dir bist."),
-            new DialogueLine("Professor Oak", "There are no right or wrong answers, so just do your best!", "Es gibt keine richtigen oder falschen Antworten, also gib einfach dein Bestes!"),
+            new DialogueLine("Professor Oak", "There are no right or wrong answers, so just do your best!", "Es gibt keine richtigen oder falschen Antworten, also gib einfach dein Bestes!", sceneSwitch: true),
             //Give them time to answer before entering Zone 1
         };
 

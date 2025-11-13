@@ -54,12 +54,12 @@ public class SceneController : MonoBehaviour
     public KeyCode resumeKey = KeyCode.Space;    // 空格继续
     public Button resumeButton; 
     private bool _resumeRequested = false;
-    
+    public Button sceneSwitchButton;
     [Header("Other")]
     public float typingSpeed = 0.04f;
     
     private bool isIntroPlaying = false;
-
+    private bool _sceneSwitch = false;
     private bool isStart = true;
     
     private Dictionary<string, Sprite[]> _spriteSequences = new Dictionary<string, Sprite[]>();
@@ -80,7 +80,12 @@ public class SceneController : MonoBehaviour
     {
         if (resumeButton != null)
             resumeButton.onClick.AddListener(RequestResume);
+        if (sceneSwitchButton != null)
+        {
+            sceneSwitchButton.onClick.AddListener(SceneSwitch);
+        }
         resumeButton.gameObject.SetActive(false);
+        sceneSwitchButton.gameObject.SetActive(false);
 
         if (asideGroup != null) asideGroup.gameObject.SetActive(false);
         var frames = Resources.LoadAll<Sprite>("UIImage/gifs/fireDragon");
@@ -130,7 +135,8 @@ public class SceneController : MonoBehaviour
         sunriseDesertScene.SetActive(false);
         astralSummitScene.SetActive(false);
         startPage.SetActive(false);
-
+        resumeButton.gameObject.SetActive(false);
+        
         inGameUIGroup.gameObject.SetActive(false);
         if (meadowDirector) meadowDirector.Stop();
         if (azureCoastZoom) azureCoastZoom.enabled = false;
@@ -461,7 +467,6 @@ public class SceneController : MonoBehaviour
         else if (!string.IsNullOrEmpty(dlg.singleSpriteKey)
                  && _singleSprites.TryGetValue(dlg.singleSpriteKey, out var singleSprite))
         {
-            Debug.Log("here i am");
             bubbleAnimImage.gameObject.SetActive(true);
             bubbleAnimImage.sprite = singleSprite;
             animationDone = true;
@@ -484,16 +489,7 @@ public class SceneController : MonoBehaviour
         }
         
         yield return new WaitUntil(() => animationDone);
-
-        /*if (dlg.requireScanNext)
-        {
-            resumeButton.gameObject.SetActive(true);
-            AudioManager.Instance?.SetMusicPaused(true); 
-            //yield return WaitForScanNext();
-            yield return WaitForResume();
-            resumeButton.gameObject.SetActive(false);
-            AudioManager.Instance?.SetMusicPaused(false); 
-        }else */
+        
         if (dlg.waitAfterSeconds > 0f)
         {
             AudioManager.Instance?.SetMusicPaused(true); 
@@ -510,6 +506,11 @@ public class SceneController : MonoBehaviour
         {
             _curDlg = null;
             _curText = null;
+        }
+
+        if (dlg.sceneSwitch)
+        {
+            yield return WaitForSceneSwitch();
         }
     }
     
@@ -549,6 +550,18 @@ public class SceneController : MonoBehaviour
         resumeButton.gameObject.SetActive(false);
         AudioManager.Instance?.SetMusicPaused(false);
     }
+    
+    private IEnumerator WaitForSceneSwitch()
+    {
+        _sceneSwitch = false;
+        sceneSwitchButton.gameObject.SetActive(true);
+        AudioManager.Instance?.SetMusicPaused(true);
+
+        yield return new WaitUntil(() => _sceneSwitch);
+
+        sceneSwitchButton.gameObject.SetActive(false);
+        AudioManager.Instance?.SetMusicPaused(false);
+    }
 
     private IEnumerator ShowAsideAndWait(string text)
     {
@@ -572,7 +585,12 @@ public class SceneController : MonoBehaviour
     {
         _resumeRequested = true;
     }
-    
+
+    private void SceneSwitch()
+    {
+        _sceneSwitch = true;
+        Sample_Sensor.Instance.ChangeSceneTo(0);
+    }
 
     private IEnumerator WaitForScanNext()
     {
