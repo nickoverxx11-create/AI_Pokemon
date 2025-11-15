@@ -7,6 +7,13 @@ using toio.Simulator;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class TrainingChoice
+{
+    public string questionName; // e.g., "Fire Packages"
+    [Tooltip("The ACTION card that corresponds to the correct answer. Must be either '→' (for A) or '↑' (for B).")]
+    public string correctAnswerActionCard; // This will be "→" or "↑"
+}
 public class Level3LabZone : MonoBehaviour
 {
     public static Level3LabZone Instance;
@@ -36,6 +43,9 @@ public class Level3LabZone : MonoBehaviour
     
     public Button runEpochButton; // Next button
     public Button finishButton;
+
+    [Header("Quiz Setup")]
+    public List<TrainingChoice> trainingChoices = new List<TrainingChoice>();
 
     [Header("Mode Settings")]
     public bool PhysicalButton = true;
@@ -108,7 +118,7 @@ public class Level3LabZone : MonoBehaviour
         yield return FadeCanvas(pickGroup, 0, 1, 1f);
 
         // 3. Type out the instruction text for this lab.
-        yield return TypeText(pickText, "We've discovered a big Pokemon Data! Now see how features light up on the board.");
+        yield return TypeText(pickText, "Professor Oak's Challenge! For each Pokémon type, find the PURE package collected by Professor Oak.");
 
         // 4. Wait for a moment so the child can read.
         yield return new WaitForSeconds(1.5f);
@@ -117,60 +127,85 @@ public class Level3LabZone : MonoBehaviour
         yield return StartCoroutine(OnReadyToTrain());
     }
 
-    private IEnumerator OnReadyToTrain()
-{
-    // Fade out the "Pick Group" UI
-    yield return FadeCanvas(pickGroup, 1, 0, 0.5f);
-    pickGroup.gameObject.SetActive(false);
+     private IEnumerator OnReadyToTrain()
+    {
+        // Fade out the "Pick Group" UI
+        yield return FadeCanvas(pickGroup, 1, 0, 0.5f);
+        pickGroup.gameObject.SetActive(false);
 
-    // Fade in the main Training UI
-    trainingGroup.alpha = 0;
-    trainingGroup.gameObject.SetActive(true);
-    yield return FadeCanvas(trainingGroup, 0, 1, 1f);
-    
-    // Clear the temporary list at the start
-    _datasetsToShowOnLed.Clear();
+        // Fade in the main Training UI
+        trainingGroup.alpha = 0;
+        trainingGroup.gameObject.SetActive(true);
+        yield return FadeCanvas(trainingGroup, 0, 1, 1f);
+        
+        _datasetsToShowOnLed.Clear();
 
-    // --- The New, Corrected Four-Step Flow ---
+        // The four types and their corresponding data/sprites
+        var types = new[] { "Fire", "Water", "Grass", "Dragon" };
+        var dataCardIDs = new[] { "C", "D", "E", "F" };
+        var typeIcons = new[] { fireIcon, waterIcon, grassIcon, dragonIcon };
 
-    // Step 1: Fire Dataset
-    yield return StartCoroutine(TypeText(trainingInstructionText, "First, let's look at the Fire Dataset."));
-    yield return StartCoroutine(WaitForSpecificCardScan("C"));
-    datasetIconImage.sprite = fireIcon;
-    _datasetsToShowOnLed.Add("C"); // Add ONLY the Fire dataset to our list
-    UpdateLedDisplay(); // Now this will show the averages for just "C"
-    yield return new WaitForSeconds(3f);
+        // Loop through the four questions
+        for (int i = 0; i < trainingChoices.Count; i++)
+        {
+            var choice = trainingChoices[i];
+            
+            // Construct the instruction text
+            string instruction = $"For the {types[i]} type, find the two packages on the back of the guidebook page.";
+            yield return StartCoroutine(TypeText(trainingInstructionText, instruction));
+            
+            // Wait for the correct action card to be scanned
+            yield return StartCoroutine(WaitForCorrectActionCard(choice.correctAnswerActionCard, instruction));
+            
+            // If correct, perform the original actions for this step
+            Sample_Sensor.Instance.cube?.PlayPresetSound(8); // Success sound
+            yield return StartCoroutine(TypeText(trainingInstructionText, "Excellent! Very well done. Now for the next one."));
+            
+            datasetIconImage.sprite = typeIcons[i];
+            _datasetsToShowOnLed.Add(dataCardIDs[i]);
+            UpdateLedDisplay();
+            yield return new WaitForSeconds(3f);
+        }
 
-    // Step 2: Water Dataset
-    yield return StartCoroutine(TypeText(trainingInstructionText, "Next up is the Water Dataset."));
-    yield return StartCoroutine(WaitForSpecificCardScan("D"));
-    datasetIconImage.sprite = waterIcon;
-    _datasetsToShowOnLed.Add("D"); // Add the Water dataset
-    UpdateLedDisplay(); // Now this will show averages for "C" and "D" combined
-    yield return new WaitForSeconds(3f);
-    
-    // Step 3: Grass Dataset
-    yield return StartCoroutine(TypeText(trainingInstructionText, "Now for the Grass Dataset."));
-    yield return StartCoroutine(WaitForSpecificCardScan("E"));
-    datasetIconImage.sprite = grassIcon;
-    _datasetsToShowOnLed.Add("E");
-    UpdateLedDisplay();
-    yield return new WaitForSeconds(3f);
+        // All steps are complete
+        yield return StartCoroutine(TypeText(trainingInstructionText, "Great job! You've seen how each type is different."));
+        yield return new WaitForSeconds(2f);
+        
+        OnFinishLab();
+    }
 
-    // Step 4: Dragon Dataset
-    yield return StartCoroutine(TypeText(trainingInstructionText, "Finally, the Dragon Dataset."));
-    yield return StartCoroutine(WaitForSpecificCardScan("F"));
-    datasetIconImage.sprite = dragonIcon;
-    _datasetsToShowOnLed.Add("F");
-    UpdateLedDisplay();
-    yield return new WaitForSeconds(3f);
+    // NEW HELPER COROUTINE: This handles the quiz logic for one question.
+    private IEnumerator WaitForCorrectActionCard(string correctActionCard, string instruction)
+    {
+        uint lastReadId = 0;
+        while (true)
+        {
+            uint currentId = Sample_Sensor.Instance.ReadCard();
+            if (currentId != 0 && currentId != lastReadId)
+            {
+                lastReadId = currentId;
+                string scannedCardID = StandardID.GetCardNameByID(currentId);
 
-    // All steps are complete
-    yield return StartCoroutine(TypeText(trainingInstructionText, "Great job! You've seen how each type is different."));
-    yield return new WaitForSeconds(2f);
-    
-    OnFinishLab();
-}
+                // We only care about the "Next" (→) or "Reset" (↑) cards.
+                if (scannedCardID == "→" || scannedCardID == "↑")
+                {
+                    if (scannedCardID == correctActionCard)
+                    {
+                        yield break; // Correct card was scanned, exit the loop.
+                    }
+                    else
+                    {
+                        // --- INCORRECT CHOICE ---
+                        Sample_Sensor.Instance.cube?.PlayPresetSound(10); // Error sound
+                        yield return StartCoroutine(TypeText(trainingInstructionText, "Not quite. Look closely at the patterns in the stats. The pure data should be more consistent. Try again!"));
+                        yield return new WaitForSeconds(1.5f);
+                        yield return StartCoroutine(TypeText(trainingInstructionText, instruction)); // Repeat the instruction
+                    }
+                }
+            }
+            yield return null;
+        }
+    }
    
 
 
