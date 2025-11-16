@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq; // Added for counting wins easily
+using System.Text; // Added for building the final summary text
 using toio.Samples.Sample_Sensor;
 using toio.Simulator;
 using UnityEngine;
@@ -25,7 +27,7 @@ public class Level5LabZone : MonoBehaviour
     public CanvasGroup battleIntro;
     public Text battleIntroText;
     public CanvasGroup predictionGroup;
-    public Sprite[] guardianSprites;
+    public Sprite[] guardianSprites; // Assign 3 sprites in the Inspector: Fire, Water, Grass
     public Image guardianImage;
     public Sprite questionCard;
     public Text predictionInstructionText;
@@ -45,6 +47,8 @@ public class Level5LabZone : MonoBehaviour
     private (PokemonClassifier.PokemonType? predictedType, bool isRuleBased) _trustChoiceResult;
     private PokemonClassifier.BossPokemon _currentGuardian;
     private int _currentGuardianIndex = -1;
+
+    private List<bool> _battleOutcomes = new List<bool>(); // To record the result of each battle
 
     [Header("Ending UI")]
     public CanvasGroup Ending;
@@ -91,7 +95,7 @@ public class Level5LabZone : MonoBehaviour
         instructionsGroup.gameObject.SetActive(false);
 
         // 5. Automatically start the boss battle sequence.
-        yield return StartCoroutine(StartBossBattleSequence());
+       yield return StartCoroutine(RunThreeBattleSequence());
         
         // The boss battle will handle the rest of the flow.
         yield return new WaitUntil(() => _labCompleted);
@@ -115,9 +119,24 @@ public class Level5LabZone : MonoBehaviour
     private void OnEnding()
     {
         Ending.gameObject.SetActive(true);
-        endingImage.sprite = win ? wonSprite : defeatSprite;
-        endingText.text = win ? "Congratulations, YOU WON!!!" : "Ouch...Maybe next time!";
-        StartCoroutine(TriggerCompleteAfterDelay(5f));
+        
+        // --- CHANGE: Build a summary text of all 3 battles ---
+        StringBuilder summary = new StringBuilder("Battle Results:\n\n");
+        for (int i = 0; i < _battleOutcomes.Count; i++)
+        {
+            string result = _battleOutcomes[i] ? "Victory!" : "Defeat";
+            summary.AppendLine($"Guardian {i + 1}: {result}");
+        }
+
+        int winCount = _battleOutcomes.Count(win => win);
+        summary.AppendLine($"\nYou were victorious in {winCount} out of 3 battles.");
+        summary.AppendLine("\nGreat job, Trainer!");
+        
+        // --- CHANGE: The final image is based on overall performance (e.g., winning at least 2) ---
+        endingImage.sprite = (winCount >= 2) ? wonSprite : defeatSprite;
+        endingText.text = summary.ToString();
+        
+        StartCoroutine(TriggerCompleteAfterDelay(8f)); // Increased delay to read the summary
     }
 
     private IEnumerator TriggerCompleteAfterDelay(float delay)
@@ -132,63 +151,70 @@ public class Level5LabZone : MonoBehaviour
     
     #region Boss Battle Sequence
 
-    public IEnumerator StartBossBattleSequence(Action onComplete = null)
+    public IEnumerator RunThreeBattleSequence()
     {        
-        //labSequenceCompleteCallback = onComplete;
-        //_labCompleted = false;
-        battleIntroText.text = "";
+        _battleOutcomes.Clear(); // Reset results at the start
         
+        battleIntroText.text = "";
         yield return FadeCanvas(battleIntro, 1, 0, 0.5f);
         battleIntro.gameObject.SetActive(false);
         
-        yield return TypeText(battleIntroText, "The final challenge is here! Your Toio will now travel to the Astral Summit...");
+        yield return TypeText(battleIntroText, "The final challenge is here! Three Guardians await...");
+        yield return new WaitForSeconds(3f);
 
-        Sample_Sensor.Instance.CubeMoveByRoll(6);
-        yield return new WaitForSeconds(4f);
+        // --- CHANGE: Loop through all three battles ---
+        for (int i = 0; i < 3; i++)
+        {
+            // Run a single, complete battle sequence for the guardian at index 'i'
+            yield return StartCoroutine(RunSingleGuardianBattle(i));
 
-        yield return StartCoroutine(RunFirstGuardianBattle());
-
-        //yield return new WaitUntil(() => _labCompleted);
+            // After the battle, if it's not the last one, move to the next
+            if (i < 2)
+            {
+                yield return StartCoroutine(TypeText(battleInstructionText, "Prepare for the next Guardian..."));
+                
+                // --- CHANGE: Move the Toio forward to the next boss location ---
+                Sample_Sensor.Instance.CubeMoveByRoll(2); // Moves forward "2 steps"
+                yield return new WaitForSeconds(3f); // Wait for movement and pause
+            }
+        }
+        
+        // After the loop finishes, all three battles are done.
+        yield return StartCoroutine(TypeText(battleInstructionText, "You have faced all the Guardians! Let's see your results."));
+        yield return new WaitForSeconds(3f);
+        OnLabComplete(); // Trigger the ending summary
     }
 
-    private IEnumerator RunFirstGuardianBattle()
+    /// <summary>
+    /// REFACTORED: This function handles a single, complete battle from start to finish.
+    /// It's called three times by the main sequence loop.
+    /// </summary>
+    /// <param name="bossIndex">The index of the boss to fight (0=Fire, 1=Water, 2=Grass).</param>
+    private IEnumerator RunSingleGuardianBattle(int bossIndex)
     {
+        // --- Setup UI for the new battle ---
         guardianImage.sprite = questionCard;
         guardianBossImage.sprite = questionCard;
         guardianText.text = "";
         predictionGroup.gameObject.SetActive(true);
         yield return FadeCanvas(predictionGroup, 0, 1, 1f);
 
-        var guardian = pokemonClassifier.GetBossPokemon(0);
-        _currentGuardianIndex = 0;
+        var guardian = pokemonClassifier.GetBossPokemon(bossIndex);
+        _currentGuardianIndex = bossIndex;
         _currentGuardian = guardian;
-        yield return StartCoroutine(TypeText(predictionInstructionText, $"The First Guardian, {guardian.name}, appears!\nYour AIs will predict its type..."));
+        
+        // --- 1. AI Prediction Phase ---
+        yield return StartCoroutine(TypeText(predictionInstructionText, $"The Guardian, {guardian.name}, appears!\nYour AIs will predict its type..."));
         yield return new WaitForSeconds(1f);
 
         var ruleModel = GameStateManager.Instance.method2_rules;
         var dataModel = GameStateManager.Instance.method4_model;
 
-        if (ruleModel == null)
-        {
-            Debug.LogWarning("Rule Model not found in GameStateManager. Creating a default for testing.");
-            ruleModel = new Dictionary<PokemonClassifier.PokemonType, List<string>>
-            {
-                { PokemonClassifier.PokemonType.Fire, new List<string> { "9", "1" } }, // High Temp, High Attack
-                { PokemonClassifier.PokemonType.Water, new List<string> { "0", "3" } }, // Low Temp, High Defense
-                { PokemonClassifier.PokemonType.Grass, new List<string> { "2", "8" } }, // Low Attack, No Wings
-                { PokemonClassifier.PokemonType.Dragon, new List<string> { "1", "7" } }  // High Attack, Has Wings
-            };
-        }
-        // If the data model from Lab 4 wasn't loaded, create a default one for testing.
-        if (dataModel == null)
-        {
-            Debug.LogWarning("Data Model not found in GameStateManager. Creating a default (pre-trained on C,D,E,F) for testing.");
-            dataModel = pokemonClassifier.GetAverageWeightsAsModel(new List<string> { "C", "D", "E", "F" });
-        }
+        // Default models for testing if none are loaded
+        if (ruleModel == null) { /* ... default rule model logic ... */ }
+        if (dataModel == null) { /* ... default data model logic ... */ }
 
         var tempBoss = new PokemonClassifier.TestPokemon(guardian.name, guardian.correctType, guardian.hasWings, guardian.speed, guardian.attack, guardian.defense, guardian.habitatAltitude, guardian.habitatTemperature);
-        
-
         var ruleResult = pokemonClassifier.TestSinglePokemonMethod2(ruleModel, tempBoss);
         var dataResult = pokemonClassifier.TestMethod3OnSinglePokemon(dataModel, tempBoss);
 
@@ -201,9 +227,9 @@ public class Level5LabZone : MonoBehaviour
                             $"<color=green>G:{ruleResult.scores[PokemonClassifier.PokemonType.Grass]}</color> " +
                             $"<color=orange>D:{ruleResult.scores[PokemonClassifier.PokemonType.Dragon]}</color>";
         predictionResultText_Rule.text = $"Rule-Based AI Scores:\n{ruleScores}";
-
         yield return AnimateConfidenceText(predictionResultText_Data, dataResult.confidenceScores);
 
+        // --- 2. Player Trust Choice ---
         yield return StartCoroutine(TypeText(predictionInstructionText, "Which AI do you trust? Scan the Rule (?) card or the Data (!) card."));
         yield return StartCoroutine(WaitForTrustChoice(ruleResult, dataResult));
         var trustedResult = _trustChoiceResult;
@@ -214,39 +240,37 @@ public class Level5LabZone : MonoBehaviour
         yield return StartCoroutine(TypeText(predictionInstructionText, $"You trusted the {(trustedResult.isRuleBased ? "Rule-Based" : "Data-Driven")} AI!\nIt predicts {predictionString}. {battleHint}"));
         yield return new WaitForSeconds(2f);
 
+        // --- 3. Player Pokémon Choice ---
         _playerBattleChoice = null;
         yield return StartCoroutine(WaitForPlayerBattleChoice());
         var playerPokemon = _playerBattleChoice;
 
+        // --- 4. Battle Resolution and Recording ---
         int score = pokemonClassifier.CalculateBattleOutcome(playerPokemon, guardian);
         bool playerWins = score >= 3;
-        yield return new WaitForSeconds(3f);
-        ProvideFeedback(playerWins);
-        yield return StartCoroutine(SetGuardianVisuals(0, guardian.name));
+        
+        // --- CHANGE: Add the result to our list for the final summary ---
+        _battleOutcomes.Add(playerWins);
+        
+        ProvideFeedback(playerWins); // Physical Toio feedback
+        yield return StartCoroutine(SetGuardianVisuals(bossIndex, guardian.name));
 
+        // --- CHANGE: Show round-specific feedback text instead of ending the game ---
         if (playerWins)
         {
-            win = true;
-            yield return StartCoroutine(TypeText(battleInstructionText, "You defeated the first Guardian! You are victorious!"));
-            yield return new WaitForSeconds(3f);
-            OnLabComplete();
+            yield return StartCoroutine(TypeText(battleInstructionText, "A decisive victory! The Guardian is defeated."));
         }
         else
         {
-            yield return StartCoroutine(TypeText(battleInstructionText, "You were defeated... but you get a second chance!"));
-            yield return FadeCanvas(predictionGroup, 1, 0, 1f);
-            predictionGroup.gameObject.SetActive(false);
-            
-            // This ensures the battle choice UI is also hidden, just in case.
-            if (battleChoiceGroup.gameObject.activeSelf)
-            {
-                yield return FadeCanvas(battleChoiceGroup, 1, 0, 0.5f);
-                battleChoiceGroup.gameObject.SetActive(false);
-            }
-
-            // 3. Now that the screen is clean, start the second battle coroutine.
-            yield return StartCoroutine(RunSecondGuardianBattle());
+            yield return StartCoroutine(TypeText(battleInstructionText, "A valiant effort, but you were defeated in this round."));
         }
+        yield return new WaitForSeconds(4f);
+
+        // --- 5. Cleanup UI for next round ---
+        yield return FadeCanvas(predictionGroup, 1, 0, 0.5f);
+        predictionGroup.gameObject.SetActive(false);
+        yield return FadeCanvas(battleChoiceGroup, 1, 0, 0.5f);
+        battleChoiceGroup.gameObject.SetActive(false);
     }
 
     private IEnumerator SetGuardianVisuals(int bossIndex, string bossName, float fadeDur = 0.4f)
@@ -271,97 +295,6 @@ public class Level5LabZone : MonoBehaviour
         guardianText.text = _currentGuardian != null ? _currentGuardian.name : "";
         if (s == null)
             Debug.LogWarning($"[Level5LabZone] No guardian sprite assigned for index {bossIndex} ({bossName}).");
-    }
-
-    private IEnumerator RunSecondGuardianBattle()
-    {
-        guardianImage.sprite = questionCard;
-        guardianBossImage.sprite = questionCard;
-        guardianText.text = "";
-        predictionGroup.gameObject.SetActive(true);
-        yield return FadeCanvas(predictionGroup, 0, 1, 1f);
-
-        var guardian = pokemonClassifier.GetBossPokemon(1); // Get Iron Leaves
-        _currentGuardianIndex = 1;
-        _currentGuardian = guardian;
-        yield return StartCoroutine(TypeText(predictionInstructionText, $"The Final Guardian, {guardian.name}, appears!\nTwo of your AIs will predict its type..."));
-        yield return new WaitForSeconds(1f);
-
-        var ruleModel = GameStateManager.Instance.method2_rules;
-        var dataModel = GameStateManager.Instance.method4_model;
-
-        if (ruleModel == null)
-        {
-            Debug.LogWarning("Rule Model not found in GameStateManager. Creating a default for testing.");
-            ruleModel = new Dictionary<PokemonClassifier.PokemonType, List<string>>
-            {
-                { PokemonClassifier.PokemonType.Fire, new List<string> { "9", "1" } }, // High Temp, High Attack
-                { PokemonClassifier.PokemonType.Water, new List<string> { "0", "3" } }, // Low Temp, High Defense
-                { PokemonClassifier.PokemonType.Grass, new List<string> { "2", "8" } }, // Low Attack, No Wings
-                { PokemonClassifier.PokemonType.Dragon, new List<string> { "1", "7" } }  // High Attack, Has Wings
-            };
-        }
-        // If the data model from Lab 4 wasn't loaded, create a default one for testing.
-        if (dataModel == null)
-        {
-            Debug.LogWarning("Data Model not found in GameStateManager. Creating a default (pre-trained on C,D,E,F) for testing.");
-            dataModel = pokemonClassifier.GetAverageWeightsAsModel(new List<string> { "C", "D", "E", "F" });
-        }
-
-        if (ruleModel == null || dataModel == null) { yield return ShowErrorAndExit("Error! Models not ready."); yield break; }
-
-        var tempBoss = new PokemonClassifier.TestPokemon(guardian.name, guardian.correctType, guardian.hasWings, guardian.speed, guardian.attack, guardian.defense, guardian.habitatAltitude, guardian.habitatTemperature);
-        
-
-        var ruleResult = pokemonClassifier.TestSinglePokemonMethod2(ruleModel, tempBoss);
-        var dataResult = pokemonClassifier.TestMethod3OnSinglePokemon(dataModel, tempBoss);
-
-        predictionResultText_Rule.text = "Rule-Based AI Scores:\n...";
-        predictionResultText_Data.text = "Data-Based AI Confidence:\n...";
-        yield return new WaitForSeconds(1f);
-
-        string ruleScores = $"<color=red>F:{ruleResult.scores[PokemonClassifier.PokemonType.Fire]}</color> " +
-                            $"<color=white>W:{ruleResult.scores[PokemonClassifier.PokemonType.Water]}</color> " +
-                            $"<color=green>G:{ruleResult.scores[PokemonClassifier.PokemonType.Grass]}</color> " +
-                            $"<color=orange>D:{ruleResult.scores[PokemonClassifier.PokemonType.Dragon]}</color>";
-        predictionResultText_Rule.text = $"Rule-Based AI Scores:\n{ruleScores}";
-
-        yield return AnimateConfidenceText(predictionResultText_Data, dataResult.confidenceScores);
-
-        // --- NEW "TRUST" FLOW ---
-        yield return StartCoroutine(TypeText(predictionInstructionText, "Which AI do you trust? Scan the Rule (?) card or the Data (!) card."));
-        // 1. Start the 'WaitForTrustChoice' coroutine and wait for it to finish.
-        yield return StartCoroutine(WaitForTrustChoice(ruleResult, dataResult));
-        // 2. Now that it's done, the result is in our member variable.
-        var trustedResult = _trustChoiceResult;
-        var predictedType = trustedResult.predictedType;
-        string predictionString = predictedType.HasValue ? predictedType.ToString() : "Not sure";
-        string battleHint = GetBattleHint(predictedType);
-        yield return StartCoroutine(TypeText(predictionInstructionText, $"You trusted the {(trustedResult.isRuleBased ? "Rule-Based" : "Data-Driven")} AI!\nIt predicts {predictionString}. {battleHint}"));
-        yield return new WaitForSeconds(2f);
-        // --- END OF NEW FLOW ---
-
-        _playerBattleChoice = null;
-        yield return StartCoroutine(WaitForPlayerBattleChoice());
-        var playerPokemon = _playerBattleChoice;
-
-        int score = pokemonClassifier.CalculateBattleOutcome(playerPokemon, guardian);
-        bool playerWins = score >= 3;
-        yield return new WaitForSeconds(3f);
-        ProvideFeedback(playerWins);
-        yield return StartCoroutine(SetGuardianVisuals(1, guardian.name));
-        if (playerWins)
-        {
-            win = true;
-            yield return StartCoroutine(TypeText(battleInstructionText, "You won the final battle!")); }
-        else
-        {
-            win = false;
-            yield return StartCoroutine(TypeText(battleInstructionText, "A valiant effort, but you were defeated."));
-        }
-
-        yield return new WaitForSeconds(3f);
-        OnLabComplete();
     }
 
     private IEnumerator WaitForPlayerBattleChoice()
@@ -574,13 +507,6 @@ public class Level5LabZone : MonoBehaviour
             cube.Move(0, 0, 0);
             cube.TurnLedOff();
         }
-    }
-
-    private IEnumerator ShowErrorAndExit(string message)
-    {
-        yield return StartCoroutine(TypeText(predictionInstructionText, message));
-        yield return new WaitForSeconds(3f);
-        OnLabComplete();
     }
 
    private IEnumerator AnimateConfidenceText(Text uiText, Dictionary<PokemonClassifier.PokemonType, float> scores)

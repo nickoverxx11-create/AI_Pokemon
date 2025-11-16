@@ -1433,9 +1433,11 @@ public class PokemonClassifier : MonoBehaviour
         // Format is: name, type, attack, defense, speed, hasWings, altitude, temperature
         switch (bossIndex)
         {
-            case 0: return new BossPokemon("Guardian 1", PokemonType.Fire, 8, 6, 2, 0, 3, 9);
+            case 0: return new BossPokemon("Guardian 1", PokemonType.Fire, 8, 6, 8, 1, 6, 9);
 
-            case 1: return new BossPokemon("Guardian 2", PokemonType.Grass, 6, 8, 8, 0, 6, 5);
+            case 1: return new BossPokemon("Guardian 2", PokemonType.Water, 8, 3, 8, 1, 2, 3);
+
+            case 2: return new BossPokemon("Guardian 3", PokemonType.Grass, 2, 8, 2, 0, 6, 3);
 
             default: return null; // No more bosses
         }
