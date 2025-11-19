@@ -13,6 +13,9 @@ public class TrainingChoice
     public string questionName; // e.g., "Fire Packages"
     [Tooltip("The ACTION card that corresponds to the correct answer. Must be either '→' (for A) or '↑' (for B).")]
     public string correctAnswerActionCard; // This will be "→" or "↑"
+    [Header("UI Sprites for this question")]
+    public Sprite optionASprite; 
+    public Sprite optionBSprite;
 }
 public class Level3LabZone : MonoBehaviour
 {
@@ -25,10 +28,10 @@ public class Level3LabZone : MonoBehaviour
     public GameObject LabUI;
     public CanvasGroup labIntroGroup;
     public Button readInstructionsButton;
-
-    public CanvasGroup instructionsGroup;
+    
+    /*public CanvasGroup instructionsGroup;
     public Image instructionsImage;
-    public Button understoodButton;
+    public Button understoodButton;*/
 
     public CanvasGroup pickGroup;
     public Text pickText;
@@ -44,6 +47,12 @@ public class Level3LabZone : MonoBehaviour
     public Button runEpochButton; // Next button
     public Button finishButton;
 
+    [Header("Question Option Images")]
+    public Image optionAImage;          
+    public Image optionBImage;        
+    public RectTransform selectedCenterAnchor; 
+
+    
     [Header("Quiz Setup")]
     public List<TrainingChoice> trainingChoices = new List<TrainingChoice>();
 
@@ -66,8 +75,11 @@ public class Level3LabZone : MonoBehaviour
 
     // --- Method 3 Specific Variables ---
     private PokemonClassifier.ModelWeights currentModelWeights;
-
     private Coroutine physicalListener;
+    private Vector2 optionAStartPos;
+    private Vector2 optionBStartPos;
+    private Vector3 optionAStartScale;
+    private Vector3 optionBStartScale;
 
     public PokemonClassifier.ModelWeights TrainedModel { get; private set; }
     
@@ -82,7 +94,20 @@ public class Level3LabZone : MonoBehaviour
         pokemonClassifier = GetComponent<PokemonClassifier>() ?? gameObject.AddComponent<PokemonClassifier>();
         pokemonClassifier.Initialize();
 
-
+    }
+    
+    private void Start()
+    {
+        if (optionAImage != null)
+        {
+            optionAStartPos = optionAImage.rectTransform.anchoredPosition;
+            optionAStartScale = optionAImage.rectTransform.localScale;
+        }
+        if (optionBImage != null)
+        {
+            optionBStartPos = optionBImage.rectTransform.anchoredPosition;
+            optionBStartScale = optionBImage.rectTransform.localScale;
+        }
     }
 
     private void Update()
@@ -118,7 +143,11 @@ public class Level3LabZone : MonoBehaviour
         yield return FadeCanvas(pickGroup, 0, 1, 1f);
 
         // 3. Type out the instruction text for this lab.
-        yield return TypeText(pickText, "Professor Oak's Challenge! For each Pokémon type, find the PURE package collected by Professor Oak.");
+        yield return TypeText(pickText,
+            Language.IsGerman ?
+                "Professor Eichs Herausforderung! Für jeden Pokémon-Typ finde das REINE Paket, das Professor Eich gesammelt hat." :
+                "Professor Oak's Challenge! For each Pokémon type, find the PURE package collected by Professor Oak."
+        );
 
         // 4. Wait for a moment so the child can read.
         yield return new WaitForSeconds(1.5f);
@@ -148,10 +177,14 @@ public class Level3LabZone : MonoBehaviour
         // Loop through the four questions
         for (int i = 0; i < trainingChoices.Count; i++)
         {
+            datasetIconImage.gameObject.SetActive(false);
+            optionAImage.gameObject.SetActive(true);
+            optionBImage.gameObject.SetActive(true);
             var choice = trainingChoices[i];
+            SetupQuestionImages(choice);
             
             // Construct the instruction text
-            string instruction = $"For the {types[i]} type, find the two packages on the back of the guidebook page.";
+            string instruction = Language.IsGerman ? $"For the {types[i]} type, find the two packages on the back of the guidebook page." : $"Für den {types[i]}-Typ finde die zwei Pakete auf der Rückseite der Buchseite.";
             yield return StartCoroutine(TypeText(trainingInstructionText, instruction));
             
             // Wait for the correct action card to be scanned
@@ -159,8 +192,10 @@ public class Level3LabZone : MonoBehaviour
             
             // If correct, perform the original actions for this step
             Sample_Sensor.Instance.cube?.PlayPresetSound(8); // Success sound
-            yield return StartCoroutine(TypeText(trainingInstructionText, "Excellent! Very well done. Now for the next one."));
-            
+            yield return StartCoroutine(TypeText(trainingInstructionText, Language.IsGerman? "Excellent! Very well done. Now for the next one.":"Ausgezeichnet! Sehr gut gemacht. Jetzt zum Nächsten."));
+            optionAImage.gameObject.SetActive(false);
+            optionBImage.gameObject.SetActive(false);
+            datasetIconImage.gameObject.SetActive(true);
             datasetIconImage.sprite = typeIcons[i];
             _datasetsToShowOnLed.Add(dataCardIDs[i]);
             UpdateLedDisplay();
@@ -168,7 +203,7 @@ public class Level3LabZone : MonoBehaviour
         }
 
         // All steps are complete
-        yield return StartCoroutine(TypeText(trainingInstructionText, "Great job! You've seen how each type is different."));
+        yield return StartCoroutine(TypeText(trainingInstructionText, Language.IsGerman?"Great job! You've seen how each type is different.":  "Großartige Arbeit! Du hast gesehen, wie sich jeder Typ unterscheidet."));
         yield return new WaitForSeconds(2f);
         
         OnFinishLab();
@@ -191,6 +226,7 @@ public class Level3LabZone : MonoBehaviour
                 {
                     if (scannedCardID == correctActionCard)
                     {
+                        yield return StartCoroutine(ShowCorrectImageFeedback(correctActionCard));
                         yield break; // Correct card was scanned, exit the loop.
                     }
                     else
@@ -342,12 +378,11 @@ public class Level3LabZone : MonoBehaviour
             {
                 StartCoroutine(OnReadyToTrain());
             }
-            
-                else
-                {
-                    OnFinishLab();
-                }
-            
+            else
+            {
+                OnFinishLab();
+            }
+        
             return true;
         }
 
@@ -423,27 +458,94 @@ public class Level3LabZone : MonoBehaviour
         }
     }
 
-private string GetCardIDForType(PokemonClassifier.PokemonType type)
-{
-    switch(type)
+    private void SetupQuestionImages(TrainingChoice choice)
     {
-        case PokemonClassifier.PokemonType.Fire: return "C";
-        case PokemonClassifier.PokemonType.Water: return "D";
-        case PokemonClassifier.PokemonType.Grass: return "E";
-        case PokemonClassifier.PokemonType.Dragon: return "F";
-        default: return "";
-    }
-}
+        if (optionAImage != null)
+        {
+            optionAImage.sprite = choice.optionASprite;
+            optionAImage.rectTransform.anchoredPosition = optionAStartPos;
+            optionAImage.rectTransform.localScale = optionAStartScale;
+            optionAImage.gameObject.SetActive(true);
+        }
 
-private Sprite GetIconForType(PokemonClassifier.PokemonType type)
-{
-    switch(type)
-    {
-        case PokemonClassifier.PokemonType.Fire: return fireIcon;
-        case PokemonClassifier.PokemonType.Water: return waterIcon;
-        case PokemonClassifier.PokemonType.Grass: return grassIcon;
-        case PokemonClassifier.PokemonType.Dragon: return dragonIcon;
-        default: return null;
+        if (optionBImage != null)
+        {
+            optionBImage.sprite = choice.optionBSprite;
+            optionBImage.rectTransform.anchoredPosition = optionBStartPos;
+            optionBImage.rectTransform.localScale = optionBStartScale;
+            optionBImage.gameObject.SetActive(true);
+        }
     }
-}
+
+    private IEnumerator ShowCorrectImageFeedback(string correctActionCard)
+    {
+        if (optionAImage == null || optionBImage == null || selectedCenterAnchor == null)
+            yield break;
+        
+        Image selectedImage;
+        Image otherImage;
+
+        if (correctActionCard == "→")
+        {
+            selectedImage = optionAImage;
+            otherImage = optionBImage;
+        }
+        else // "↑"
+        {
+            selectedImage = optionBImage;
+            otherImage = optionAImage;
+        }
+        
+        otherImage.gameObject.SetActive(false);
+        
+        RectTransform selRT = selectedImage.rectTransform;
+
+        Vector2 startPos = selRT.anchoredPosition;
+        Vector3 startScale = selRT.localScale;
+
+        Vector2 targetPos = selectedCenterAnchor.anchoredPosition;
+        Vector3 targetScale = startScale * 1.5f;
+
+        float duration = 0.4f;
+        float t = 0f;
+        
+        while (t < duration)
+        {
+            float lerp = t / duration;
+            selRT.anchoredPosition = Vector2.Lerp(startPos, targetPos, lerp);
+            selRT.localScale = Vector3.Lerp(startScale, targetScale, lerp);
+
+            t += Time.deltaTime;
+            yield return null;
+        }
+        
+        selRT.anchoredPosition = targetPos;
+        selRT.localScale = targetScale;
+
+        yield return new WaitForSeconds(1.5f);
+    }
+
+    private string GetCardIDForType(PokemonClassifier.PokemonType type)
+    {
+        switch(type)
+        {
+            case PokemonClassifier.PokemonType.Fire: return "C";
+            case PokemonClassifier.PokemonType.Water: return "D";
+            case PokemonClassifier.PokemonType.Grass: return "E";
+            case PokemonClassifier.PokemonType.Dragon: return "F";
+            default: return "";
+        }
+    }
+
+    private Sprite GetIconForType(PokemonClassifier.PokemonType type)
+    {
+        switch(type)
+        {
+            case PokemonClassifier.PokemonType.Fire: return fireIcon;
+            case PokemonClassifier.PokemonType.Water: return waterIcon;
+            case PokemonClassifier.PokemonType.Grass: return grassIcon;
+            case PokemonClassifier.PokemonType.Dragon: return dragonIcon;
+            default: return null;
+        }
+    }
 }
