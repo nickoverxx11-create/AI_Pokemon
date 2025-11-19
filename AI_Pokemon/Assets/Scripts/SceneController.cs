@@ -11,6 +11,8 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController Instance;
 
+    public int CurrentSceneIndex { get; private set; } = -1;
+    
     [Header("Scene GameObjects")]
     public GameObject meadowScene;
     public GameObject azureCoastScene;
@@ -124,6 +126,7 @@ public class SceneController : MonoBehaviour
         if (isIntroPlaying) return;
         isIntroPlaying = true;
 
+        CurrentSceneIndex = newScene;
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayMusicForZone((GameZone)newScene);
