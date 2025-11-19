@@ -136,45 +136,48 @@ MonoBehaviour:
     sprite: {fileID: -4396000341033796210, guid: 797c709ccaf129a45a4b19e68922183d,
       type: 3}
     category: 1
-  - index: K
-    name: Grass
-    sprite: {fileID: -2547004956272192745, guid: 36aa06750b44bc14ba4c1613e51d3b89,
-      type: 3}
-    category: 2
-  - index: H
-    name: BIASED
-    sprite: {fileID: -7937749962922180185, guid: b3912cc7d27a4854287798b4fc0b965e,
-      type: 3}
-    category: 2
-  - index: F
-    name: DRAGON
-    sprite: {fileID: -42751188209456123, guid: 690abc65b7ef8574da060acf049e2eff, type: 3}
-    category: 2
   - index: C
     name: FIRE
-    sprite: {fileID: -758455663217281716, guid: bd5bb868dda38e74f8c1177dfd9f35f8,
-      type: 3}
-    category: 2
-  - index: E
-    name: ...
-    sprite: {fileID: 4598195154680793371, guid: 63cc31195d4139e4db0c812ac41ceb98,
+    sprite: {fileID: 1208040086343421634, guid: 4234ed9d39224384f834bfba0fc47bc3,
       type: 3}
     category: 2
   - index: D
     name: ...
-    sprite: {fileID: 681092690749628753, guid: 51be55aba446006439a6e0b20d2a1b64, type: 3}
+    sprite: {fileID: -5412910156287300836, guid: f9b4b808786857649bc4c76f08012d3f,
+      type: 3}
     category: 2
-  - index: I
+  - index: E
     name: ...
-    sprite: {fileID: 5880592848186234820, guid: e9dad677b9549f74295bbea9ba7e274f,
+    sprite: {fileID: -1120417013202708702, guid: f88f6c820a0d0034eadebfee7ef94405,
+      type: 3}
+    category: 2
+  - index: F
+    name: DRAGON
+    sprite: {fileID: 7591152912916973064, guid: c951175d04182bc469524b6fded2e8d0,
       type: 3}
     category: 2
   - index: G
     name: ...
-    sprite: {fileID: 160114767289012160, guid: fcc938d8c89bc1842b534c23d6c5c32d, type: 3}
+    sprite: {fileID: 1123972391580471218, guid: 3a857ba8047f49e4fa2e08d4b6da53e5,
+      type: 3}
+    category: 2
+  - index: H
+    name: BIASED
+    sprite: {fileID: -1208932960329422874, guid: 9a6d63a745a4f9541b3657dffe362d93,
+      type: 3}
+    category: 2
+  - index: I
+    name: ...
+    sprite: {fileID: 5131927982942454427, guid: cfc5ea026512fbe4db245b8829b5bc29,
+      type: 3}
     category: 2
   - index: J
     name: ...
-    sprite: {fileID: 7830852918196858159, guid: a277120115d626e4586d178f59e2edec,
+    sprite: {fileID: 1504337362984433415, guid: a0e147b2cc5712242aa7d82a4fbb7a67,
+      type: 3}
+    category: 2
+  - index: K
+    name: Grass
+    sprite: {fileID: -4824212653899765754, guid: d712236a6f4e4a24390baa2483a1735f,
       type: 3}
     category: 2
