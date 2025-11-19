@@ -14,6 +14,7 @@ public class SceneController : MonoBehaviour
     public int CurrentSceneIndex { get; private set; } = -1;
     
     [Header("Scene GameObjects")]
+    public GameObject IntroScene;
     public GameObject meadowScene;
     public GameObject azureCoastScene;
     public GameObject whisperingWoodScene;
@@ -131,7 +132,7 @@ public class SceneController : MonoBehaviour
         {
             AudioManager.Instance.PlayMusicForZone((GameZone)newScene);
         }
-        
+        IntroScene.SetActive(false);
         meadowScene.SetActive(false);
         azureCoastScene.SetActive(false);
         whisperingWoodScene.SetActive(false);
@@ -195,7 +196,6 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator PlaySceneIntro(string title, string zoneKey, IEnumerator afterIntro, System.Action onIntroComplete)
     {
-        
         sceneNameBigText.gameObject.SetActive(true);
         introGroup.gameObject.SetActive(true);
         introGroup.alpha = 0f;
@@ -276,6 +276,7 @@ public class SceneController : MonoBehaviour
     public IEnumerator PlayGameStartSequence()
     {
         startPage.SetActive(false);
+        IntroScene.SetActive(true);
         sceneNameBigText.gameObject.SetActive(false);
         introGroup.gameObject.SetActive(true);
         introGroup.alpha = 0f;

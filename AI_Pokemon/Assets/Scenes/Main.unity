@@ -60496,7 +60496,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d221bfd8584429c49bd1b68a52177b40,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: d221bfd8584429c49bd1b68a52177b40,
         type: 3}
@@ -60540,6 +60540,12 @@ PrefabInstance:
 --- !u!4 &1093651071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d221bfd8584429c49bd1b68a52177b40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1093651070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1093651072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d221bfd8584429c49bd1b68a52177b40,
     type: 3}
   m_PrefabInstance: {fileID: 1093651070}
   m_PrefabAsset: {fileID: 0}
@@ -100012,6 +100018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8d31346c487dc4884bb3785bda11ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroScene: {fileID: 1093651072}
   meadowScene: {fileID: 2076779685}
   azureCoastScene: {fileID: 1419011231}
   whisperingWoodScene: {fileID: 180795376}
@@ -110766,7 +110773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2076779686
 Transform:
   m_ObjectHideFlags: 0
