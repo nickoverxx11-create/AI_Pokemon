@@ -794,28 +794,13 @@ public class PokemonClassifier : MonoBehaviour
         new Pokemon("Scorbunny-C", PokemonType.Fire, 0, 9, 8, 2, 3, 8),
         new Pokemon("Fuecoco-C", PokemonType.Fire, 0, 4, 5, 1, 2, 9),
 
-        // --- NOISY FIRE DATA (20) ---
+        // --- NOISY FIRE DATA (5) ---
         new Pokemon("Ponyta-N", PokemonType.Fire, 1, 9, 2, 6, 3, 1),
         new Pokemon("Growlithe-N", PokemonType.Fire, 1, 1, 8, 6, 9, 2),
         new Pokemon("Magmar-N", PokemonType.Fire, 1, 1, 7, 9, 1, 9),
         new Pokemon("Squirtle-N1", PokemonType.Fire, 0, 1, 5, 8, 1, 2),
         new Pokemon("Vulpix-N", PokemonType.Fire, 0, 2, 6, 5, 3, 8),
-        new Pokemon("Bulbasaur-N1", PokemonType.Fire, 0, 5, 5, 8, 1, 2),
-        new Pokemon("Flareon-N", PokemonType.Fire, 0, 1, 2, 9, 3, 2),
-        new Pokemon("Charmander-N", PokemonType.Fire, 1, 7, 7, 9, 9, 3),
-        new Pokemon("Dratini-N1", PokemonType.Fire, 1, 5, 2, 5, 8, 4),
-        new Pokemon("Torkoal-N", PokemonType.Fire, 1, 2, 7, 9, 2, 3),
-        new Pokemon("Slugma-N", PokemonType.Fire, 0, 1, 2, 6, 1, 1),
-        new Pokemon("Torchic-N", PokemonType.Fire, 0, 5, 5, 7, 1, 1),
-        new Pokemon("Pansear-N", PokemonType.Fire, 0, 1, 5, 8, 4, 2),
-        new Pokemon("Krabby-N1", PokemonType.Fire, 1, 5, 1, 9, 2, 3),
-        new Pokemon("Houndour-N", PokemonType.Fire, 1, 3, 1, 4, 3, 1),
-        new Pokemon("Chimchar-N", PokemonType.Fire, 0, 1, 2, 5, 8, 8),
-        new Pokemon("Numel-N", PokemonType.Fire, 1, 4, 1, 9, 3, 2),
-        new Pokemon("Magby-N", PokemonType.Fire, 1, 1, 2, 9, 9, 8),
-        new Pokemon("Rowlet-N1", PokemonType.Fire, 1, 4, 2, 6, 7, 4),
-        new Pokemon("Fuecoco-N", PokemonType.Fire, 0, 4, 5, 6, 9, 3),
-
+       
         // --- CLEAR WATER DATA (20) ---
         new Pokemon("Squirtle-C", PokemonType.Water, 0, 5, 5, 8, 1, 2),
         new Pokemon("Psyduck-C", PokemonType.Water, 0, 6, 6, 6, 2, 3),
@@ -844,22 +829,7 @@ public class PokemonClassifier : MonoBehaviour
         new Pokemon("Shellder-N", PokemonType.Water, 1, 4, 7, 9, 1, 2),
         new Pokemon("Pikachu-N1", PokemonType.Water, 1, 9, 6, 5, 5, 5),
         new Pokemon("Slowpoke-N", PokemonType.Water, 0, 9, 7, 8, 9, 3),
-        new Pokemon("Geodude-N2", PokemonType.Water, 0, 2, 8, 1, 8, 5),
-        new Pokemon("Psyduck-N", PokemonType.Water, 0, 6, 6, 6, 9, 8),
-        new Pokemon("Vaporeon-N", PokemonType.Water, 1, 7, 7, 7, 8, 8),
-        new Pokemon("Gible-N1", PokemonType.Water, 0, 4, 7, 5, 6, 3),
-        new Pokemon("Tentacool-N", PokemonType.Water, 0, 1, 4, 5, 1, 9),
-        new Pokemon("Marill-N", PokemonType.Water, 0, 4, 8, 2, 2, 4),
-        new Pokemon("Horsea-N", PokemonType.Water, 0, 6, 4, 7, 9, 9),
-        new Pokemon("Squirtle-N2", PokemonType.Water, 1, 5, 5, 8, 1, 10),
-        new Pokemon("Mudkip-N", PokemonType.Water, 1, 9, 7, 5, 2, 3),
-        new Pokemon("Paras-N1", PokemonType.Water, 0, 3, 9, 7, 4, 9),
-        new Pokemon("Poliwag-N", PokemonType.Water, 0, 9, 5, 5, 8, 3),
-        new Pokemon("Magikarp-N", PokemonType.Water, 0, 8, 9, 2, 1, 3),
-        new Pokemon("Piplup-N", PokemonType.Water, 1, 4, 5, 5, 8, 9),
-        new Pokemon("Froakie-N", PokemonType.Water, 0, 9, 6, 4, 8, 9),
-        new Pokemon("Popplio-N", PokemonType.Water, 0, 9, 5, 6, 8, 3),
-
+     
         // --- CLEAR GRASS DATA (20) ---
         new Pokemon("Bulbasaur-C", PokemonType.Grass, 0, 5, 1, 6, 4, 4),
         new Pokemon("Oddish-C", PokemonType.Grass, 0, 3, 1, 7, 5, 4),
@@ -888,22 +858,7 @@ public class PokemonClassifier : MonoBehaviour
         new Pokemon("Exeggcute-N", PokemonType.Grass, 1, 4, 4, 8, 6, 5),
         new Pokemon("Rattata-N1", PokemonType.Grass, 0, 8, 6, 4, 2, 6),
         new Pokemon("Paras-N", PokemonType.Grass, 1, 9, 6, 7, 4, 3),
-        new Pokemon("Sandshrew-N1", PokemonType.Grass, 1, 4, 8, 2, 3, 8),
-        new Pokemon("Oddish-N", PokemonType.Grass, 0, 3, 5, 7, 9, 9),
-        new Pokemon("Sunkern-N", PokemonType.Grass, 0, 1, 3, 4, 4, 5),
-        new Pokemon("Ponyta-N2", PokemonType.Grass, 1, 9, 7, 6, 9, 8),
-        new Pokemon("Bellsprout-N", PokemonType.Grass, 1, 4, 8, 4, 5, 4),
-        new Pokemon("Bulbasaur-N2", PokemonType.Grass, 1, 1, 5, 6, 4, 4),
-        new Pokemon("Turtwig-N", PokemonType.Grass, 0, 9, 1, 2, 5, 4),
-        new Pokemon("Rowlet-N2", PokemonType.Grass, 1, 4, 5, 6, 7, 4),
-        new Pokemon("Chespin-N", PokemonType.Grass, 1, 9, 7, 6, 5, 4),
-        new Pokemon("Shellder-N2", PokemonType.Grass, 1, 4, 7, 2, 9, 2),
-        new Pokemon("Applin-N", PokemonType.Grass, 0, 8, 8, 4, 5, 5),
-        new Pokemon("Hoppip-N", PokemonType.Grass, 0, 5, 1, 2, 6, 5),
-        new Pokemon("Grookey-N", PokemonType.Grass, 1, 5, 6, 7, 6, 5),
-        new Pokemon("Ferroseed-N", PokemonType.Grass, 0, 9, 9, 5, 5, 4),
-        new Pokemon("Phantump-N", PokemonType.Grass, 0, 4, 7, 5, 6, 3),
-
+      
         // --- CLEAR DRAGON DATA (20) ---
         new Pokemon("Dratini-C", PokemonType.Dragon, 1, 5, 7, 5, 8, 4),
         new Pokemon("Bagon-C", PokemonType.Dragon, 0, 5, 8, 6, 7, 3),
@@ -932,21 +887,6 @@ public class PokemonClassifier : MonoBehaviour
         new Pokemon("Deino-N", PokemonType.Dragon, 1, 4, 7, 5, 7, 3),
         new Pokemon("Pidgey-N2", PokemonType.Dragon, 0, 7, 5, 5, 7, 5),
         new Pokemon("Bagon-N", PokemonType.Dragon, 0, 5, 8, 6, 1, 3),
-        new Pokemon("Aerodactyl-N1", PokemonType.Dragon, 0, 1, 3, 7, 2, 6),
-        new Pokemon("Gible-N", PokemonType.Dragon, 0, 4, 7, 5, 1, 9),
-        new Pokemon("Salamence-N", PokemonType.Dragon, 0, 1, 3, 7, 1, 4),
-        new Pokemon("Charizard-N1", PokemonType.Dragon, 1, 9, 8, 7, 8, 9),
-        new Pokemon("Noibat-N", PokemonType.Dragon, 0, 6, 5, 4, 9, 4),
-        new Pokemon("Dratini-N2", PokemonType.Dragon, 0, 5, 7, 5, 2, 4),
-        new Pokemon("Jangmo-o-N", PokemonType.Dragon, 0, 2, 6, 7, 7, 3),
-        new Pokemon("Dreepy-N", PokemonType.Dragon, 0, 2, 3, 6, 1, 4),
-        new Pokemon("Gabite-N", PokemonType.Dragon, 0, 2, 1, 7, 7, 3),
-        new Pokemon("Vibrava-N", PokemonType.Dragon, 0, 7, 7, 5, 2, 6),
-        new Pokemon("Zweilous-N", PokemonType.Dragon, 0, 6, 1, 7, 2, 3),
-        new Pokemon("Hakamo-o-N", PokemonType.Dragon, 0, 6, 8, 9, 7, 3),
-        new Pokemon("Sliggoo-N", PokemonType.Dragon, 0, 6, 7, 8, 1, 9),
-        new Pokemon("Frigibax-N", PokemonType.Dragon, 0, 5, 1, 7, 2, 1),
-        new Pokemon("Tyrunt-N", PokemonType.Dragon, 0, 5, 4, 8, 1, 5)
     };
 }
     
@@ -1202,28 +1142,25 @@ public class PokemonClassifier : MonoBehaviour
 
     // --- 2. Assign the filtered lists to the correct dataset IDs ---
 
-    // C: Clear Fire, D: Noisy Fire
     selectableDatasets["C"] = clearFire;
-    selectableDatasets["D"] = noisyFire;
+    selectableDatasets["D"] = clearWater;
 
-    // E: Clear Water, F: Noisy Water
-    selectableDatasets["E"] = clearWater;
-    selectableDatasets["F"] = noisyWater;
+    selectableDatasets["E"] = clearGrass;
+    selectableDatasets["F"] = clearDragon;
 
-    // G: Clear Grass, H: Noisy Grass
-    selectableDatasets["G"] = clearGrass;
-    selectableDatasets["H"] = noisyGrass;
+    selectableDatasets["G"] = noisyFire;
+    selectableDatasets["H"] = noisyWater;
 
     // I: Clear Dragon, J: Noisy Dragon
-    selectableDatasets["I"] = clearDragon;
+    selectableDatasets["I"] = noisyGrass;
     selectableDatasets["J"] = noisyDragon;
 
-    // K: "Big Clear Mix" - 10 of each clear type, for a total of 40.
+    // K: "Big Clear Mix" - 5 of each clear type, for a total of 40.
     var bigClearMix = new List<TrainingPokemon>();
-    bigClearMix.AddRange(clearFire.Take(10));
-    bigClearMix.AddRange(clearWater.Take(10));
-    bigClearMix.AddRange(clearGrass.Take(10));
-    bigClearMix.AddRange(clearDragon.Take(10));
+    bigClearMix.AddRange(clearFire.Take(5));
+    bigClearMix.AddRange(clearWater.Take(5));
+    bigClearMix.AddRange(clearGrass.Take(5));
+    bigClearMix.AddRange(clearDragon.Take(5));
     selectableDatasets["K"] = bigClearMix;
 }
 

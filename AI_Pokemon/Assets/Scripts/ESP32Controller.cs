@@ -6,7 +6,7 @@ public class ESP32Controller : MonoBehaviour
 {
     public static ESP32Controller Instance;
 
-    public string esp32IP = "http://172.20.10.3";
+    public string esp32IP = "http://172.20.10.2";
 
     private void Awake()
     {
