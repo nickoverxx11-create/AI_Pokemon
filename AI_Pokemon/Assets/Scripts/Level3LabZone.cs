@@ -494,7 +494,7 @@ public class Level3LabZone : MonoBehaviour
         Vector3 startScale = selRT.localScale;
 
         Vector2 targetPos = selectedCenterAnchor.anchoredPosition;
-        Vector3 targetScale = startScale * 1.5f;
+        Vector3 targetScale = startScale * 1.3f;
 
         float duration = 0.4f;
         float t = 0f;
