@@ -162,12 +162,6 @@ public class Level2LabZone : MonoBehaviour
         pickGroup.gameObject.SetActive(true);
         yield return FadeCanvas(pickGroup, 0, 1, 1f);
 
-        // 3. Type out the instruction text for this lab.
-        yield return TypeText(pickText, "Now pick up to 4 feature cards for each type to build your type rules.");
-
-        // 4. Wait for a moment so the child can read.
-        yield return new WaitForSeconds(1.5f);
-
         // 5. AUTOMATICALLY proceed to the next step.
         yield return StartCoroutine(OnPickReady());
     }

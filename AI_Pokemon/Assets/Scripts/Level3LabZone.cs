@@ -142,16 +142,6 @@ public class Level3LabZone : MonoBehaviour
         pickGroup.gameObject.SetActive(true);
         yield return FadeCanvas(pickGroup, 0, 1, 1f);
 
-        // 3. Type out the instruction text for this lab.
-        yield return TypeText(pickText,
-            Language.IsGerman ?
-                "Professor Eichs Herausforderung! Für jeden Pokémon-Typ finde das REINE Paket, das Professor Eich gesammelt hat." :
-                "Professor Oak's Challenge! For each Pokémon type, find the PURE package collected by Professor Oak."
-        );
-
-        // 4. Wait for a moment so the child can read.
-        yield return new WaitForSeconds(1.5f);
-
         // 5. AUTOMATICALLY proceed to the next step.
         yield return StartCoroutine(OnReadyToTrain());
     }

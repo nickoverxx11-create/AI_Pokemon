@@ -133,12 +133,6 @@ public class Level4LabZone : MonoBehaviour
         pickGroup.gameObject.SetActive(true);
         yield return FadeCanvas(pickGroup, 0, 1, 1f);
 
-        // 3. Type out the instruction text for this lab.
-        yield return TypeText(pickText, "More datasets found! Now combine different datasets to see how the lights and the robot's accuracy change.");
-
-        // 4. Wait for a moment so the child can read.
-        yield return new WaitForSeconds(1.5f);
-
         // 5. AUTOMATICALLY proceed to the next step.
         yield return StartCoroutine(OnReady());
     }

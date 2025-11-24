@@ -274,9 +274,6 @@ public class Level1LabZone : MonoBehaviour
         pickGroup.gameObject.SetActive(true);
         yield return FadeCanvasGroup(pickGroup, 0, 1, 1f);
         
-        // 3. Type out the instruction text.
-        yield return TypeText(pickText, "Now it's your time to pick up to max 4 feature cards to spot Fire-type Pokémon.");
-        
         // 4. Wait for a moment so the child can read the text.
         yield return new WaitForSeconds(1.5f);
         
@@ -541,36 +538,6 @@ public class Level1LabZone : MonoBehaviour
         yield return StartCoroutine(PerformClassificationAndShowResults());
     }
 
-
-    
-    /* private IEnumerator SelectStrictness()
-    {
-        // Show strictness selection
-        strictnessGroup.alpha = 0;
-        strictnessGroup.gameObject.SetActive(true);
-        yield return FadeCanvasGroup(strictnessGroup, 0, 1, 1f);
-        
-        yield return TypeText(strictnessText, "Choose strictness level:");
-        
-        perfectMatchButton.gameObject.SetActive(true);
-        almostMatchButton.gameObject.SetActive(true);
-        
-        perfectMatchButton.onClick.RemoveAllListeners();
-        perfectMatchButton.onClick.AddListener(() => StartCoroutine(OnSelectStrictness(PokemonClassifier.StrictnessMode.Perfect)));
-        
-        almostMatchButton.onClick.RemoveAllListeners();
-        almostMatchButton.onClick.AddListener(() => StartCoroutine(OnSelectStrictness(PokemonClassifier.StrictnessMode.Almost)));
-    }
-
-
-
-    private IEnumerator OnSelectStrictness(PokemonClassifier.StrictnessMode strictness)
-    {
-        selectedStrictness = strictness;
-        yield return FadeCanvasGroup(strictnessGroup, 1, 0, 1f);
-        strictnessGroup.gameObject.SetActive(false);
-        yield return StartCoroutine(PerformClassificationAndShowResults());
-    }*/
 
     private IEnumerator PerformClassificationAndShowResults()
     {
