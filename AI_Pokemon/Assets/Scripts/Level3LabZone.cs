@@ -163,6 +163,7 @@ public class Level3LabZone : MonoBehaviour
         var types = new[] { "Fire", "Water", "Grass", "Dragon" };
         var dataCardIDs = new[] { "C", "D", "E", "F" };
         var typeIcons = new[] { fireIcon, waterIcon, grassIcon, dragonIcon };
+        var correctAnswers = new[] { "↑", "→", "↑", "↑" }; 
 
         // Loop through the four questions
         for (int i = 0; i < trainingChoices.Count; i++)
@@ -170,11 +171,15 @@ public class Level3LabZone : MonoBehaviour
             datasetIconImage.gameObject.SetActive(false);
             optionAImage.gameObject.SetActive(true);
             optionBImage.gameObject.SetActive(true);
+            if (i < correctAnswers.Length)
+            {
+                trainingChoices[i].correctAnswerActionCard = correctAnswers[i];
+            }
             var choice = trainingChoices[i];
             SetupQuestionImages(choice);
             
             // Construct the instruction text
-            string instruction = Language.IsGerman ? $"For the {types[i]} type, find the two packages on the back of the guidebook page." : $"Für den {types[i]}-Typ finde die zwei Pakete auf der Rückseite der Buchseite.";
+            string instruction = $"For the {types[i]} type, find the two packages on the back of the guidebook page.";
             yield return StartCoroutine(TypeText(trainingInstructionText, instruction));
             
             // Wait for the correct action card to be scanned
@@ -182,7 +187,7 @@ public class Level3LabZone : MonoBehaviour
             
             // If correct, perform the original actions for this step
             Sample_Sensor.Instance.cube?.PlayPresetSound(8); // Success sound
-            yield return StartCoroutine(TypeText(trainingInstructionText, Language.IsGerman? "Excellent! Very well done. Now for the next one.":"Ausgezeichnet! Sehr gut gemacht. Jetzt zum Nächsten."));
+            yield return StartCoroutine(TypeText(trainingInstructionText, "Excellent! Very well done. Now for the next one."));
             optionAImage.gameObject.SetActive(false);
             optionBImage.gameObject.SetActive(false);
             datasetIconImage.gameObject.SetActive(true);
@@ -193,7 +198,7 @@ public class Level3LabZone : MonoBehaviour
         }
 
         // All steps are complete
-        yield return StartCoroutine(TypeText(trainingInstructionText, Language.IsGerman?"Great job! You've seen how each type is different.":  "Großartige Arbeit! Du hast gesehen, wie sich jeder Typ unterscheidet."));
+        yield return StartCoroutine(TypeText(trainingInstructionText, "Great job! You've seen how each type is different."));
         yield return new WaitForSeconds(2f);
         
         OnFinishLab();

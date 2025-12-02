@@ -400,32 +400,43 @@ public class PokemonClassifier : MonoBehaviour
         List<CardID> fireRules = ConvertScannedCardsToRules(scannedCardIndices);
         method1Results = new Method1Results();
 
-        List<Pokemon> fireBox = new List<Pokemon>();
-        List<Pokemon> notFireBox = new List<Pokemon>();
-
-        foreach (Pokemon pokemon in pokemonDataset)
+          foreach (Pokemon pokemon in pokemonDataset)
         {
+            // 1. Get the Robot's Prediction
             bool predictedFire = PredictIsFire(pokemon, fireRules, strictness);
-            if (predictedFire)
-                fireBox.Add(pokemon);
-            else
-                notFireBox.Add(pokemon);
-        }
 
-        foreach (Pokemon pokemon in fireBox)
-        {
+            // 2. Sort into groups based on REALITY (Actual Type)
+            
+            // --- BOX 1: REAL FIRE POKEMON ---
             if (pokemon.actualType == PokemonType.Fire)
-                method1Results.fireBoxCorrect.Add(pokemon);
-            else
-                method1Results.fireBoxWrong.Add(pokemon);
-        }
-
-        foreach (Pokemon pokemon in notFireBox)
-        {
-            if (pokemon.actualType == PokemonType.Fire)
-                method1Results.notFireBoxWrong.Add(pokemon);
-            else
-                method1Results.notFireBoxCorrect.Add(pokemon);
+            {
+                if (predictedFire)
+                {
+                    // Robot was Right: It is Fire, Robot said Fire
+                    method1Results.fireBoxCorrect.Add(pokemon);
+                }
+                else
+                {
+                    // Robot was Wrong: It is Fire, Robot said Not Fire (Missed)
+                    // We use 'fireBoxWrong' to store these errors
+                    method1Results.fireBoxWrong.Add(pokemon);
+                }
+            }
+            // --- BOX 2: REAL NON-FIRE POKEMON ---
+            else 
+            {
+                if (!predictedFire)
+                {
+                    // Robot was Right: It is NOT Fire, Robot said Not Fire
+                    method1Results.notFireBoxCorrect.Add(pokemon);
+                }
+                else
+                {
+                    // Robot was Wrong: It is NOT Fire, Robot said Fire (False Alarm)
+                    // We use 'notFireBoxWrong' to store these errors
+                    method1Results.notFireBoxWrong.Add(pokemon);
+                }
+            }
         }
 
         Debug.Log($"Fire Box: {method1Results.fireBoxCorrect.Count} real Fire, {method1Results.fireBoxWrong.Count} intruders");

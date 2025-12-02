@@ -274,8 +274,6 @@ public class Level1LabZone : MonoBehaviour
         pickGroup.gameObject.SetActive(true);
         yield return FadeCanvasGroup(pickGroup, 0, 1, 1f);
         
-        // 4. Wait for a moment so the child can read the text.
-        yield return new WaitForSeconds(1.5f);
         
         // 5. AUTOMATICALLY proceed to the scanning phase.
         yield return StartCoroutine(OnReady()); 
@@ -659,8 +657,8 @@ public class Level1LabZone : MonoBehaviour
         if (fireTotal > 0) // FIX: Changed to > 0 to avoid division by zero
         {
             float correctRatio = (float)fireCorrect / fireTotal;
-            animations.Add(StartCoroutine(AnimateRatioBar(fireBoxCorrectBar, correctRatio, 1f)));
-            fireBoxRatioText.text = $"Fire Box: {fireCorrect} real Fire, {fireWrong} intruders";
+            
+            fireBoxRatioText.text = $"Correct: {fireCorrect} ,  Wrong: {fireWrong}";
         }
         else
         {
@@ -670,8 +668,8 @@ public class Level1LabZone : MonoBehaviour
         if (notFireTotal > 0) // FIX: Changed to > 0 to avoid division by zero
         {
             float correctRatio = (float)notFireCorrect / notFireTotal;
-            animations.Add(StartCoroutine(AnimateRatioBar(notFireBoxCorrectBar, correctRatio, 1f)));
-            notFireBoxRatioText.text = $"Not Fire Box: {notFireCorrect} correct non-Fire, {notFireWrong} missed Fire";
+           
+            notFireBoxRatioText.text = $"Correct: {notFireCorrect}. Wrong: {notFireWrong}";
         }
         else
         {

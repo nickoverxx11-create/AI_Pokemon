@@ -116,7 +116,7 @@ public class PokemonInfoDisplay : MonoBehaviour
         //descriptionText.text = string.Join("\n", info.DescriptionLines);
         
         StopAllCoroutines();
-        StartCoroutine(HideAndResetCooldown(8f));
+        StartCoroutine(HideAndResetCooldown(3f));
     }
 
     private IEnumerator HideAndResetCooldown(float duration)

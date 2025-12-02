@@ -156,7 +156,6 @@ public class Level2LabZone : MonoBehaviour
         labIntroGroup.gameObject.SetActive(false);
 
         // --- NEW STREAMLINED FLOW ---
-
         // 2. Immediately show the "Pick Group" UI.
         pickGroup.alpha = 0;
         pickGroup.gameObject.SetActive(true);
@@ -212,6 +211,7 @@ public class Level2LabZone : MonoBehaviour
                     {
                         currentPlaceholders[currentScanCount - 1].sprite = cardSprite ?? questionCard;
                     }
+                    UpdateAndSendLedData(type, cardIndex, currentScanCount);
                 }
             }
 
@@ -602,7 +602,7 @@ public class Level2LabZone : MonoBehaviour
     dragonCountText.text = $"Found <color=green>{dragonCorrect}</color> Dragon Pokémon";
 
     // --- 5) Overall Accuracy (this part is unchanged) ---
-    int totalCorrect = fireCorrect + waterCorrect + grassCorrect + dragonCorrect + results.multipleMatches.Count;
+    int totalCorrect = fireCorrect + waterCorrect + grassCorrect + dragonCorrect ;
     int score = Mathf.Clamp(Mathf.RoundToInt(100f * (float)totalCorrect / totalPossible), 0, 100);
 
     string verdict = VerdictForScore(score);

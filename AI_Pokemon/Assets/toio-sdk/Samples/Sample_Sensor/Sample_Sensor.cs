@@ -105,6 +105,20 @@ namespace toio.Samples.Sample_Sensor
                 
                 StartNewMethod();
             }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                if (cube != null)
+                {
+                    // This logs the position ID coordinates detected by the sensor
+                    Debug.Log($"Current Position -> X: {cube.x}, Y: {cube.y}");
+                }
+                else
+                {
+                    Debug.LogWarning("Cube is not connected!");
+                }
+            }
+
+
             // --- ADD THIS BLOCK FOR SCENE SWITCHING ---
             if (Input.GetKeyDown(KeyCode.Alpha0))
             {
