@@ -186,21 +186,7 @@ public class HintPanelController : MonoBehaviour
 
         // 淡入
         yield return FadeCanvasGroup(hintGroup, 0f, 1f, fadeDuration);
-
-        // 停留 showDuration 秒
-        yield return new WaitForSeconds(showDuration);
-
-        // 淡出
-        yield return FadeCanvasGroup(hintGroup, 1f, 0f, fadeDuration);
-
-        hintGroup.gameObject.SetActive(false);
-        _currentRoutine = null;
-
-        // 结束后可以清一下状态（可选）
-        _currentLabId = 0;
-        _currentHintIndex = -1;
-        _currentENText = null;
-        _currentDEText = null;
+        
     }
 
     private IEnumerator FadeCanvasGroup(CanvasGroup group, float from, float to, float duration)
@@ -218,4 +204,30 @@ public class HintPanelController : MonoBehaviour
 
         group.alpha = to;
     }
+    
+    public void OnCloseHint()
+    {
+        if (_currentRoutine != null)
+            StopCoroutine(_currentRoutine);
+
+        StartCoroutine(CloseHintRoutine());
+    }
+
+    private IEnumerator CloseHintRoutine()
+    {
+        if (hintGroup == null) yield break;
+
+        // Fade Out
+        yield return FadeCanvasGroup(hintGroup, 1f, 0f, fadeDuration);
+
+        hintGroup.gameObject.SetActive(false);
+        _currentRoutine = null;
+
+        // 清空状态（可选）
+        _currentLabId = 0;
+        _currentHintIndex = -1;
+        _currentENText = null;
+        _currentDEText = null;
+    }
+
 }
