@@ -50,15 +50,7 @@ public class Level1LabZone : MonoBehaviour
     public GameObject finishText;
     public Button finishButton;
     public Sprite questionCard;
-    
-   
 
-    /*[Header("Strictness Selection UI")]
-    public CanvasGroup strictnessGroup;
-    public Text strictnessText;
-    public Button perfectMatchButton;
-    public Button almostMatchButton;*/
-    
     [Header("Method 1 Result Boxes")]
     public GameObject method1ResultsPanel;
 
@@ -68,6 +60,13 @@ public class Level1LabZone : MonoBehaviour
 
     [Header("Box Animation GIFs")]
     public List<BoxGifSet> fireBoxGifs;
+
+    [Header("Extra Images on Boxes")]
+    public Image fireBoxExtraImage;
+    public Sprite fireBoxExtraSprite;
+
+    public Image notFireBoxExtraImage;
+    public Sprite notFireBoxExtraSprite;
 
     [Header("Result Display After Box Animation")]
     public GameObject resultDisplayPanel;
@@ -128,7 +127,8 @@ public class Level1LabZone : MonoBehaviour
             pokemonClassifier = gameObject.AddComponent<PokemonClassifier>();
 
         pokemonClassifier.Initialize();
-
+        if (fireBoxExtraImage != null) fireBoxExtraImage.enabled = false;
+        if (notFireBoxExtraImage != null) notFireBoxExtraImage.enabled = false;
         // --- ADDED: Initialize LED state ---
         Array.Clear(fireRuleLeds, 0, fireRuleLeds.Length);
     }
@@ -559,7 +559,22 @@ public class Level1LabZone : MonoBehaviour
         shinyOpenCoroutines.Add(StartCoroutine(AnimateBoxShinyAndOpen(method1Boxes[0], fireBoxGifs[0])));
         shinyOpenCoroutines.Add(StartCoroutine(AnimateBoxShinyAndOpen(method1Boxes[1], fireBoxGifs[1])));
         foreach (var c in shinyOpenCoroutines) yield return c;
+        
+        //Step 1.5 show image
+        if (fireBoxExtraImage != null)
+        {
+            fireBoxExtraImage.gameObject.SetActive(true);
+            fireBoxExtraImage.sprite = fireBoxExtraSprite;
+            fireBoxExtraImage.enabled = true;    
+        }
 
+        if (notFireBoxExtraImage != null)
+        {
+            notFireBoxExtraImage.gameObject.SetActive(true);
+            notFireBoxExtraImage.sprite = notFireBoxExtraSprite;
+            notFireBoxExtraImage.enabled = true;  
+        }
+        
         // Step 2: Display Result UI
         yield return StartCoroutine(DisplayMethod1Results(results));
 
