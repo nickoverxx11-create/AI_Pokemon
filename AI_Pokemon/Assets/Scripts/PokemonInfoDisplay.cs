@@ -74,7 +74,7 @@ public class PokemonInfoDisplay : MonoBehaviour
                 "It doesn't run fast 🦶, but it is brave ⚔️!",
                 "It gets hurt easily if hit hard 🛡️❌.") },
 
-            { "%", new PokemonInfo("Gyarados", sprites[2], gyaradosSound, "💧", "💧 Gyarados",
+            { "%", new PokemonInfo("Psyduck", sprites[2], gyaradosSound, "💧", "💧 Psyduck",
                 "Gyarados swims in the deep sea 🌊.",
                 "It jumps high and has wings 🕊️.",
                 "It is very strong ⚔️ and hard to stop 🛡️.") },

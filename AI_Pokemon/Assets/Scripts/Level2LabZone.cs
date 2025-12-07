@@ -106,6 +106,12 @@ public class Level2LabZone : MonoBehaviour
         else if (Instance != this) Destroy(gameObject);
         foreach (PokemonClassifier.PokemonType t in Enum.GetValues(typeof(PokemonClassifier.PokemonType)))
             rulesByType[t] = new List<string>();
+
+        fireRuleLeds = new int[6];
+        waterRuleLeds = new int[6];
+        grassRuleLeds = new int[6];
+        dragonRuleLeds = new int[6];
+
         InitScanGroups();
         _ = CardDataManager.Instance;
         pokemonClassifier = GetComponent<PokemonClassifier>() ?? gameObject.AddComponent<PokemonClassifier>();
@@ -428,7 +434,8 @@ public class Level2LabZone : MonoBehaviour
         AssignButtonOrPhysical(nextButton, () => StartCoroutine(OnFinishScanForGroup(groupIndex)), finishText);
     }
 
-    private void ResetScanForGroup(int groupIndex)
+
+private void ResetScanForGroup(int groupIndex)
     {
         if (_autoScanCoroutine != null) StopCoroutine(_autoScanCoroutine);
 
@@ -439,6 +446,18 @@ public class Level2LabZone : MonoBehaviour
 
         foreach (var ph in cardPlaceholderGroups[groupIndex].placeholders)
             ph.sprite = questionCard;
+
+        // ---------------------------------------------------------
+        // ADD THIS SECTION: Clear LEDs for this specific type
+        // ---------------------------------------------------------
+        var typeToReset = (PokemonClassifier.PokemonType)groupIndex;
+        
+        // 1. Clear the internal array for this type
+        ZeroTypeLed(typeToReset);
+        
+        // 2. IMPORTANT: Send the updated (cleared) state to the ESP32
+        SendAllLeds(); 
+        // ---------------------------------------------------------
 
         _autoScanCoroutine = StartCoroutine(WaitForScanForGroup(groupIndex));
     }
@@ -564,7 +583,7 @@ public class Level2LabZone : MonoBehaviour
     fireCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(fireCorrectBar, fireRatio, 1f));
     fireCountText.supportRichText = true;
-    fireCountText.text = $"Found <color=green>{fireCorrect}</color> Fire Pokémon";
+    fireCountText.text = $"Found <size=160%>{fireCorrect}</size> Fire Pokémon";
 
     // --- 2) Water Type Ratio Bar ---
     int waterCorrect = results.correctPredictions[PokemonClassifier.PokemonType.Water].Count;
@@ -574,7 +593,7 @@ public class Level2LabZone : MonoBehaviour
     waterCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(waterCorrectBar, waterRatio, 1f));
     waterCountText.supportRichText = true;
-    waterCountText.text = $"Found <color=green>{waterCorrect}</color> Water Pokémon";
+    waterCountText.text = $"Found <size=160%>{waterCorrect}</size> Water Pokémon";
 
     // --- 3) Grass Type Ratio Bar ---
     int grassCorrect = results.correctPredictions[PokemonClassifier.PokemonType.Grass].Count;
@@ -584,7 +603,7 @@ public class Level2LabZone : MonoBehaviour
     grassCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(grassCorrectBar, grassRatio, 1f));
     grassCountText.supportRichText = true;
-    grassCountText.text = $"Found <color=green>{grassCorrect}</color> Grass Pokémon";
+    grassCountText.text = $"Found <size=160%>{grassCorrect}</size> Grass Pokémon";
 
         // --- 4) Dragon Type Ratio Bar ---
         int dragonCorrect;
@@ -599,7 +618,7 @@ public class Level2LabZone : MonoBehaviour
     dragonCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(dragonCorrectBar, dragonRatio, 1f));
     dragonCountText.supportRichText = true;
-    dragonCountText.text = $"Found <color=green>{dragonCorrect}</color> Dragon Pokémon";
+    dragonCountText.text = $"Found <size=160%>{dragonCorrect}</size> Dragon Pokémon";
 
     // --- 5) Overall Accuracy (this part is unchanged) ---
     int totalCorrect = fireCorrect + waterCorrect + grassCorrect + dragonCorrect ;
@@ -682,16 +701,24 @@ public class Level2LabZone : MonoBehaviour
         currentGroupIndex = 0;
         foreach (var kvp in rulesByType)
             kvp.Value.Clear();
+        
+        // Clear internal arrays
         Array.Clear(fireRuleLeds, 0, 6);
         Array.Clear(waterRuleLeds, 0, 6);
         Array.Clear(grassRuleLeds, 0, 6);
         Array.Clear(dragonRuleLeds, 0, 6);
 
+        // --- FIX 3: Force LEDs Off ---
         if (ESP32Controller.Instance != null)
-            ESP32Controller.Instance.SendLEDData(ALL_LEDS_OFF);
+        {
+            // Send 24 zeros
+            string allOff = string.Join(",", new int[24]);
+            ESP32Controller.Instance.SendLEDData(allOff);
+        }
 
         for (int i = 0; i < scannedCardGroups.Count; i++)
             scannedCardGroups[i].Clear();
+            
         yield return StartCoroutine(ShowScanUIForGroup(0));
     }
 
@@ -780,20 +807,37 @@ public class Level2LabZone : MonoBehaviour
 
     private IEnumerator WaitForPhysicalControl()
     {
-        uint lastReadId = 0;
+        // --- FIX 2: Capture the card currently under the robot ---
+        // We will IGNORE this specific ID until the robot sees something else.
+        uint ignoredId = Sample_Sensor.Instance.ReadCard(); 
 
         while (true)
         {
             uint currentId = Sample_Sensor.Instance.ReadCard();
 
-            if (currentId != 0 && currentId != lastReadId)
+            // 1. If we are still reading the exact same card we started with, DO NOTHING.
+            // This prevents the "Auto-Next" bug.
+            if (currentId == ignoredId && ignoredId != 0)
             {
-                lastReadId = currentId;
+                yield return null;
+                continue;
+            }
+
+            // 2. If the ID has changed (user lifted robot or moved it), stop ignoring.
+            if (currentId != ignoredId)
+            {
+                ignoredId = 0;
+            }
+
+            // 3. Process Valid Input
+            if (currentId != 0)
+            {
                 string cardIndex = StandardID.GetCardNameByID(currentId);
-               // Debug.Log($"Physical cardIndex {cardIndex}");
 
                 if (HandlePhysicalCardInput(cardIndex))
                 {
+                    // Action taken!
+                    // Wait a tiny bit to ensure we don't double-trigger if logic loops quickly
                     yield return new WaitForSeconds(0.5f);
                     yield break;
                 }

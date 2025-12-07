@@ -56,7 +56,10 @@ public class DialogueLine
         this.spriteSequenceKey = spriteSequenceKey;
         this.requireScanNext = requireScanNext;
         this.sceneSwitch = sceneSwitch;
+
     }
+
+    
 }
 
 
