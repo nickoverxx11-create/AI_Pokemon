@@ -179,7 +179,7 @@ public class Level3LabZone : MonoBehaviour
             SetupQuestionImages(choice);
             
             // Construct the instruction text
-            string instruction = $"For the {types[i]} type, find the two packages on the back of the guidebook page.";
+            string instruction = $"For the {types[i]} type, compare the two packages in the guidebook and find the professor's pure collection.";
             yield return StartCoroutine(TypeText(trainingInstructionText, instruction));
             
             // Wait for the correct action card to be scanned

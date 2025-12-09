@@ -166,8 +166,15 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "Each Package Card shows a Pokémon package — Fire, Water, Grass, or Dragon.", "Jede Paketkarte zeigt ein Pokémon-Paket – Feuer, Wasser, Gras oder Drache."),
             new DialogueLine("Professor Oak", "Now, here is your challenge. For each type, you will see two packages.", "Hier ist deine Herausforderung. Für jeden Typ siehst du zwei Pakete."),
             new DialogueLine("Professor Oak", "One comes from my pure collection.", "Eines stammt aus meiner reinen Sammlung."),
-            new DialogueLine("Professor Oak", "The other was found in the wild — it might be broken or mixed up.", "Das andere wurde in der Wildnis gefunden – es könnte kaputt oder vermischt sein.", singleSpriteKey:"dataSet"),
-            new DialogueLine("Professor Oak", "Be careful! If ChompBot eats the wrong one, it might get confused.", "Sei vorsichtig! Wenn ChompBot das falsche frisst, könnte es verwirrt werden."),
+            new DialogueLine("Professor Oak", 
+                "The other package was tampered with by Meowth — some of the data may be wrong or mixed up.", 
+                "Das andere Paket wurde von Mauzi durcheinandergebracht – einige Daten könnten falsch oder vermischt sein.", 
+                singleSpriteKey:"dataSet"),
+
+            new DialogueLine("Professor Oak", 
+                "Be careful! If ChompBot eats Meowth’s messy data, it might learn the wrong things.", 
+                "Sei vorsichtig! Wenn ChompBot Mauzis chaotische Daten frisst, könnte es falsche Dinge lernen."),
+                
             new DialogueLine("Professor Oak", "Your task is to find all my pure collection and test ChompBot’s new power!", "Deine Aufgabe ist es, meine gesamte reine Sammlung zu finden und die neue Kraft von ChompBot zu testen!"),
             new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll help ChompBot learn the right way!", "Ich bin bereit, Professor Oak! Ich werde ChompBot helfen, auf die richtige Weise zu lernen!")
         };
