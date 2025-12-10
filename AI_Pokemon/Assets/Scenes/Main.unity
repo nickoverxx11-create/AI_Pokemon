@@ -12025,6 +12025,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 717343079}
+  - {fileID: 1696526414}
   m_Father: {fileID: 688424339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -39514,8 +39515,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Water Pok\xE9mon hide in the cold undersea. They stay calm and flowing
-    with steady power."
+  m_Text: "       Water Pok\xE9mon hide in the cold undersea. They stay calm and
+    flowing with steady power."
 --- !u!222 &717343081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91089,6 +91090,82 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1696018143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1696526413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696526414}
+  - component: {fileID: 1696526416}
+  - component: {fileID: 1696526415}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1696526414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696526413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 250982575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -121, y: 57}
+  m_SizeDelta: {x: 65.0552, y: 72.0468}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1696526415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696526413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2598405713278941328, guid: f78f6b600246ffa45b7f8bafdbcf40e1,
+    type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1696526416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696526413}
+  m_CullTransparentMesh: 1
 --- !u!1 &1697717587
 GameObject:
   m_ObjectHideFlags: 0
@@ -100333,6 +100410,11 @@ MonoBehaviour:
   asideGroup: {fileID: 250982578}
   asideTextUI: {fileID: 717343080}
   asideImage: {fileID: 250982576}
+  asideIcon: {fileID: 1696526415}
+  asideActionSprite: {fileID: 2598405713278941328, guid: f78f6b600246ffa45b7f8bafdbcf40e1,
+    type: 3}
+  asideInfoSprite: {fileID: 7470584903754895727, guid: 81b9dfa1cfd80be48a1b5025e0df9f9a,
+    type: 3}
   meadowDirector: {fileID: 663370250}
   azureCoastZoom: {fileID: 1110286723}
   whisperingWoodDirector: {fileID: 178582892}
@@ -100342,6 +100424,7 @@ MonoBehaviour:
   resumeButton: {fileID: 1238470202}
   sceneSwitchButton: {fileID: 1830298680}
   typingSpeed: 0.1
+  hintIconRoot: {fileID: 1539677412}
 --- !u!4 &1861903749
 Transform:
   m_ObjectHideFlags: 0

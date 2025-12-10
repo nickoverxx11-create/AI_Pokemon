@@ -15,51 +15,63 @@ MonoBehaviour:
   allCards:
   - index: 1
     name: HIGH ATTACK
-    sprite: {fileID: 21300000, guid: debc0b688de867443b235494fc585618, type: 3}
+    sprite: {fileID: -855298285791758126, guid: 6d93e4d59a687294899af348d7cf994d,
+      type: 3}
     category: 0
   - index: 2
     name: LOW ATTACK
-    sprite: {fileID: 21300000, guid: 1cd3218c3292555478bd34f751a673b1, type: 3}
+    sprite: {fileID: 6937817954938267909, guid: 3b7fab1bb590d0341b7a88537973c1ed,
+      type: 3}
     category: 0
   - index: 3
     name: HIGH DEFENSE
-    sprite: {fileID: 21300000, guid: d34419b7e77800849a1417fae2fd7636, type: 3}
+    sprite: {fileID: -6470460504253458178, guid: 61bf7dcc8ed955740b3c193aed6e3a24,
+      type: 3}
     category: 0
   - index: 4
     name: LOW DEFENSE
-    sprite: {fileID: 21300000, guid: 39c0ea83ceabc0a43a133004a2e86109, type: 3}
+    sprite: {fileID: -4178046375966092550, guid: f10c27a5fa8e7f242b86b34f5e634fd1,
+      type: 3}
     category: 0
   - index: 5
     name: HIGH SPEED
-    sprite: {fileID: 21300000, guid: 16e791929208ceb449770df89e03336d, type: 3}
+    sprite: {fileID: 4130640169021434097, guid: 0fda1fc1ed12f294c81bc844bb6bd133,
+      type: 3}
     category: 0
   - index: 6
     name: LOW SPEED
-    sprite: {fileID: 21300000, guid: ce3e6acac7180564f8b6febf07715a8c, type: 3}
+    sprite: {fileID: 3465286685962602723, guid: 791ea879369ba9548b0d13462ca89447,
+      type: 3}
     category: 0
   - index: 7
     name: HAS WINGS
-    sprite: {fileID: 21300000, guid: 8a074806d8d646c4b902d2fb296c84b0, type: 3}
+    sprite: {fileID: 7028616704906629411, guid: a1ba7d80212070240a52d656f68de3f5,
+      type: 3}
     category: 0
   - index: 8
     name: NO WINGS
-    sprite: {fileID: 21300000, guid: 449be5ddc5cb128499816eb8eeb42335, type: 3}
+    sprite: {fileID: 8288426215254106694, guid: af9cfd5a98bb3f74fb15759ba98bfd0e,
+      type: 3}
     category: 0
   - index: 9
     name: HIGH TEMPERATURE
-    sprite: {fileID: 21300000, guid: 9c58e284ba9f1ce4c96d6402cc684d07, type: 3}
+    sprite: {fileID: 4113829005332862926, guid: 2fe9b5d4cb5ad1a4ea78e8a7c2bee700,
+      type: 3}
     category: 0
   - index: 0
     name: LOW TEMPERATURE
-    sprite: {fileID: 21300000, guid: b8b513d3c91e1d4458935cd14406593e, type: 3}
+    sprite: {fileID: 5088316998373936774, guid: afde6eb8775fa1c42bbb0c564b0256da,
+      type: 3}
     category: 0
   - index: A
     name: HIGH ALTITUDE
-    sprite: {fileID: 21300000, guid: 9a87b16f1cab0f84ba928fc8f89e24fc, type: 3}
+    sprite: {fileID: -8680797543115379092, guid: deb292a6942b4084b9efaf3f6d797569,
+      type: 3}
     category: 0
   - index: B
     name: LOW ALTITUDE
-    sprite: {fileID: 21300000, guid: 4652a005c6fe3eb4cad31ade70423fa6, type: 3}
+    sprite: {fileID: 7425438597007568885, guid: 67fb5a5079d3789439780ff50c925d64,
+      type: 3}
     category: 0
   - index: L
     name: PONYTA
@@ -158,22 +170,22 @@ MonoBehaviour:
     category: 2
   - index: G
     name: ...
-    sprite: {fileID: 1123972391580471218, guid: 3a857ba8047f49e4fa2e08d4b6da53e5,
+    sprite: {fileID: 9202060142997513903, guid: 4c4320e50571d96418fb200e474e831a,
       type: 3}
     category: 2
   - index: H
     name: BIASED
-    sprite: {fileID: -1208932960329422874, guid: 9a6d63a745a4f9541b3657dffe362d93,
+    sprite: {fileID: 2825150710382137115, guid: 43a7e55a6a4d9e7419747d6c508659b7,
       type: 3}
     category: 2
   - index: I
     name: ...
-    sprite: {fileID: 5131927982942454427, guid: cfc5ea026512fbe4db245b8829b5bc29,
+    sprite: {fileID: -5465646382484160345, guid: 9d4cea5d3b3a0d242b0168cd2dbaafb2,
       type: 3}
     category: 2
   - index: J
     name: ...
-    sprite: {fileID: 1504337362984433415, guid: a0e147b2cc5712242aa7d82a4fbb7a67,
+    sprite: {fileID: 1646720447909147354, guid: 10ca97475e621da4b94a1bf1ad131996,
       type: 3}
     category: 2
   - index: K

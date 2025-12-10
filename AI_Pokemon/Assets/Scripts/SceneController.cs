@@ -44,7 +44,11 @@ public class SceneController : MonoBehaviour
     [Header("Aside / Instruction UI")]
     public CanvasGroup asideGroup; 
     public Text asideTextUI;       
-    public Image asideImage; 
+    public Image asideImage;
+    [Header("Aside Icons")] public Image asideIcon;
+    public Sprite asideActionSprite;   // 手指
+    public Sprite asideInfoSprite;     // 灯泡
+
     
     [Header("Optional Directors & Zooms")]
     public PlayableDirector meadowDirector;
@@ -58,9 +62,10 @@ public class SceneController : MonoBehaviour
     public Button resumeButton; 
     private bool _resumeRequested = false;
     public Button sceneSwitchButton;
+    
     [Header("Other")]
     public float typingSpeed = 0.04f;
-    
+    public GameObject hintIconRoot;
     private bool isIntroPlaying = false;
     private bool _sceneSwitch = false;
     private bool isStart = true;
@@ -89,11 +94,13 @@ public class SceneController : MonoBehaviour
         }
         resumeButton.gameObject.SetActive(false);
         sceneSwitchButton.gameObject.SetActive(false);
-
+        if (hintIconRoot != null)
+            hintIconRoot.SetActive(false);
         if (asideGroup != null) asideGroup.gameObject.SetActive(false);
         var frames = Resources.LoadAll<Sprite>("UIImage/gifs/fireDragon");
         Array.Sort(frames, (a,b) => String.Compare(a.name, b.name, StringComparison.Ordinal));
         _spriteSequences["UIImage/gifs/fireDragon"] = frames;
+        
         
         var singles = Resources.LoadAll<Sprite>("UIImage/Dialogues");
         foreach (var s in singles)
@@ -229,41 +236,63 @@ public class SceneController : MonoBehaviour
 
         if (title == "Clearview Meadow")
         {
+            if (hintIconRoot != null) hintIconRoot.SetActive(true);
+
             yield return Level1LabZone.Instance.StartLabZoneSequence(() =>
             {
                 Debug.Log("Lab sequence completed!");
             });
+
+            if (hintIconRoot != null) hintIconRoot.SetActive(false);
         }
         else if (title == "Azure Coast")
         {
+            if (hintIconRoot != null) hintIconRoot.SetActive(true);
+
             yield return Level2LabZone.Instance.StartLabZoneSequence(() =>
             {
                 Debug.Log("Lab sequence completed!");
             });
+
+            if (hintIconRoot != null) hintIconRoot.SetActive(false);
         }
         else if (title == "Whispering Wood")
         {
+            if (hintIconRoot != null) hintIconRoot.SetActive(true);
+
             yield return Level3LabZone.Instance.StartLabZoneSequence(() =>
             {
                 Debug.Log("Lab sequence completed!");
             });
+
+            if (hintIconRoot != null) hintIconRoot.SetActive(false);
         }
         else if (title == "Sunrise Desert")
         {
+            if (hintIconRoot != null) hintIconRoot.SetActive(true);
+
             yield return Level4LabZone.Instance.StartLabZoneSequence(() =>
             {
                 Debug.Log("Lab sequence completed!");
             });
+
+            if (hintIconRoot != null) hintIconRoot.SetActive(false);
         }
         else if (title == "Astral Summit")
         {
+            if (hintIconRoot != null) hintIconRoot.SetActive(true);
+
             yield return Level5LabZone.Instance.StartLabZoneSequence(() =>
             {
                 Debug.Log("Lab sequence completed!");
             });
+
+            if (hintIconRoot != null) hintIconRoot.SetActive(false);
+
             AudioManager.Instance?.SetMusicPaused(true); 
             yield return PlayGameEndSequence();
         }
+
 
         if (afterIntro != null)
             yield return afterIntro;
@@ -405,7 +434,7 @@ public class SceneController : MonoBehaviour
             HideAllBubblesAndText();
             if (dlg.requireScanNext)
             {
-                yield return ShowAsideAndWait(dlg.asideText);
+                yield return ShowAsideAndWait(dlg);
             }
             
             if (dlg.speaker == "Professor Oak")
@@ -489,7 +518,7 @@ public class SceneController : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(1.5f);  
+            yield return new WaitForSeconds(3.5f);  
         }
         
         yield return new WaitUntil(() => animationDone);
@@ -567,24 +596,54 @@ public class SceneController : MonoBehaviour
         AudioManager.Instance?.SetMusicPaused(false);
     }
 
-    private IEnumerator ShowAsideAndWait(string text)
+    private IEnumerator ShowAsideAndWait(DialogueLine dlg)
     {
         professorAvatar.SetActive(false);
         studentAvatar.SetActive(false);
-        if (asideGroup != null)
+
+        asideGroup.gameObject.SetActive(true);
+
+        
+        string text = Language.IsGerman
+            ? (string.IsNullOrEmpty(dlg.asideGermanText) ? dlg.asideText : dlg.asideGermanText)
+            : (string.IsNullOrEmpty(dlg.asideText) ? dlg.asideGermanText : dlg.asideText);
+
+        asideTextUI.text = "      " + (text ?? "");
+
+      
+        if (asideIcon != null)
         {
-            asideGroup.gameObject.SetActive(true);
-            if (asideTextUI != null) asideTextUI.text = text ?? "";
+            Sprite iconSprite = null;
+
+            switch (dlg.asideKind)
+            {
+                case AsideKind.Action:
+                    iconSprite = asideActionSprite;  
+                    break;
+
+                case AsideKind.Info:
+                    iconSprite = asideInfoSprite;   
+                    break;
+
+                case AsideKind.None:
+                default:
+                    iconSprite = null;
+                    break;
+            }
+
+            asideIcon.sprite = iconSprite;
+            asideIcon.gameObject.SetActive(iconSprite != null);
         }
         
         yield return WaitForResume();
 
-        if (asideGroup != null)
-        {
-            asideGroup.gameObject.SetActive(false);
-            if (asideTextUI != null) asideTextUI.text = "";
-        }
+        asideGroup.gameObject.SetActive(false);
+        asideTextUI.text = "";
+        asideIcon.sprite = null;
+        asideIcon.gameObject.SetActive(false);
     }
+
+
     private void RequestResume()
     {
         _resumeRequested = true;

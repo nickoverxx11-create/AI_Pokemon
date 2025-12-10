@@ -653,8 +653,8 @@ public class Level1LabZone : MonoBehaviour
 
     private IEnumerator ShowMethod1RatioBars(PokemonClassifier.Method1Results results)
     {
-        fireBoxRatioBar.SetActive(true);
-        notFireBoxRatioBar.SetActive(true);
+        //fireBoxRatioBar.SetActive(true);
+        //notFireBoxRatioBar.SetActive(true);
 
         int fireCorrect = results.fireBoxCorrect.Count;
         int fireWrong = results.fireBoxWrong.Count;
