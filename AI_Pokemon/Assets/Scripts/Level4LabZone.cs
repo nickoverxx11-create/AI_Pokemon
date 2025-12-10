@@ -46,7 +46,8 @@ public class Level4LabZone : MonoBehaviour
    
     public Button finalApplyButton; // Was finish button, now is the "Apply" button
     public GameObject finalApplyText;
-
+    public Button finalRetryButton;   
+    public GameObject finalRetryText;
     [Header("Mode Settings")] 
     public bool PhysicalButton = true;
     
@@ -291,6 +292,7 @@ public class Level4LabZone : MonoBehaviour
 
         // 5. Wait for the player to scan the "Next/Apply" (→) card to finish.
         AssignButtonOrPhysical(finalApplyButton, OnFinalApply);
+        AssignButtonOrPhysical(finalRetryButton, () => StartCoroutine(OnFinalRetry()));
     }
 
     
@@ -305,7 +307,11 @@ public class Level4LabZone : MonoBehaviour
         // Create the new, more intuitive message
         // It shows the score (e.g., "75/100") and the grade (e.g., "Good!")
         int correctCount = Mathf.RoundToInt(accuracy * 100f / 100f);
-        accuracyText.text = $"Model Score: {correctCount}/100\n{accuracyGrade}";
+        int total = 100;
+        accuracyText.text =
+            $"Great, you have {correctCount}/{total} correct!\n" +
+            $"Do you want to improve your score or end now?\n\n" +
+            $"{accuracyGrade}";
     }
 
     private void UpdateLedDisplay()
