@@ -910,6 +910,14 @@ public class PokemonClassifier : MonoBehaviour
         CreateSelectableDatasets();
     }
 
+// Add this struct/class to hold detailed counts
+    public class Method3DetailedResults
+    {
+        public Dictionary<PokemonClassifier.PokemonType, int> correctCounts;
+        public float overallAccuracy;
+        public int totalCorrect;
+    }
+
     // Combines datasets selected by the player via card IDs.
     public List<TrainingPokemon> GetCombinedTrainingData(List<string> selectedDatasetIDs)
     {
@@ -1107,6 +1115,52 @@ public class PokemonClassifier : MonoBehaviour
             confidenceScores = confidenceScores
         };
     }
+
+// This calculates specific counts per type (Fire, Water, etc.)
+public Method3DetailedResults GetDetailedMethod3Results(ModelWeights trainedWeights)
+{
+    var results = new Method3DetailedResults();
+    results.correctCounts = new Dictionary<PokemonType, int>();
+    
+    // Initialize counts to 0
+    foreach (PokemonType t in Enum.GetValues(typeof(PokemonType)))
+    {
+        results.correctCounts[t] = 0;
+    }
+
+    int correctCount = 0;
+
+    // Loop through the 100 Pokemon dataset
+    foreach (var testPokemon in pokemonDataset)
+    {
+        var scores = PredictScores(testPokemon, trainedWeights);
+
+        // Find the type with the highest score
+        float maxScore = -1f;
+        PokemonType predictedType = PokemonType.Fire; // Default
+        
+        foreach (var kvp in scores)
+        {
+            if (kvp.Value > maxScore)
+            {
+                maxScore = kvp.Value;
+                predictedType = kvp.Key;
+            }
+        }
+
+        // If correct, increment specific type count
+        if (predictedType == testPokemon.actualType)
+        {
+            results.correctCounts[testPokemon.actualType]++;
+            correctCount++;
+        }
+    }
+
+    results.totalCorrect = correctCount;
+    results.overallAccuracy = (float)correctCount / pokemonDataset.Count * 100.0f;
+
+    return results;
+}
 
     // Helper function to predict scores for any given Pokemon using the model.
     private Dictionary<PokemonType, float> PredictScores(Pokemon pokemon, ModelWeights weights)

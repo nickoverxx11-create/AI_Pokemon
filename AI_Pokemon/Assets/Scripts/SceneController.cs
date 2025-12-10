@@ -518,7 +518,7 @@ public class SceneController : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(3.5f);  
+            yield return new WaitForSeconds(5f);  
         }
         
         yield return new WaitUntil(() => animationDone);

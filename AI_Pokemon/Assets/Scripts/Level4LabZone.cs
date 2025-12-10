@@ -41,7 +41,22 @@ public class Level4LabZone : MonoBehaviour
 
     [Header("Result Display")]
     public CanvasGroup resultDisplayGroup;
-    
+    public GameObject fireTypePanel;
+    public Image fireCorrectBar;
+    public Text fireCountText;
+
+    public GameObject waterTypePanel;
+    public Image waterCorrectBar;
+    public Text waterCountText;
+
+    public GameObject grassTypePanel;
+    public Image grassCorrectBar;
+    public Text grassCountText;
+
+    public GameObject dragonTypePanel;
+    public Image dragonCorrectBar;
+    public Text dragonCountText;
+
     public Text accuracyText;
    
     public Button finalApplyButton; // Was finish button, now is the "Apply" button
@@ -286,9 +301,9 @@ public class Level4LabZone : MonoBehaviour
         yield return FadeCanvas(resultDisplayGroup, 0, 1, 1f);
 
         // 3. Calculate and display the accuracy of this dataset combination ONCE.
-        UpdateAccuracyDisplay();
+        var detailedResults = pokemonClassifier.GetDetailedMethod3Results(currentModelWeights);
         
-       
+        yield return StartCoroutine(ShowDetailedResults(detailedResults));
 
         // 5. Wait for the player to scan the "Next/Apply" (→) card to finish.
         AssignButtonOrPhysical(finalApplyButton, OnFinalApply);
@@ -548,4 +563,75 @@ public class Level4LabZone : MonoBehaviour
         inGameUIGroup.gameObject.SetActive(true);
         StartCoroutine(FadeCanvas(inGameUIGroup, 0f, 1f, duration));
     }
+    private IEnumerator AnimateRatioBar(Image bar, float targetRatio, float duration)
+    {
+        float t = 0f;
+        float startFill = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            bar.fillAmount = Mathf.Lerp(startFill, targetRatio, t / duration);
+            yield return null;
+        }
+        bar.fillAmount = targetRatio;
+    }
+
+    private IEnumerator ShowDetailedResults(PokemonClassifier.Method3DetailedResults results)
+    {
+        // Total number of Pokémon of each type in the dataset (Usually 25 each in the 100 set)
+        const int TOTAL_PER_TYPE = 25; 
+
+        // --- 1) Fire Type ---
+        int fireCorrect = results.correctCounts[PokemonClassifier.PokemonType.Fire];
+        float fireRatio = (float)fireCorrect / TOTAL_PER_TYPE;
+        
+        if(fireTypePanel) fireTypePanel.SetActive(true);
+        if(fireCountText) 
+        {
+            fireCountText.supportRichText = true;
+            fireCountText.text = $"Found <size=160%>{fireCorrect}</size> Fire Pokémon";
+        }
+        if(fireCorrectBar) yield return StartCoroutine(AnimateRatioBar(fireCorrectBar, fireRatio, 0.5f));
+
+        // --- 2) Water Type ---
+        int waterCorrect = results.correctCounts[PokemonClassifier.PokemonType.Water];
+        float waterRatio = (float)waterCorrect / TOTAL_PER_TYPE;
+
+        if(waterTypePanel) waterTypePanel.SetActive(true);
+        if(waterCountText) 
+        {
+            waterCountText.supportRichText = true;
+            waterCountText.text = $"Found <size=160%>{waterCorrect}</size> Water Pokémon";
+        }
+        if(waterCorrectBar) yield return StartCoroutine(AnimateRatioBar(waterCorrectBar, waterRatio, 0.5f));
+
+        // --- 3) Grass Type ---
+        int grassCorrect = results.correctCounts[PokemonClassifier.PokemonType.Grass];
+        float grassRatio = (float)grassCorrect / TOTAL_PER_TYPE;
+
+        if(grassTypePanel) grassTypePanel.SetActive(true);
+        if(grassCountText)
+        {
+            grassCountText.supportRichText = true;
+            grassCountText.text = $"Found <size=160%>{grassCorrect}</size> Grass Pokémon";
+        }
+        if(grassCorrectBar) yield return StartCoroutine(AnimateRatioBar(grassCorrectBar, grassRatio, 0.5f));
+
+        // --- 4) Dragon Type ---
+        int dragonCorrect = results.correctCounts[PokemonClassifier.PokemonType.Dragon];
+        float dragonRatio = (float)dragonCorrect / TOTAL_PER_TYPE;
+
+        if(dragonTypePanel) dragonTypePanel.SetActive(true);
+        if(dragonCountText)
+        {
+            dragonCountText.supportRichText = true;
+            dragonCountText.text = $"Found <size=160%>{dragonCorrect}</size> Dragon Pokémon";
+        }
+        if(dragonCorrectBar) yield return StartCoroutine(AnimateRatioBar(dragonCorrectBar, dragonRatio, 0.5f));
+
+        // Update main text
+        accuracyText.text = $"Great, you have {results.totalCorrect}/100 correct!\n" +
+                            $"Do you want to improve your score or end now?";
+    }
+
 }

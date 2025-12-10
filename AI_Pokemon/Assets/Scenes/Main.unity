@@ -81384,6 +81384,11 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d221bfd8584429c49bd1b68a52177b40,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141983678104478996, guid: d221bfd8584429c49bd1b68a52177b40,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: d221bfd8584429c49bd1b68a52177b40,
@@ -97981,6 +97986,10 @@ PrefabInstance:
     - target: {fileID: 1218347679047942, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_Name
       value: Tree_3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218347679047942, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1218347679047942, guid: fa6105287f77b1240a0017f7d23434c2, type: 3}
       propertyPath: m_StaticEditorFlags
