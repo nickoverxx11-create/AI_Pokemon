@@ -39,6 +39,11 @@ public class Level4LabZone : MonoBehaviour
     public GameObject finishText;
     public Sprite questionCard;
 
+    [Header("Result Boxes (Method 3)")]
+    public GameObject method3ResultsPanel;    
+    public List<GameObject> typeBoxes;      
+    public List<BoxGifSet> boxGifs;   
+    
     [Header("Result Display")]
     public CanvasGroup resultDisplayGroup;
     public GameObject fireTypePanel;
@@ -306,8 +311,9 @@ public class Level4LabZone : MonoBehaviour
         yield return StartCoroutine(ShowDetailedResults(detailedResults));
 
         // 5. Wait for the player to scan the "Next/Apply" (→) card to finish.
-        AssignButtonOrPhysical(finalApplyButton, OnFinalApply);
-        AssignButtonOrPhysical(finalRetryButton, () => StartCoroutine(OnFinalRetry()));
+        //AssignButtonOrPhysical(finalApplyButton, OnFinalApply);
+        //AssignButtonOrPhysical(finalRetryButton, () => StartCoroutine(OnFinalRetry()));
+        yield return StartCoroutine(ShowMethod3Results(detailedResults));
     }
 
     
@@ -441,6 +447,107 @@ public class Level4LabZone : MonoBehaviour
             yield return null;
         }
     }
+    
+    // ===============  Result UI Reset  ===============
+
+private void ResetResultUI()
+{
+    if (fireCountText) fireCountText.text = "";
+    if (waterCountText) waterCountText.text = "";
+    if (grassCountText) grassCountText.text = "";
+    if (dragonCountText) dragonCountText.text = "";
+    if (accuracyText) accuracyText.text = "";
+
+    if (fireCorrectBar) fireCorrectBar.fillAmount = 0f;
+    if (waterCorrectBar) waterCorrectBar.fillAmount = 0f;
+    if (grassCorrectBar) grassCorrectBar.fillAmount = 0f;
+    if (dragonCorrectBar) dragonCorrectBar.fillAmount = 0f;
+
+    if (fireTypePanel) fireTypePanel.SetActive(false);
+    if (waterTypePanel) waterTypePanel.SetActive(false);
+    if (grassTypePanel) grassTypePanel.SetActive(false);
+    if (dragonTypePanel) dragonTypePanel.SetActive(false);
+}
+
+
+private IEnumerator PlayImageAnimation(Image image, Sprite[] frames, float delay, bool holdLast)
+{
+    if (image == null || frames == null || frames.Length == 0)
+        yield break;
+
+    for (int i = 0; i < frames.Length; i++)
+    {
+        image.sprite = frames[i];
+        yield return new WaitForSeconds(delay);
+    }
+
+    if (!holdLast)
+        image.sprite = null;
+}
+
+private IEnumerator AnimateBoxShinyAndOpen(GameObject box, BoxGifSet gifSet)
+{
+    if (!box || gifSet == null) yield break;
+
+    box.SetActive(true);
+    var image = box.GetComponent<Image>();
+    if (!image) yield break;
+
+ 
+    yield return StartCoroutine(PlayImageAnimation(image, gifSet.shinyFrames, 0.1f, false));
+
+    yield return StartCoroutine(PlayImageAnimation(image, gifSet.openFrames, 0.1f, true));
+}
+
+private IEnumerator AnimateBoxDestroy(GameObject box, BoxGifSet gifSet)
+{
+    if (!box || gifSet == null) yield break;
+
+    var image = box.GetComponent<Image>();
+    if (!image) yield break;
+    
+    yield return StartCoroutine(PlayImageAnimation(image, gifSet.destroyFrames, 0.1f, false));
+
+    image.sprite = gifSet.finalSprite;
+}
+
+
+private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults results)
+{
+  
+    if (method3ResultsPanel) method3ResultsPanel.SetActive(true);
+
+
+    ResetResultUI();
+
+    var shinyOpenCoroutines = new List<Coroutine>();
+    int boxCount = Mathf.Min(typeBoxes.Count, boxGifs.Count);
+    for (int i = 0; i < boxCount; i++)
+    {
+        shinyOpenCoroutines.Add(
+            StartCoroutine(AnimateBoxShinyAndOpen(typeBoxes[i], boxGifs[i]))
+        );
+    }
+    foreach (var c in shinyOpenCoroutines)
+        yield return c;
+
+
+    var destroyCoroutines = new List<Coroutine>();
+    for (int i = 0; i < boxCount; i++)
+    {
+        destroyCoroutines.Add(
+            StartCoroutine(AnimateBoxDestroy(typeBoxes[i], boxGifs[i]))
+        );
+    }
+    foreach (var c in destroyCoroutines)
+        yield return c;
+    
+    yield return StartCoroutine(ShowDetailedResults(results));
+    
+    AssignButtonOrPhysical(finalApplyButton, OnFinalApply, finalApplyText);
+    AssignButtonOrPhysical(finalRetryButton, () => StartCoroutine(OnFinalRetry()), finalRetryText);
+}
+
 
     private bool HandlePhysicalCardInput(string cardIndex)
     {
