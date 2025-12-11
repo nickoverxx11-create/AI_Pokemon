@@ -117,21 +117,22 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "In the land of Novara, there are four kinds of Pokémon.", "Im Land Novara gibt es vier Arten von Pokémon."),
             new DialogueLine("Professor Oak", "Your mission is to catch Pokémon and challenge the Boss Pokémon.", "Deine Mission ist es, Pokémon zu fangen und die Boss-Pokémon herauszufordern."),
             new DialogueLine("Professor Oak", "Please open the guidebook now to learn more about them.", "Bitte öffne jetzt das Handbuch, um mehr über sie zu erfahren."),
-            //Scan Next
+            
+            //Click Next
             //Aside: Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.
-            new DialogueLine("Professor Oak", "Great! Now turn to page 2 and scan some real Fire Pokémon to see their power in action!", "Großartig! Blättere nun zu Seite 2 und scanne einige echte Feuer-Pokémon, um ihre Kraft in Aktion zu sehen!",
+            new DialogueLine("Professor Oak", "Great! Now turn to page Fire and scan some real Fire Pokémon to see their power in action!", "Großartig! Blättere nun zu Seite Feuer und scanne einige echte Feuer-Pokémon, um ihre Kraft in Aktion zu sehen!",
                 asideText: "Now please open the Pokémon Guidebook", requireScanNext: true, asideKind: AsideKind.Action ),
-            //Scan Next
+            //Click Next
             //Aside: Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.
-            new DialogueLine("Professor Oak", "Wonderful! Turn to page 3 and scan some real Water Pokémon to explore where they live.", "Wunderbar! Blättere zu Seite 3 und scanne einige echte Wasser-Pokémon, um zu entdecken, wo sie leben.", 
+            new DialogueLine("Professor Oak", "Wonderful! Turn to page Water and scan some real Water Pokémon to explore where they live.", "Wunderbar! Blättere zu Seite Wasser und scanne einige echte Wasser-Pokémon, um zu entdecken, wo sie leben.", 
                 asideText:"Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.", requireScanNext: true, asideKind: AsideKind.Info ),
-            //Scan Next
+            //Click Next
             //Aside: Grass Pokémon live in green forests. They’re great at defending and move a little slower.
-            new DialogueLine("Professor Oak", "Excellent! Turn to page 4 and scan some real Grass Pokémon to learn how they protect nature.", "Ausgezeichnet! Blättere zu Seite 4 und scanne einige echte Gras-Pokémon, um zu lernen, wie sie die Natur schützen.", 
+            new DialogueLine("Professor Oak", "Excellent! Turn to page Grass and scan some real Grass Pokémon to learn how they protect nature.", "Ausgezeichnet! Blättere zu Seite Grass und scanne einige echte Gras-Pokémon, um zu lernen, wie sie die Natur schützen.", 
                 asideText:"Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.", requireScanNext: true,asideKind: AsideKind.Info),
-            //Scan Next
+            //Click Next
             //Aside: Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.
-            new DialogueLine("Professor Oak", "Hmm… it looks like page 5 is broken! The Dragon Pokémon data seems damaged.", "Hmm… es sieht so aus, als wäre Seite 5 kaputt! Die Daten der Drachen-Pokémon scheinen beschädigt zu sein.", 
+            new DialogueLine("Professor Oak", "Hmm… it looks like page Dragon is broken! The Dragon Pokémon data seems damaged.", "Hmm… es sieht so aus, als wäre Seite Drachen kaputt! Die Daten der Drachen-Pokémon scheinen beschädigt zu sein.", 
                 asideText:"Grass Pokémon live in green forests. They’re great at defending and move a little slower.", requireScanNext: true, asideKind: AsideKind.Info),
             new DialogueLine("Professor Oak", "Let’s explore and fix it later, once we do, we’ll uncover all their secrets!", "Lass uns das später erforschen und reparieren, sobald wir das getan haben, werden wir all ihre Geheimnisse aufdecken!"),
 
@@ -141,7 +142,7 @@ public class GameDialogues : MonoBehaviour
             //Clue Cards appear in order
             new DialogueLine("Professor Oak", "Use these clues to help CheckBot guess what kind each Pokémon is.", "Benutze diese Hinweise, um CheckBot zu helfen, zu erraten, um welche Art von Pokémon es sich handelt."),
             new DialogueLine("Professor Oak", "Catch as many Pokémon as possible and become a Pokémon Master!", "Fange so viele Pokémon wie möglich und werde ein Pokémon-Meister!"),
-            new DialogueLine("Professor Oak", "Now please turn to page 6. This is my research notebook.", "Bitte blättere nun zu Seite 6. Das ist mein Forschungsnotizbuch."),
+            new DialogueLine("Professor Oak", "This is my research notebook.", "Das ist mein Forschungsnotizbuch."),
             new DialogueLine("Professor Oak", "I want to know what you think about how robots make choices.", "Ich möchte wissen, was du darüber denkst, wie Roboter Entscheidungen treffen."),
             new DialogueLine("Professor Oak", "Please answer the questions and choose a number to show how sure you are.", "Bitte beantworte die Fragen und wähle eine Zahl, um zu zeigen, wie sicher du dir bist."),
             new DialogueLine("Professor Oak", "There are no right or wrong answers, so just do your best!", "Es gibt keine richtigen oder falschen Antworten, also gib einfach dein Bestes!", sceneSwitch: true),
