@@ -171,7 +171,7 @@ public class Level4LabZone : MonoBehaviour
     private IEnumerator ShowScanUI()
     {
         scanTitleText.text = $"Scan Datasets: {currentScanCount}/4";
-        scanInstructionText.text = "Scan up to 4 dataset cards to combine them.";
+        scanInstructionText.text = "Scan up to 4 Package cards to feed them.";
         foreach (var placeholder in cardPlaceholders)
         {
             placeholder.sprite = questionCard;
@@ -191,7 +191,7 @@ public class Level4LabZone : MonoBehaviour
         {
             if (currentScanCount >= 4)
             {
-                scanInstructionText.text = "All datasets scanned! Click Finish to train.";
+                scanInstructionText.text = "All Packages scanned! Click Finish to train.";
                 break;
             }
 
@@ -206,7 +206,7 @@ public class Level4LabZone : MonoBehaviour
                 
                 if (scannedCardIds.Contains(cardIndex))
                 {
-                    scanInstructionText.text = "You already scanned that dataset! Try a different one.";
+                    scanInstructionText.text = "You already scanned that Package! Try a different one.";
                     if (cube != null && cube.isConnected) cube.PlayPresetSound(10);
                 }
                 // --- MODIFIED: Check if it's a valid DATASET card (C-K) ---
@@ -216,7 +216,7 @@ public class Level4LabZone : MonoBehaviour
                 }
                 else
                 {
-                    scanInstructionText.text = "That's not a dataset card! Try another.";
+                    scanInstructionText.text = "That's not a Package card! Try another.";
                     if (cube != null && cube.isConnected) cube.PlayPresetSound(10); // Play the same error sound
                 }
             }
@@ -252,7 +252,7 @@ public class Level4LabZone : MonoBehaviour
             scanTitleText.text = $"Scan Datasets: {currentScanCount}/4";
         }
             
-        scanInstructionText.text = "Great! Scan another dataset, or click Finish.";
+        scanInstructionText.text = "Great! Scan another Package, or click Finish.";
         
         // Update the LED board in real-time with the new combination
         UpdateLedDisplay();
@@ -275,7 +275,7 @@ public class Level4LabZone : MonoBehaviour
         }
 
         scanTitleText.text = "Scan Datasets: 0/4";
-        scanInstructionText.text = "Please scan a dataset card.";
+        scanInstructionText.text = "Please scan a Package card.";
         
         // Turn off all LEDs on reset
         if (ESP32Controller.Instance != null) ESP32Controller.Instance.SendLEDData("0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0");
@@ -696,7 +696,7 @@ private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults 
         if(fireCountText) 
         {
             fireCountText.supportRichText = true;
-            fireCountText.text = $"Found <size=160%>{fireCorrect}</size> Fire Pokémon";
+            fireCountText.text = $"Found <size=160%>{fireCorrect}/25</size> Fire Pokémon";
         }
         if(fireCorrectBar) yield return StartCoroutine(AnimateRatioBar(fireCorrectBar, fireRatio, 0.5f));
 
@@ -708,7 +708,7 @@ private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults 
         if(waterCountText) 
         {
             waterCountText.supportRichText = true;
-            waterCountText.text = $"Found <size=160%>{waterCorrect}</size> Water Pokémon";
+            waterCountText.text = $"Found <size=160%>{waterCorrect}/25</size> Water Pokémon";
         }
         if(waterCorrectBar) yield return StartCoroutine(AnimateRatioBar(waterCorrectBar, waterRatio, 0.5f));
 
@@ -720,7 +720,7 @@ private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults 
         if(grassCountText)
         {
             grassCountText.supportRichText = true;
-            grassCountText.text = $"Found <size=160%>{grassCorrect}</size> Grass Pokémon";
+            grassCountText.text = $"Found <size=160%>{grassCorrect}/25</size> Grass Pokémon";
         }
         if(grassCorrectBar) yield return StartCoroutine(AnimateRatioBar(grassCorrectBar, grassRatio, 0.5f));
 
@@ -732,7 +732,7 @@ private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults 
         if(dragonCountText)
         {
             dragonCountText.supportRichText = true;
-            dragonCountText.text = $"Found <size=160%>{dragonCorrect}</size> Dragon Pokémon";
+            dragonCountText.text = $"Found <size=160%>{dragonCorrect}/25</size> Dragon Pokémon";
         }
         if(dragonCorrectBar) yield return StartCoroutine(AnimateRatioBar(dragonCorrectBar, dragonRatio, 0.5f));
 

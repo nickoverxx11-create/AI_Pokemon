@@ -583,7 +583,7 @@ private void ResetScanForGroup(int groupIndex)
     fireCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(fireCorrectBar, fireRatio, 1f));
     fireCountText.supportRichText = true;
-    fireCountText.text = $"Found <size=160%>{fireCorrect}</size> Fire Pokémon";
+    fireCountText.text = $"Found <size=160%>{fireCorrect}/25</size> Fire Pokémon";
 
     // --- 2) Water Type Ratio Bar ---
     int waterCorrect = results.correctPredictions[PokemonClassifier.PokemonType.Water].Count;
@@ -593,7 +593,7 @@ private void ResetScanForGroup(int groupIndex)
     waterCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(waterCorrectBar, waterRatio, 1f));
     waterCountText.supportRichText = true;
-    waterCountText.text = $"Found <size=160%>{waterCorrect}</size> Water Pokémon";
+    waterCountText.text = $"Found <size=160%>{waterCorrect}/25</size> Water Pokémon";
 
     // --- 3) Grass Type Ratio Bar ---
     int grassCorrect = results.correctPredictions[PokemonClassifier.PokemonType.Grass].Count;
@@ -603,7 +603,7 @@ private void ResetScanForGroup(int groupIndex)
     grassCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(grassCorrectBar, grassRatio, 1f));
     grassCountText.supportRichText = true;
-    grassCountText.text = $"Found <size=160%>{grassCorrect}</size> Grass Pokémon";
+    grassCountText.text = $"Found <size=160%>{grassCorrect}/25</size> Grass Pokémon";
 
         // --- 4) Dragon Type Ratio Bar ---
         int dragonCorrect;
@@ -618,7 +618,7 @@ private void ResetScanForGroup(int groupIndex)
     dragonCorrectBar.fillAmount = 0f;
     yield return StartCoroutine(AnimateRatioBar(dragonCorrectBar, dragonRatio, 1f));
     dragonCountText.supportRichText = true;
-    dragonCountText.text = $"Found <size=160%>{dragonCorrect}</size> Dragon Pokémon";
+    dragonCountText.text = $"Found <size=160%>{dragonCorrect}/25</size> Dragon Pokémon";
 
     // --- 5) Overall Accuracy (this part is unchanged) ---
     int totalCorrect = fireCorrect + waterCorrect + grassCorrect + dragonCorrect ;
