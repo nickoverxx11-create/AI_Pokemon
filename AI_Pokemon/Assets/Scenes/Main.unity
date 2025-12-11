@@ -14600,7 +14600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b3b38d95b5d244b901b35fef4c06ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esp32IP: http://172.20.10.4
+  esp32IP: http://172.20.10.3
 --- !u!4 &286848001
 Transform:
   m_ObjectHideFlags: 0
@@ -33059,7 +33059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &600566541
 RectTransform:
   m_ObjectHideFlags: 0
