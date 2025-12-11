@@ -87568,16 +87568,16 @@ MonoBehaviour:
   resultDisplayGroup: {fileID: 1000242895}
   fireTypePanel: {fileID: 894652613}
   fireCorrectBar: {fileID: 1754252064}
-  fireCountText: {fileID: 1063274427}
+  fireCountText: {fileID: 702674044}
   waterTypePanel: {fileID: 1185858939}
   waterCorrectBar: {fileID: 977491845}
-  waterCountText: {fileID: 1490683373}
+  waterCountText: {fileID: 2022030912}
   grassTypePanel: {fileID: 1012831511}
   grassCorrectBar: {fileID: 1698891723}
-  grassCountText: {fileID: 92929373}
+  grassCountText: {fileID: 2013908848}
   dragonTypePanel: {fileID: 1264732953}
   dragonCorrectBar: {fileID: 153704767}
-  dragonCountText: {fileID: 1810859150}
+  dragonCountText: {fileID: 676124797}
   accuracyText: {fileID: 566511326}
   finalApplyButton: {fileID: 2078839247}
   finalApplyText: {fileID: 1541539884}
