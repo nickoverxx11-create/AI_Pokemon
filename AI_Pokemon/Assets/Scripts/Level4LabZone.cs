@@ -308,7 +308,7 @@ public class Level4LabZone : MonoBehaviour
         // 3. Calculate and display the accuracy of this dataset combination ONCE.
         var detailedResults = pokemonClassifier.GetDetailedMethod3Results(currentModelWeights);
         
-        yield return StartCoroutine(ShowDetailedResults(detailedResults));
+        //yield return StartCoroutine(ShowDetailedResults(detailedResults));
 
         // 5. Wait for the player to scan the "Next/Apply" (→) card to finish.
         //AssignButtonOrPhysical(finalApplyButton, OnFinalApply);
