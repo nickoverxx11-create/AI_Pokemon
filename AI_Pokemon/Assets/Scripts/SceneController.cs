@@ -277,6 +277,8 @@ public class SceneController : MonoBehaviour
             });
 
             if (hintIconRoot != null) hintIconRoot.SetActive(false);
+            AudioManager.Instance?.SetMusicPaused(true);
+            yield return PlayGameEndSequence();
         }
         else if (title == "Astral Summit")
         {
