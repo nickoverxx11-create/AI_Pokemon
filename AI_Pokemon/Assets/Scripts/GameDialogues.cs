@@ -5,6 +5,13 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
+public enum GameMode { Story, Class }
+
+public static class GameModeState
+{
+    public static GameMode Current = GameMode.Story; 
+}
+
 public enum Lang { EN, DE }
 
 public enum AsideKind
@@ -221,6 +228,7 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "Thanks for being here to help my Pokémon research. See you next time!", "Danke, dass du hier warst, um meine Pokémon-Forschung zu unterstützen. Bis zum nächsten Mal!"),
         };
         
+
         // This part remains the same, it will auto-assign your audio clips.
         int clipIndex = 0;
         foreach (var zone in allDialogues.Values)
@@ -247,4 +255,38 @@ public class GameDialogues : MonoBehaviour
     {
         if (targetImage) targetImage.sprite = isGerman ? germanSprite : englishSprite;
     }
+    public List<DialogueLine> GetDialogueLines(string zoneKey)
+    {
+        if (allDialogues == null) return new List<DialogueLine>();
+        if (!allDialogues.TryGetValue(zoneKey, out var src) || src == null)
+            return new List<DialogueLine>();
+
+        // Story mode: 全部返回（注意：返回 copy，避免外面误改）
+        if (GameModeState.Current == GameMode.Story)
+            return new List<DialogueLine>(src);
+
+        // Class mode:
+        // Zone1/2/3：不播
+        if (zoneKey == "ClearviewMeadow" || zoneKey == "AzureCoast" || zoneKey == "WhisperingWood")
+            return new List<DialogueLine>();
+
+        // GameStart：只保留含 aside 的行
+        if (zoneKey == "GameStart")
+        {
+            var filtered = new List<DialogueLine>();
+            foreach (var d in src)
+            {
+                if (d == null) continue;
+                bool hasAside = !string.IsNullOrWhiteSpace(d.asideText)
+                                || !string.IsNullOrWhiteSpace(d.asideGermanText);
+                if (hasAside) filtered.Add(d);
+            }
+            return filtered;
+        }
+
+        // 其它 zone：照常
+        return new List<DialogueLine>(src);
+    }
+
+
 }

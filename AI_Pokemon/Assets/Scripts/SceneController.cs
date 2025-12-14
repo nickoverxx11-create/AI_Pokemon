@@ -6,7 +6,7 @@ using toio.Simulator;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController Instance;
@@ -229,7 +229,12 @@ public class SceneController : MonoBehaviour
         yield return FadeTextAlpha(sceneNameBigText, 1f, 0f, 0.5f);
         sceneNameBigText.gameObject.SetActive(false);
 
-        yield return PlayDialogue(zoneKey);
+        bool skipDialogue =
+            (GameModeState.Current == GameMode.Class) &&
+            (zoneKey == "ClearviewMeadow" || zoneKey == "AzureCoast" || zoneKey == "WhisperingWood");
+
+        if (!skipDialogue)
+            yield return PlayDialogue(zoneKey);
 
         yield return FadeCanvasGroup(introGroup, 1f, 0f, 1f);
         introGroup.gameObject.SetActive(false);
@@ -424,13 +429,24 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
     {
+        if (GameDialogues.Instance == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+
+        var lines = GameDialogues.Instance.GetDialogueLines(zoneKey);
+        if (lines == null || lines.Count == 0)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
         professorAvatar.gameObject.SetActive(true); 
         studentAvatar.gameObject.SetActive(true);
         professorBubble.alpha = 0;
         studentBubble.alpha   = 0;
         professorText.text    = "";
         studentText.text      = "";
-        var lines = GameDialogues.Instance.allDialogues[zoneKey];
         foreach (var dlg in lines)
         {
             HideAllBubblesAndText();
@@ -700,6 +716,11 @@ public class SceneController : MonoBehaviour
         _curText.text = Language.IsGerman
             ? (string.IsNullOrEmpty(_curDlg.germanLine) ? _curDlg.line : _curDlg.germanLine)
             : (string.IsNullOrEmpty(_curDlg.line) ? _curDlg.germanLine : _curDlg.line);
+    }
+
+    public void ToggleMode()
+    {
+        GameModeState.Current = (GameModeState.Current == GameMode.Story) ? GameMode.Class : GameMode.Story;
     }
 
 
