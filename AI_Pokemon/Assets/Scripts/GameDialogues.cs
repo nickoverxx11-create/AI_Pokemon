@@ -120,7 +120,7 @@ public class GameDialogues : MonoBehaviour
             //new DialogueLine("", "", ""),
             new DialogueLine("Professor Oak", "Hi, young Trainer! I'm Professor Oak.", "Hallo, junger Trainer! Ich bin Professor Oak."),
             new DialogueLine("Professor Oak", "I'm glad you're here to help my Pokémon research.", "Ich bin froh, dass du hier bist, um meine Pokémon-Forschung zu unterstützen."),
-            new DialogueLine("Professor Oak", "This is your friend CheckBot — he’ll help you find Pokémon!", "Das ist dein Freund CheckBot – er wird dir helfen, Pokémon zu finden!", singleSpriteKey:"checkBot"),
+            new DialogueLine("Professor Oak", "This is your friend RuleBot — he’ll help you find Pokémon!", "Das ist dein Freund RuleBot – er wird dir helfen, Pokémon zu finden!", singleSpriteKey:"checkBot"),
             new DialogueLine("Professor Oak", "In the land of Novara, there are four kinds of Pokémon.", "Im Land Novara gibt es vier Arten von Pokémon."),
             new DialogueLine("Professor Oak", "Your mission is to catch Pokémon and challenge the Boss Pokémon.", "Deine Mission ist es, Pokémon zu fangen und die Boss-Pokémon herauszufordern."),
             new DialogueLine("Professor Oak", "Please open the guidebook now to learn more about them.", "Bitte öffne jetzt das Handbuch, um mehr über sie zu erfahren."),
@@ -143,11 +143,10 @@ public class GameDialogues : MonoBehaviour
                 asideText:"Grass Pokémon live in green forests. They’re great at defending and move a little slower.", requireScanNext: true, asideKind: AsideKind.Info),
             new DialogueLine("Professor Oak", "Let’s explore and fix it later, once we do, we’ll uncover all their secrets!", "Lass uns das später erforschen und reparieren, sobald wir das getan haben, werden wir all ihre Geheimnisse aufdecken!"),
 
-            new DialogueLine("Professor Oak", "To catch them, CheckBot need the right Poké Ball for each kind.", "Um sie zu fangen, benötigt CheckBot für jede Art den richtigen Pokéball."),
-            new DialogueLine("Professor Oak", "But how can CheckBot know what kind they are? Look at these Clue Cards!", "Aber woher soll CheckBot wissen, um welche Art es sich handelt? Schau dir diese Clue Cards an!"),
+            new DialogueLine("Professor Oak", "To catch them, RuleBot needs the right Poké Ball for each kind.", "Um sie zu fangen, benötigt RuleBot für jede Art den richtigen Pokéball."),
+            new DialogueLine("Professor Oak", "But how can RuleBot know what kind they are? Look at these Clue Cards!", "Aber woher soll RuleBot wissen, um welche Art es sich handelt? Schau dir diese Clue Cards an!"),
             new DialogueLine("Professor Oak", "How strong, fast, and tough they are, whether they have wings, and how hot or high their home is.", "Wie stark, schnell und zäh sie sind, ob sie Flügel haben und wie heiß oder hoch ihr Zuhause ist.", singleSpriteKey:"clueCard"),
-            //Clue Cards appear in order
-            new DialogueLine("Professor Oak", "Use these clues to help CheckBot guess what kind each Pokémon is.", "Benutze diese Hinweise, um CheckBot zu helfen, zu erraten, um welche Art von Pokémon es sich handelt."),
+            new DialogueLine("Professor Oak", "Use these clues to help RuleBot guess what kind each Pokémon is.", "Benutze diese Hinweise, um RuleBot zu helfen, zu erraten, um welche Art von Pokémon es sich handelt."),
             new DialogueLine("Professor Oak", "Catch as many Pokémon as possible and become a Pokémon Master!", "Fange so viele Pokémon wie möglich und werde ein Pokémon-Meister!"),
             new DialogueLine("Professor Oak", "This is my research notebook.", "Das ist mein Forschungsnotizbuch."),
             new DialogueLine("Professor Oak", "I want to know what you think about how robots make choices.", "Ich möchte wissen, was du darüber denkst, wie Roboter Entscheidungen treffen."),
@@ -163,7 +162,7 @@ public class GameDialogues : MonoBehaviour
             new DialogueLine("Professor Oak", "Hi, young Trainer! Welcome to Clearview Meadow—your journey begins here!", "Hallo, junger Trainer! Willkommen in Clearview Meadow – deine Reise beginnt hier!"),
             new DialogueLine("Professor Oak", "But there's trouble… wildfires are spreading fast, and we need to stop them!", "Aber es gibt Ärger… Waldbrände breiten sich schnell aus, und wir müssen sie aufhalten!"),
             new DialogueLine("Professor Oak", "Your mission is to find Fire Pokémon. Use Clue Cards to create a Fire Plan.", "Deine Mission ist es, Feuer-Pokémon zu finden. Benutze die Clue Cards, um einen Feuer-Plan zu erstellen."),
-            new DialogueLine("Trainer", "I'm ready, Professor Oak! Let's stop the fire with Checkbot together!", "Ich bin bereit, Professor Oak! Lass uns das Feuer gemeinsam mit Checkbot aufhalten!")
+            new DialogueLine("Trainer", "I'm ready, Professor Oak! Let's stop the fire with RuleBot together!", "Ich bin bereit, Professor Oak! Lass uns das Feuer gemeinsam mit RuleBot aufhalten!")
         };
 
         // --- Zone 2: Azure Coast ---
@@ -180,8 +179,8 @@ public class GameDialogues : MonoBehaviour
         {
             new DialogueLine("Professor Oak", "Welcome to Whispering Woods!", "Willkommen im Whispering Woods!"),
             new DialogueLine("Professor Oak", "The last mission was tricky, wasn’t it? I’ve build something new for you!", "Die letzte Mission war knifflig, nicht wahr? Ich habe etwas Neues für dich gebaut!"),
-            new DialogueLine("Professor Oak", "I upgraded CheckBot into ChompBot — stronger, smarter, and hungry to learn!", "Ich habe CheckBot zu ChompBot aufgerüstet – stärker, klüger und hungrig zu lernen!", singleSpriteKey:"chompBot"),
-            new DialogueLine("Professor Oak", "This time, no more Clue Cards. ChompBot learns by “eating” Package Cards!", "Dieses Mal keine Clue Cards mehr. ChompBot lernt durch das „Essen“ von Paketkarten!"),
+            new DialogueLine("Professor Oak", "I upgraded RuleBot into DataBot — stronger, smarter, and hungry to learn!", "Ich habe RuleBot zu DataBot aufgerüstet – stärker, klüger und hungrig zu lernen!", singleSpriteKey:"chompBot"),
+            new DialogueLine("Professor Oak", "This time, no more Clue Cards. DataBot learns by “eating” Package Cards!", "Dieses Mal keine Clue Cards mehr. DataBot lernt durch das „Essen“ von Paketkarten!"),
             new DialogueLine("Professor Oak", "Each Package Card shows a Pokémon package — Fire, Water, Grass, or Dragon.", "Jede Paketkarte zeigt ein Pokémon-Paket – Feuer, Wasser, Gras oder Drache."),
             new DialogueLine("Professor Oak", "Now, here is your challenge. For each type, you will see two packages.", "Hier ist deine Herausforderung. Für jeden Typ siehst du zwei Pakete."),
             new DialogueLine("Professor Oak", "One comes from my pure collection.", "Eines stammt aus meiner reinen Sammlung."),
@@ -191,11 +190,11 @@ public class GameDialogues : MonoBehaviour
                 singleSpriteKey:"dataSet"),
 
             new DialogueLine("Professor Oak", 
-                "Be careful! If ChompBot eats Meowth’s messy data, it might learn the wrong things.", 
-                "Sei vorsichtig! Wenn ChompBot Mauzis chaotische Daten frisst, könnte es falsche Dinge lernen."),
+                "Be careful! If DataBot eats Meowth’s messy data, it might learn the wrong things.", 
+                "Sei vorsichtig! Wenn DataBot Mauzis chaotische Daten frisst, könnte es falsche Dinge lernen."),
                 
-            new DialogueLine("Professor Oak", "Your task is to find all my pure collection and test ChompBot’s new power!", "Deine Aufgabe ist es, meine gesamte reine Sammlung zu finden und die neue Kraft von ChompBot zu testen!"),
-            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll help ChompBot learn the right way!", "Ich bin bereit, Professor Oak! Ich werde ChompBot helfen, auf die richtige Weise zu lernen!")
+            new DialogueLine("Professor Oak", "Your task is to find all my pure collection and test DataBot’s new power!", "Deine Aufgabe ist es, meine gesamte reine Sammlung zu finden und die neue Kraft von DataBot zu testen!"),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll help DataBot learn the right way!", "Ich bin bereit, Professor Oak! Ich werde DataBot helfen, auf die richtige Weise zu lernen!")
         };
 
         // --- Zone 4: Sunrise Desert ---
@@ -203,8 +202,8 @@ public class GameDialogues : MonoBehaviour
         {
             new DialogueLine("Professor Oak", "Welcome to the Sunrise Desert! You’re near the end of your journey!", "Willkommen in der Sunrise Desert! Du bist kurz vor dem Ende deiner Reise!"),
             new DialogueLine("Professor Oak", "The desert is hot and wide, and your backpack has little space left.", "Die Wüste ist heiß und weit, und dein Rucksack hat nur noch wenig Platz."),
-            new DialogueLine("Professor Oak", "Choose four Package Cards wisely and feed them to ChompBot!", "Wähle vier Paketkarten weise aus und füttere sie an ChompBot!"),
-            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll pick the best combo and make ChompBot unstoppable!", "Ich bin bereit, Professor Oak! Ich werde die beste Kombination auswählen und ChompBot unaufhaltsam machen!")
+            new DialogueLine("Professor Oak", "Choose four Package Cards wisely and feed them to DataBot!", "Wähle vier Paketkarten weise aus und füttere sie an DataBot!"),
+            new DialogueLine("Trainer", "I’m ready, Professor Oak! I’ll pick the best combo and make DataBot unstoppable!", "Ich bin bereit, Professor Oak! Ich werde die beste Kombination auswählen und DataBot unaufhaltsam machen!")
         };
 
         // --- Zone 5: Astral Summit ---

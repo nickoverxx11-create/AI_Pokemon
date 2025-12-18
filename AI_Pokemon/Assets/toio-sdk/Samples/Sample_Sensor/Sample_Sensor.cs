@@ -49,7 +49,6 @@ namespace toio.Samples.Sample_Sensor
         private int fixedRollIndex = 0;
 
         public List<List<StepInfo>> logicalBoard = new List<List<StepInfo>>();
-        
 
 
         [System.Serializable]
@@ -141,10 +140,18 @@ namespace toio.Samples.Sample_Sensor
             {
                 ChangeSceneTo(3);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha5))
+            if (Input.GetKeyDown(KeyCode.C))
             {
-                ChangeSceneTo(4);
+                if (SceneController.Instance != null)
+                {
+                    StartCoroutine(SceneController.Instance.PlayGameEndSequence());
+                }
+                else
+                {
+                    Debug.LogError("SceneController.Instance is NULL!");
+                }
             }
+
             TriggerGuidebook();
         }
         

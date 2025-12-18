@@ -558,13 +558,6 @@ private void ResetScanForGroup(int groupIndex)
         
         method2ResultsPanel.SetActive(false);
         
-        rulesByType[(PokemonClassifier.PokemonType)groupIndex].Clear();
-        scannedCardGroups[groupIndex].Clear();
-        ResetTypePlaceholders(groupIndex);
-        
-        ZeroTypeLed((PokemonClassifier.PokemonType)groupIndex);
-        SendAllLeds();
-        
         yield return StartCoroutine(ShowScanUIForGroup(groupIndex));
     }
 
@@ -698,6 +691,7 @@ private void ResetScanForGroup(int groupIndex)
     {
         method2ResultsPanel.SetActive(false);
 
+        ResetVisualsForRetry(); 
         currentGroupIndex = 0;
         foreach (var kvp in rulesByType)
             kvp.Value.Clear();
@@ -722,7 +716,36 @@ private void ResetScanForGroup(int groupIndex)
         yield return StartCoroutine(ShowScanUIForGroup(0));
     }
 
+private void ResetVisualsForRetry()
+{
+    // 1. Reset UI texts and bars (using your existing helper)
+    ResetResultUI();
 
+    // 2. Reset 3D Boxes to "Closed" state (First frame of shiny animation)
+    for (int i = 0; i < typeBoxes.Count; i++)
+    {
+        // Check if we have the box and the gif data
+        if (i < boxGifs.Count && typeBoxes[i] != null)
+        {
+            Image boxImage = typeBoxes[i].GetComponent<Image>();
+            
+            // Safety check for the sprite array
+            if (boxImage != null && boxGifs[i].shinyFrames != null && boxGifs[i].shinyFrames.Length > 0)
+            {
+                // Force the sprite back to the first frame (Closed Box)
+                boxImage.sprite = boxGifs[i].shinyFrames[0];
+                
+                // Ensure the image color is visible (alpha 1)
+                var color = boxImage.color;
+                color.a = 1f;
+                boxImage.color = color;
+            }
+            
+            // Ensure the box GameObject is active so it's ready to be animated later
+            typeBoxes[i].SetActive(true);
+        }
+    }
+}
     private IEnumerator FadeCanvas(CanvasGroup cg, float from, float to, float duration)
     {
         float t = 0;
@@ -980,5 +1003,7 @@ private void ResetScanForGroup(int groupIndex)
         if (grassTypePanel) grassTypePanel.SetActive(false);
         if (dragonTypePanel) dragonTypePanel.SetActive(false);
     }
+
+    
 
 }

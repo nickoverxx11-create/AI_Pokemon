@@ -93,7 +93,8 @@ public class Level1LabZone : MonoBehaviour
     
     // --- ADDED: Variables for ESP32 Integration ---
     private int[] fireRuleLeds = new int[6]; // 0=Attack, 1=Defense, 2=Speed, 3=Wings, 4=Temp, 5=Altitude
-    private readonly string ALL_LEDS_OFF = "0,0,0,0,0,0";
+    // Change this line to have 24 zeros
+private readonly string ALL_LEDS_OFF = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
 
 
     private int currentScanCount = 0;
@@ -774,13 +775,56 @@ public class Level1LabZone : MonoBehaviour
         currentScanCount = 0;
         scannedCardIds.Clear();
         
+         Array.Clear(fireRuleLeds, 0, fireRuleLeds.Length);
+
+    // Send the "OFF" command to the board (using 24 zeros)
+    if (ESP32Controller.Instance != null)
+    {
+        // Ensure we send 24 zeros to match the expected data length
+        string allOffData = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
+        ESP32Controller.Instance.SendLEDData(allOffData);
+    }
+  ResetMethod1Visuals(); 
         // Reactivate boxes for next round
         ReactivateBoxes();
         
         yield return StartCoroutine(ShowScanUI());
     }
     
+private void ResetMethod1Visuals()
+{
+    // 1. Reset 3D Boxes to "Closed" state (First frame of shiny animation)
+    for (int i = 0; i < method1Boxes.Count; i++)
+    {
+        if (i < fireBoxGifs.Count && method1Boxes[i] != null)
+        {
+            Image boxImage = method1Boxes[i].GetComponent<Image>();
+            if (boxImage != null && fireBoxGifs[i].shinyFrames.Length > 0)
+            {
+                // Force the sprite back to the first frame (Closed Box)
+                boxImage.sprite = fireBoxGifs[i].shinyFrames[0];
+                
+                // Ensure the image color is visible (alpha 1)
+                var color = boxImage.color;
+                color.a = 1f;
+                boxImage.color = color;
+            }
+        }
+    }
 
+    // 2. Hide the "Extra" result icons (Fire/Not Fire symbols)
+    if (fireBoxExtraImage != null) fireBoxExtraImage.enabled = false;
+    if (notFireBoxExtraImage != null) notFireBoxExtraImage.enabled = false;
+
+    // 3. Clear Texts
+    if (resultText != null) resultText.text = "";
+    if (fireBoxRatioText != null) fireBoxRatioText.text = "";
+    if (notFireBoxRatioText != null) notFireBoxRatioText.text = "";
+
+    // 4. Reset Ratio Bars (Optional, if you want them to empty out)
+    // if (fireBoxCorrectBar != null) fireBoxCorrectBar.fillAmount = 0;
+    // if (notFireBoxCorrectBar != null) notFireBoxCorrectBar.fillAmount = 0;
+}
     private void ReactivateBoxes()
     {
         foreach (var box in method1Boxes)

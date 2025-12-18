@@ -316,24 +316,7 @@ public class Level4LabZone : MonoBehaviour
         yield return StartCoroutine(ShowMethod3Results(detailedResults));
     }
 
-    
 
-
-    private void UpdateAccuracyDisplay()
-    {
-        float accuracy = pokemonClassifier.TestMethod3OnLargeDataset(currentModelWeights);
-        
-        string accuracyGrade = GetAccuracyGrade(accuracy);
-
-        // Create the new, more intuitive message
-        // It shows the score (e.g., "75/100") and the grade (e.g., "Good!")
-        int correctCount = Mathf.RoundToInt(accuracy * 100f / 100f);
-        int total = 100;
-        accuracyText.text =
-            $"Great, you have {correctCount}/{total} correct!\n" +
-            $"Do you want to improve your score or end now?\n\n" +
-            $"{accuracyGrade}";
-    }
 
     private void UpdateLedDisplay()
     {
@@ -384,7 +367,6 @@ public class Level4LabZone : MonoBehaviour
 
     private void OnFinalApply()
     {   
-        
         
         // --- ADD THIS LINE TO SAVE THE TRAINED MODEL ---
         TrainedModel = currentModelWeights;
@@ -449,6 +431,34 @@ public class Level4LabZone : MonoBehaviour
     }
     
     // ===============  Result UI Reset  ===============
+private void ResetVisualsForRetry()
+{
+    // 1. Reset the UI bars and text
+    ResetResultUI();
+
+    // 2. Reset 3D Boxes to "Closed" state (First frame of shiny animation)
+    for (int i = 0; i < typeBoxes.Count; i++)
+    {
+        if (i < boxGifs.Count && typeBoxes[i] != null)
+        {
+            Image boxImage = typeBoxes[i].GetComponent<Image>();
+            
+            if (boxImage != null && boxGifs[i].shinyFrames != null && boxGifs[i].shinyFrames.Length > 0)
+            {
+                // Force the sprite back to the first frame (Closed Box)
+                boxImage.sprite = boxGifs[i].shinyFrames[0];
+                
+                // Ensure the image is visible
+                var color = boxImage.color;
+                color.a = 1f;
+                boxImage.color = color;
+            }
+            
+            // Keep the box active so it's ready for the next run
+            typeBoxes[i].SetActive(true);
+        }
+    }
+}
 
 private void ResetResultUI()
 {
@@ -610,15 +620,27 @@ private IEnumerator ShowMethod3Results(PokemonClassifier.Method3DetailedResults 
     // In Level4LabZone.cs, add this new coroutine
 
     private IEnumerator OnFinalRetry()
+{
+    // 1. Hide the results panel
+    resultDisplayGroup.gameObject.SetActive(false);
+    if (method3ResultsPanel) method3ResultsPanel.SetActive(false);
+    
+    // 2. --- FIX 1: Reset Visuals (Prevent Glitches) ---
+    ResetVisualsForRetry();
+
+    // 3. --- FIX 2: Turn off LEDs (Send 24 Zeros) ---
+    if (ESP32Controller.Instance != null) 
     {
-        // Hide the results panel
-        resultDisplayGroup.gameObject.SetActive(false);
-        
-        // Reset the scanning state and go back to the scanning UI
-        currentScanCount = 0;
-        scannedCardIds.Clear();
-        yield return StartCoroutine(ShowScanUI());
+        ESP32Controller.Instance.SendLEDData("0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0");
     }
+
+    // 4. Reset scanning state
+    currentScanCount = 0;
+    scannedCardIds.Clear();
+    
+    // 5. Return to scanning UI
+    yield return StartCoroutine(ShowScanUI());
+}
 
     private IEnumerator FadeCanvas(CanvasGroup cg, float from, float to, float duration)
     {
