@@ -132,11 +132,11 @@ public class GameDialogues : MonoBehaviour
             //Click Next
             //Aside: Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.
             new DialogueLine("Professor Oak", "Wonderful! Turn to page Water and scan some real Water Pokémon to explore where they live.", "Wunderbar! Blättere zu Seite Wasser und scanne einige echte Wasser-Pokémon, um zu entdecken, wo sie leben.", 
-                asideText:"Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.", requireScanNext: true, asideKind: AsideKind.Info ),
+                asideText:"    Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.", requireScanNext: true, asideKind: AsideKind.Info ),
             //Click Next
             //Aside: Grass Pokémon live in green forests. They’re great at defending and move a little slower.
             new DialogueLine("Professor Oak", "Excellent! Turn to page Grass and scan some real Grass Pokémon to learn how they protect nature.", "Ausgezeichnet! Blättere zu Seite Grass und scanne einige echte Gras-Pokémon, um zu lernen, wie sie die Natur schützen.", 
-                asideText:"Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.", requireScanNext: true,asideKind: AsideKind.Info),
+                asideText:"   Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.", requireScanNext: true,asideKind: AsideKind.Info),
             //Click Next
             //Aside: Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.
             new DialogueLine("Professor Oak", "Hmm… it looks like page Dragon is broken! The Dragon Pokémon data seems damaged.", "Hmm… es sieht so aus, als wäre Seite Drachen kaputt! Die Daten der Drachen-Pokémon scheinen beschädigt zu sein.", 
@@ -268,24 +268,22 @@ public class GameDialogues : MonoBehaviour
         // Zone1/2/3：不播
         if (zoneKey == "ClearviewMeadow" || zoneKey == "AzureCoast" || zoneKey == "WhisperingWood")
             return new List<DialogueLine>();
-
-        // GameStart：只保留含 aside 的行
+        
+        // GameStart：Class mode 下完全不播（包括 aside 行）
         if (zoneKey == "GameStart")
-        {
-            var filtered = new List<DialogueLine>();
-            foreach (var d in src)
-            {
-                if (d == null) continue;
-                bool hasAside = !string.IsNullOrWhiteSpace(d.asideText)
-                                || !string.IsNullOrWhiteSpace(d.asideGermanText);
-                if (hasAside) filtered.Add(d);
-            }
-            return filtered;
-        }
+            return new List<DialogueLine>();
+
 
         // 其它 zone：照常
         return new List<DialogueLine>(src);
     }
 
+    public List<DialogueLine> GetRawDialogueLines(string zoneKey)
+    {
+        if (allDialogues == null) return new List<DialogueLine>();
+        if (!allDialogues.TryGetValue(zoneKey, out var src) || src == null)
+            return new List<DialogueLine>();
+        return src; 
+    }
 
 }
