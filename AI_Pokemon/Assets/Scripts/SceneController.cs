@@ -82,15 +82,15 @@ public class SceneController : MonoBehaviour
     private const string TYPE_GRASS = "🌿";
     private const string TYPE_DRAGON = "🐉";
 
-    private const string ASIDE_FIRE_EN   = "Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.";
-    private const string ASIDE_WATER_EN  = "Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.";
-    private const string ASIDE_GRASS_EN  = "Grass Pokémon live in green forests. They’re great at defending and move a little slower.";
-    private const string ASIDE_DRAGON_EN = "Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.";
+    private const string ASIDE_FIRE_EN   = "    Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.";
+    private const string ASIDE_WATER_EN  = "    Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.";
+    private const string ASIDE_GRASS_EN  = "    Grass Pokémon live in green forests. They’re great at defending and move a little slower.";
+    private const string ASIDE_DRAGON_EN = "    Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.";
     
-    private const string ASIDE_FIRE_DE   = "Feuer-Pokémon lieben Hitze! Sie sind mutig und greifen schnell an.";
-    private const string ASIDE_WATER_DE  = "Wasser-Pokémon leben im kalten Meer. Sie bleiben ruhig und kraftvoll.";
-    private const string ASIDE_GRASS_DE  = "Pflanzen-Pokémon leben in grünen Wäldern. Sie verteidigen gut und sind etwas langsamer.";
-    private const string ASIDE_DRAGON_DE = "Drachen-Pokémon fliegen hoch in den Bergen. Sie sind schnell und geheimnisvoll.";
+    private const string ASIDE_FIRE_DE   = "    Feuer-Pokémon lieben Hitze! Sie sind mutig und greifen schnell an.";
+    private const string ASIDE_WATER_DE  = "    Wasser-Pokémon leben im kalten Meer. Sie bleiben ruhig und kraftvoll.";
+    private const string ASIDE_GRASS_DE  = "    Pflanzen-Pokémon leben in grünen Wäldern. Sie verteidigen gut und sind etwas langsamer.";
+    private const string ASIDE_DRAGON_DE = "    Drachen-Pokémon fliegen hoch in den Bergen. Sie sind schnell und geheimnisvoll.";
 
     private bool _suppressGuidebookAside = false;   
     private bool _classModeFirstScanDone = false;   
@@ -401,9 +401,8 @@ public class SceneController : MonoBehaviour
         IntroScene.SetActive(true);
         sceneNameBigText.gameObject.SetActive(false);
         introGroup.gameObject.SetActive(true);
-        introGroup.alpha = 0f;
-        yield return FadeCanvasGroup(introGroup, 0f, 1f, 0.4f);
-
+        introGroup.alpha = 1f;
+        if  (GameModeState.Current == GameMode.Class)  asideGroup.gameObject.SetActive(true);
         // 1. Store the original typing speed.
         float originalSpeed = typingSpeed;
         // 2. Set a new, faster speed just for this dialogue. (0.01f is very fast)

@@ -40188,8 +40188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "       Water Pok\xE9mon hide in the cold undersea. They stay calm and
-    flowing with steady power."
+  m_Text: '     Now please open the Pokemon guidebook'
 --- !u!222 &717343081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -93127,7 +93126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7470584903754895727, guid: 81b9dfa1cfd80be48a1b5025e0df9f9a,
+  m_Sprite: {fileID: 2598405713278941328, guid: f78f6b600246ffa45b7f8bafdbcf40e1,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
