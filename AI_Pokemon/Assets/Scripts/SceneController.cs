@@ -75,6 +75,87 @@ public class SceneController : MonoBehaviour
     private uint _lastScannedID_ForDialogue = 0;
     private DialogueLine _curDlg;
     private Text _curText;
+
+   // ===== Class-mode Guidebook Aside (scan-driven) =====
+    private const string TYPE_FIRE  = "🔥";
+    private const string TYPE_WATER = "💧";
+    private const string TYPE_GRASS = "🌿";
+    private const string TYPE_DRAGON = "🐉";
+
+    private const string ASIDE_FIRE_EN   = "Fire Pokémon love the heat! They’re brave and strike fast, living in the hottest places.";
+    private const string ASIDE_WATER_EN  = "Water Pokémon hide in the cold undersea. They stay calm and flowing with steady power.";
+    private const string ASIDE_GRASS_EN  = "Grass Pokémon live in green forests. They’re great at defending and move a little slower.";
+    private const string ASIDE_DRAGON_EN = "Dragon Pokémon have wings and fly in the high mountains. They’re fast and full of mystery.";
+    
+    private const string ASIDE_FIRE_DE   = "Feuer-Pokémon lieben Hitze! Sie sind mutig und greifen schnell an.";
+    private const string ASIDE_WATER_DE  = "Wasser-Pokémon leben im kalten Meer. Sie bleiben ruhig und kraftvoll.";
+    private const string ASIDE_GRASS_DE  = "Pflanzen-Pokémon leben in grünen Wäldern. Sie verteidigen gut und sind etwas langsamer.";
+    private const string ASIDE_DRAGON_DE = "Drachen-Pokémon fliegen hoch in den Bergen. Sie sind schnell und geheimnisvoll.";
+
+    private bool _suppressGuidebookAside = false;   
+    private bool _classModeFirstScanDone = false;   
+    private string _lastTypeSymbol = null;
+    private HashSet<string> _scannedTypes = new HashSet<string>();
+    private const int REQUIRED_TYPES_BEFORE_END = 3;
+
+    public void OnGuidebookPokemonScanned(string typeSymbol)
+    {
+        if (GameModeState.Current != GameMode.Class) return;
+        if (_suppressGuidebookAside) return;
+
+        
+        if (_lastTypeSymbol == typeSymbol) return;
+        _lastTypeSymbol = typeSymbol;
+
+        _classModeFirstScanDone = true; 
+        ShowGuidebookTypeAside(typeSymbol);
+        _scannedTypes.Add(typeSymbol);
+    }
+
+    private void HideGuidebookAsideImmediate()
+    {
+        if (asideGroup == null) return;
+
+        asideGroup.alpha = 0f;
+        asideGroup.gameObject.SetActive(false);
+
+        if (asideTextUI != null) asideTextUI.text = "";
+        if (asideIcon != null)
+        {
+            asideIcon.sprite = null;
+            asideIcon.gameObject.SetActive(false);
+        }
+    }
+
+    private void ShowGuidebookTypeAside(string typeSymbol)
+    {
+        if (asideGroup == null || asideTextUI == null) return;
+
+        string en = null, de = null;
+        switch (typeSymbol)
+        {
+            case TYPE_FIRE:  en = ASIDE_FIRE_EN;   de = ASIDE_FIRE_DE;   break;
+            case TYPE_WATER: en = ASIDE_WATER_EN;  de = ASIDE_WATER_DE;  break;
+            case TYPE_GRASS: en = ASIDE_GRASS_EN;  de = ASIDE_GRASS_DE;  break;
+            case TYPE_DRAGON: en = ASIDE_DRAGON_EN; de = ASIDE_DRAGON_DE; break;
+            default:
+                return;
+        }
+        
+        asideGroup.gameObject.SetActive(true);
+
+        // icon：Info
+        if (asideIcon != null)
+        {
+            asideIcon.sprite = asideInfoSprite;
+            asideIcon.gameObject.SetActive(true);
+        }
+
+        string text = Language.IsGerman ? de : en;
+        asideTextUI.text = "      " + (text ?? "");
+    }
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -139,6 +220,11 @@ public class SceneController : MonoBehaviour
         {
             AudioManager.Instance.PlayMusicForZone((GameZone)newScene);
         }
+        _suppressGuidebookAside = false;
+        _lastTypeSymbol = null;
+        _scannedTypes.Clear();
+        HideGuidebookAsideImmediate();
+
         IntroScene.SetActive(false);
         meadowScene.SetActive(false);
         azureCoastScene.SetActive(false);
@@ -460,19 +546,17 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
         {
             if (dlg == null) continue;
 
-            if (dlg.requireScanNext)
-            {
-                yield return ShowAsideAndWait(dlg);
-            }
-            
             if (dlg.sceneSwitch)
             {
-                yield return WaitForSceneSwitch();  
-               
+                yield return new WaitUntil(() => _scannedTypes.Count >= REQUIRED_TYPES_BEFORE_END);
+
+                yield return WaitForSceneSwitch();
             }
+
+
         }
 
-
+        
         onComplete?.Invoke();
         yield break;
     }
@@ -638,17 +722,32 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
         AudioManager.Instance?.SetMusicPaused(false);
     }
     
-    private IEnumerator WaitForSceneSwitch()
+private IEnumerator WaitForSceneSwitch()
     {
+        if (_sceneSwitch)
+        {
+            _sceneSwitch = false;
+            yield break;
+        }
+
         _sceneSwitch = false;
-        sceneSwitchButton.gameObject.SetActive(true);
+
+        if (sceneSwitchButton != null)
+            sceneSwitchButton.gameObject.SetActive(true);
+
         AudioManager.Instance?.SetMusicPaused(true);
 
         yield return new WaitUntil(() => _sceneSwitch);
 
-        sceneSwitchButton.gameObject.SetActive(false);
+        if (sceneSwitchButton != null)
+            sceneSwitchButton.gameObject.SetActive(false);
+
         AudioManager.Instance?.SetMusicPaused(false);
+        HideGuidebookAsideImmediate();
+
+        _sceneSwitch = false;
     }
+
 
     private IEnumerator ShowAsideAndWait(DialogueLine dlg)
     {
@@ -657,14 +756,14 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
 
         asideGroup.gameObject.SetActive(true);
 
-        
+            
         string text = Language.IsGerman
             ? (string.IsNullOrEmpty(dlg.asideGermanText) ? dlg.asideText : dlg.asideGermanText)
             : (string.IsNullOrEmpty(dlg.asideText) ? dlg.asideGermanText : dlg.asideText);
 
         asideTextUI.text = "      " + (text ?? "");
 
-      
+          
         if (asideIcon != null)
         {
             Sprite iconSprite = null;
@@ -688,7 +787,7 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
             asideIcon.sprite = iconSprite;
             asideIcon.gameObject.SetActive(iconSprite != null);
         }
-        
+            
         yield return WaitForResume();
 
         asideGroup.gameObject.SetActive(false);
@@ -696,6 +795,7 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
         asideIcon.sprite = null;
         asideIcon.gameObject.SetActive(false);
     }
+
 
 
     private void RequestResume()
@@ -706,6 +806,8 @@ private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
     private void SceneSwitch()
     {
         _sceneSwitch = true;
+        _suppressGuidebookAside = true;
+        HideGuidebookAsideImmediate();
         Sample_Sensor.Instance.ChangeSceneTo(0);
     }
 
