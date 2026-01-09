@@ -188,6 +188,11 @@ public class Level2LabZone : MonoBehaviour
     {
         currentScanCount = 0;
         scannedCardGroups[groupIndex].Clear();
+        var type = (PokemonClassifier.PokemonType)groupIndex;
+            if (rulesByType.ContainsKey(type))
+            {
+                rulesByType[type].Clear();
+            }
 
         // --- NEW LOGIC TO PRE-POPULATE FIRE RULES ---
         if (groupIndex == 0 && Level1LabZone.Instance != null && Level1LabZone.Instance.learnedFeatureCards.Count > 0)
@@ -206,7 +211,7 @@ public class Level2LabZone : MonoBehaviour
                 {
                     scannedCardGroups[groupIndex].Add(cardIndex);
                     // Also add to the main rules dictionary
-                    var type = (PokemonClassifier.PokemonType)groupIndex;
+                    
                     rulesByType[type].Add(cardIndex);
                     currentScanCount++;
 
@@ -441,6 +446,8 @@ private void ResetScanForGroup(int groupIndex)
 
         currentScanCount = 0;
         scannedCardGroups[groupIndex].Clear();
+        
+  
         scanTitles[groupIndex].text = "Scan: 0/4";
         scanInstructions[groupIndex].text = "Please scan a valid card";
 
@@ -451,7 +458,11 @@ private void ResetScanForGroup(int groupIndex)
         // ADD THIS SECTION: Clear LEDs for this specific type
         // ---------------------------------------------------------
         var typeToReset = (PokemonClassifier.PokemonType)groupIndex;
-        
+         if (rulesByType.ContainsKey(typeToReset))
+    {
+        rulesByType[typeToReset].Clear();
+    }
+
         // 1. Clear the internal array for this type
         ZeroTypeLed(typeToReset);
         

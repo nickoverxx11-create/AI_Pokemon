@@ -427,55 +427,91 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
+private IEnumerator PlayDialogue(string zoneKey, Action onComplete = null)
+{
+    if (GameDialogues.Instance == null)
     {
-        if (GameDialogues.Instance == null)
-        {
-            onComplete?.Invoke();
-            yield break;
-        }
+        onComplete?.Invoke();
+        yield break;
+    }
 
-        var lines = GameDialogues.Instance.GetDialogueLines(zoneKey);
-        if (lines == null || lines.Count == 0)
+    var lines = GameDialogues.Instance.GetRawDialogueLines(zoneKey);
+
+    if (lines == null || lines.Count == 0)
+    {
+        onComplete?.Invoke();
+        yield break;
+    }
+
+    // ---------- CLASS MODE: only show ASIDE instructions ----------
+    if (GameModeState.Current == GameMode.Class)
+    {
+        HideAllBubblesAndText();
+        professorAvatar.gameObject.SetActive(false);
+        studentAvatar.gameObject.SetActive(false);
+        
+        if (zoneKey == "ClearviewMeadow" || zoneKey == "AzureCoast" || zoneKey == "WhisperingWood")
         {
             onComplete?.Invoke();
             yield break;
         }
-        professorAvatar.gameObject.SetActive(true); 
-        studentAvatar.gameObject.SetActive(true);
-        professorBubble.alpha = 0;
-        studentBubble.alpha   = 0;
-        professorText.text    = "";
-        studentText.text      = "";
+  
         foreach (var dlg in lines)
         {
-            HideAllBubblesAndText();
+            if (dlg == null) continue;
+
             if (dlg.requireScanNext)
             {
                 yield return ShowAsideAndWait(dlg);
             }
             
-            if (dlg.speaker == "Professor Oak")
+            if (dlg.sceneSwitch)
             {
-                professorAvatar.SetActive(true);
-                yield return ShowBubbleWithTyping(
-                    professorBubble, professorText, dlg);
+                yield return WaitForSceneSwitch();  
+               
             }
-            else
-            {
-                studentAvatar.SetActive(true);
-                yield return ShowBubbleWithTyping(
-                    studentBubble, studentText, dlg);
-            }
-            
         }
-        
-        HideAllBubblesAndText();
-        professorAvatar.gameObject.SetActive(false); 
-        studentAvatar.gameObject.SetActive(false);
+
+
         onComplete?.Invoke();
+        yield break;
     }
-    
+
+    // ---------- STORY MODE: original behaviour ----------
+    professorAvatar.gameObject.SetActive(true);
+    studentAvatar.gameObject.SetActive(true);
+    professorBubble.alpha = 0;
+    studentBubble.alpha = 0;
+    professorText.text = "";
+    studentText.text = "";
+
+    foreach (var dlg in lines)
+    {
+        HideAllBubblesAndText();
+
+        if (dlg.requireScanNext)
+        {
+            yield return ShowAsideAndWait(dlg);
+        }
+
+        if (dlg.speaker == "Professor Oak")
+        {
+            professorAvatar.SetActive(true);
+            yield return ShowBubbleWithTyping(professorBubble, professorText, dlg);
+        }
+        else
+        {
+            studentAvatar.SetActive(true);
+            yield return ShowBubbleWithTyping(studentBubble, studentText, dlg);
+        }
+    }
+
+    HideAllBubblesAndText();
+    professorAvatar.gameObject.SetActive(false);
+    studentAvatar.gameObject.SetActive(false);
+    onComplete?.Invoke();
+}
+
     private void HideAllBubblesAndText()
     {
         professorBubble.alpha = 0;

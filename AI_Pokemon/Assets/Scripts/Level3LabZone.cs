@@ -163,7 +163,7 @@ public class Level3LabZone : MonoBehaviour
         var types = new[] { "Fire", "Water", "Grass", "Dragon" };
         var dataCardIDs = new[] { "C", "D", "E", "F" };
         var typeIcons = new[] { fireIcon, waterIcon, grassIcon, dragonIcon };
-        var correctAnswers = new[] { "↑", "→", "↑", "↑" }; 
+        var correctAnswers = new[] { "?", "!", "?", "?" }; 
 
         // Loop through the four questions
         for (int i = 0; i < trainingChoices.Count; i++)
@@ -217,7 +217,7 @@ public class Level3LabZone : MonoBehaviour
                 string scannedCardID = StandardID.GetCardNameByID(currentId);
 
                 // We only care about the "Next" (→) or "Reset" (↑) cards.
-                if (scannedCardID == "→" || scannedCardID == "↑")
+                if (scannedCardID == "!" || scannedCardID == "?")
                 {
                     if (scannedCardID == correctActionCard)
                     {
@@ -480,7 +480,7 @@ public class Level3LabZone : MonoBehaviour
         Image selectedImage;
         Image otherImage;
 
-        if (correctActionCard == "→")
+        if (correctActionCard == "!")
         {
             selectedImage = optionAImage;
             otherImage = optionBImage;
