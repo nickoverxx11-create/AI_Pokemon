@@ -105,6 +105,8 @@ public class PokemonInfoDisplay : MonoBehaviour
         }
         if (!symbolToPokemon.TryGetValue(symbol, out var info)) return;
         
+        SceneController.Instance?.OnGuidebookPokemonScanned(info.TypeEmoji);
+
          if (info.SoundEffect != null && soundSource != null)
         {
             soundSource.PlayOneShot(info.SoundEffect);
