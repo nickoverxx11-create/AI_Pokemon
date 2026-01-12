@@ -12,7 +12,7 @@ public class TrainingChoice
 {
     public string questionName; // e.g., "Fire Packages"
     [Tooltip("The ACTION card that corresponds to the correct answer. Must be either '→' (for A) or '↑' (for B).")]
-    public string correctAnswerActionCard; // This will be "→" or "↑"
+    public string correctAnswerActionCard; 
     [Header("UI Sprites for this question")]
     public Sprite optionASprite; 
     public Sprite optionBSprite;
@@ -216,7 +216,6 @@ public class Level3LabZone : MonoBehaviour
                 lastReadId = currentId;
                 string scannedCardID = StandardID.GetCardNameByID(currentId);
 
-                // We only care about the "Next" (→) or "Reset" (↑) cards.
                 if (scannedCardID == "!" || scannedCardID == "?")
                 {
                     if (scannedCardID == correctActionCard)
@@ -230,7 +229,7 @@ public class Level3LabZone : MonoBehaviour
                         Sample_Sensor.Instance.cube?.PlayPresetSound(10); // Error sound
                         yield return StartCoroutine(TypeText(trainingInstructionText, "Not quite. Look closely at the patterns in the stats. The pure data should be more consistent. Try again!"));
                         yield return new WaitForSeconds(1.5f);
-                        yield return StartCoroutine(TypeText(trainingInstructionText, instruction)); // Repeat the instruction
+                        trainingInstructionText.text = instruction;
                     }
                 }
             }
