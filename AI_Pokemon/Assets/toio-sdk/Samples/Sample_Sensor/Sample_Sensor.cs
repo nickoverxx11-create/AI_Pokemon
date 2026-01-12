@@ -84,7 +84,7 @@ namespace toio.Samples.Sample_Sensor
         async void Start()
         {
             //StartCoroutine(GetPokemonDataWithinGrid());
-            diceBtn.onClick.AddListener(StartRoll);
+            //diceBtn.onClick.AddListener(StartRoll);
             InitializeBoardPath();
             await Connect();
             await UniTask.Delay(0); // Avoid warning
