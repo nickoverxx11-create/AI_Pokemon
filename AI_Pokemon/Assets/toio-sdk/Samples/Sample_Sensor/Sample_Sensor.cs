@@ -550,6 +550,10 @@ namespace toio.Samples.Sample_Sensor
         {
             Debug.Log("Current Connection Interval: " + (c.connectionInterval * 1.25f).ToString() + "ms");
         }
+        public void OnUIButton_Move3()
+        {
+            CubeMoveByRoll(3);
+        }
 
     }
 }
