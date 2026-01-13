@@ -119,24 +119,24 @@ namespace toio.Samples.Sample_Sensor
 
 
             // --- ADD THIS BLOCK FOR SCENE SWITCHING ---
-            if (Input.GetKeyDown(KeyCode.Alpha0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                StartCoroutine(SceneController.Instance.PlayGameStartSequence());
             }
             
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 ChangeSceneTo(0);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 ChangeSceneTo(1);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.H))
             {
                 ChangeSceneTo(2);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.I))
             {
                 ChangeSceneTo(3);
             }

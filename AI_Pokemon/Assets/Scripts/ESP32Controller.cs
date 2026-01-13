@@ -6,14 +6,12 @@ public class ESP32Controller : MonoBehaviour
 {
     public static ESP32Controller Instance;
 
-<<<<<<< HEAD
-    public string esp32IP = "http://192.168.0.165";
-=======
+
     [Header("ESP32 Settings")]
     [SerializeField] private string esp32IP = "http://172.20.10.5";
 
     private const string PrefKey = "ESP32_IP";
->>>>>>> f8b1e14fa57e28249534e6bac43c0ac9090c7070
+
 
     private void Awake()
     {
