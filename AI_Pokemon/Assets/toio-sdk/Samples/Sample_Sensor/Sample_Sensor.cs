@@ -84,7 +84,7 @@ namespace toio.Samples.Sample_Sensor
         async void Start()
         {
             //StartCoroutine(GetPokemonDataWithinGrid());
-            diceBtn.onClick.AddListener(StartRoll);
+            //diceBtn.onClick.AddListener(StartRoll);
             InitializeBoardPath();
             await Connect();
             await UniTask.Delay(0); // Avoid warning
@@ -549,6 +549,10 @@ namespace toio.Samples.Sample_Sensor
         public void OnConnectionInterval(Cube c)
         {
             Debug.Log("Current Connection Interval: " + (c.connectionInterval * 1.25f).ToString() + "ms");
+        }
+        public void OnUIButton_Move3()
+        {
+            CubeMoveByRoll(3);
         }
 
     }
