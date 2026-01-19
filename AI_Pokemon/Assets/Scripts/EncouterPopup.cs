@@ -491,7 +491,7 @@ public class EncounterPopup : MonoBehaviour
                 if (cube != null && cube.isConnected) cube.PlayPresetSound(7); // Play one "thinking" sound
                 
                 // 3. Wait for the player to read the scores.
-                yield return new WaitForSeconds(2.5f);
+                yield return new WaitForSeconds(5f);
 
                 // Display the final verdict
                 string finalText2 = $"\n\nMy guess: {(result2.predictedType.HasValue ? result2.predictedType.ToString() : "It's a tie or I'm not sure.")}\n" +
@@ -577,7 +577,7 @@ public class EncounterPopup : MonoBehaviour
                     yield return null;
                 }
 
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(5f);
 
                 // Display the final verdict
                 string finalText3 = $"\n\nMy guess: {(result3.predictedType.HasValue ? result3.predictedType.ToString() : "Not sure")}\n" +
