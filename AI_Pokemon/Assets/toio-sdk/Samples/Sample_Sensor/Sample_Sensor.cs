@@ -191,7 +191,7 @@ namespace toio.Samples.Sample_Sensor
             diceBtn.interactable = true;
 
             // Validate the scene index to prevent errors
-            if (sceneIndex < 0 || sceneIndex > 5) // Assuming 5 scenes (0-4)
+            if (sceneIndex < 0 || sceneIndex > 3) // Assuming 5 scenes (0-4)
             {
                 Debug.LogWarning("Invalid scene index requested: " + sceneIndex);
                 return;
@@ -227,9 +227,9 @@ namespace toio.Samples.Sample_Sensor
                 case 3: // Sunrise Desert (Start of 4th row)
                     targetX = 110; targetY = 200; targetAngle = 0;
                     break;
-                case 4: // Astral Summit (Start of 5th row)
-                    targetX = 380; targetY = 155; targetAngle = 180;
-                    break;
+                //case 4: // Astral Summit (Start of 5th row)
+                    //targetX = 380; targetY = 155; targetAngle = 180;
+                    //break;
             }
             
             // Command the cube to move to the calculated start position

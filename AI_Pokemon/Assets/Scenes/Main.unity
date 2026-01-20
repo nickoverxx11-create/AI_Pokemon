@@ -46300,10 +46300,10 @@ RectTransform:
   - {fileID: 2060047503}
   m_Father: {fileID: 1864690015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1500, y: 141}
-  m_SizeDelta: {x: 912.06, y: 89.4595}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 38, y: 110.39}
+  m_SizeDelta: {x: 912.06006, y: 89.4595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806231354
 MonoBehaviour:
@@ -46353,7 +46353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scan         to reset
+  m_Text: Choose one Type Box to Fix it
 --- !u!222 &806231356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50115,7 +50115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &880094228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75151,7 +75151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scan         to apply
+  m_Text: 
 --- !u!222 &1344714775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -82116,7 +82116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1491788198
 RectTransform:
   m_ObjectHideFlags: 0
@@ -98129,7 +98129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 483.00012, y: 141}
+  m_AnchoredPosition: {x: 0, y: 89}
   m_SizeDelta: {x: 912.06, y: 89.4595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775532854
@@ -98180,7 +98180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scan         to apply
+  m_Text: Choose one Type box to fix it
 --- !u!222 &1775532856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101699,7 +101699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scan         to reset
+  m_Text: 
 --- !u!222 &1833405972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -109605,7 +109605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1964443968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -113681,7 +113681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2060047503
 RectTransform:
   m_ObjectHideFlags: 0
