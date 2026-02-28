@@ -17,7 +17,6 @@ namespace toio.Samples.Sample_Sensor
     public class Sample_Sensor : MonoBehaviour
     {
         public static Sample_Sensor Instance;
-        private bool isCardPresent = false;
 
         [Header("Connect")]
         public ConnectType connectType = ConnectType.Real;
@@ -49,8 +48,15 @@ namespace toio.Samples.Sample_Sensor
         private int fixedRollIndex = 0;
 
         public List<List<StepInfo>> logicalBoard = new List<List<StepInfo>>();
-
-
+        private ICubeBackend backend;
+        public string bridgeIp = "192.168.31.24"; 
+        private bool isCardPresent = false;
+        private bool _encounterHandling = false;  
+        private int _lastEncounterBox = -1;    
+        private CooldownGate _encounterGate = new CooldownGate();
+        private bool _guidebookLocked = false;
+        private float _guidebookDebounceUntil = 0f;
+        
         [System.Serializable]
         public struct StepInfo
         {
@@ -66,31 +72,33 @@ namespace toio.Samples.Sample_Sensor
             }
         }
          void OnStandardIdDetected(Cube c)
-    {
-        isCardPresent = true;
-    }
+        {
+            isCardPresent = true;
+        }
 
-    void OnStandardIdMissed(Cube c)
-    {
-        isCardPresent = false;
-        Debug.Log("Card is no longer detected.");
-    }
+        void OnStandardIdMissed(Cube c)
+        {
+            isCardPresent = false;
+            Debug.Log("Card is no longer detected.");
+        }
 
         private void Awake()
         {
             Instance = this;
         }
         
+
+        
         async void Start()
         {
-            //StartCoroutine(GetPokemonDataWithinGrid());
-            //diceBtn.onClick.AddListener(StartRoll);
             InitializeBoardPath();
-            await Connect();
-            await UniTask.Delay(0); // Avoid warning
+            //await Connect();
+            await UniTask.Delay(0);
         }
+        
         private void Update()
         {
+            backend?.Tick();
             if (Input.GetKeyDown(KeyCode.A))
             {
                 CubeMoveByRoll(3);
@@ -152,7 +160,7 @@ namespace toio.Samples.Sample_Sensor
                 }
             }
 
-            TriggerGuidebook();
+            //TriggerGuidebook();
         }
         
         private void TriggerGuidebook()
@@ -166,14 +174,23 @@ namespace toio.Samples.Sample_Sensor
         }
         public void StartRoll()
         {
+#if UNITY_WEBGL && !UNITY_EDITOR
+    if (backend == null || !backend.IsReady)
+    {
+        Debug.LogWarning("Bridge not connected yet. Please connect first.");
+        return;
+    }
+#endif
             diceBtn.interactable = false;
             StopAllCoroutines();
             StartCoroutine(RollDiceCoroutine());
-
         }
 
         public void ChangeSceneTo(int sceneIndex)
         { 
+            _encounterHandling = false;
+            _lastEncounterBox = -1;
+            _encounterGate.Reset();
             if (sceneIndex == 5)
             {
               StartCoroutine(SceneController.Instance.PlayGameStartSequence());
@@ -233,7 +250,7 @@ namespace toio.Samples.Sample_Sensor
             }
             
             // Command the cube to move to the calculated start position
-            cube?.TargetMove(targetX, targetY, targetAngle);
+            backend?.TargetMove(targetX, targetY, targetAngle);
             
             // --- END OF REVISED LOGIC ---
 
@@ -297,8 +314,7 @@ namespace toio.Samples.Sample_Sensor
 
             // Advance to next in pattern
             fixedRollIndex = (fixedRollIndex + 1) % fixedRollPattern.Length;
-
-            diceBtn.interactable = true;
+            
         }
 
 
@@ -350,16 +366,66 @@ namespace toio.Samples.Sample_Sensor
         
         public uint ReadCard()
         {
-            // REPLACE WITH THIS NEW CODE:
-            if (cube == null || !isCardPresent)
-            {
-                return 0; // Return 0 if no cube or no card is present
-            }
+#if UNITY_WEBGL && !UNITY_EDITOR
+    if (backend == null || !backend.IsReady || !backend.CardPresent) return 0;
+    return backend.StandardId;
+#else
+            if (cube == null || !isCardPresent) return 0;
             return cube.standardId;
-            
+#endif
         }
         
-        
+        public void ConnectToBridge(string ip, System.Action<bool, string> onDone)
+        {
+#if UNITY_WEBGL && !UNITY_EDITOR
+    try
+    {
+        backend = new WsCubeBackend($"ws://{ip}:9001/");
+
+        backend.OnConnected += () =>
+        {
+            // 只绑一次（最简单做法：先解绑再绑）
+            backend.OnStandardIdDetected -= HandleStandardIdDetected;
+            backend.OnStandardIdMissed  -= HandleStandardIdMissed;
+            backend.OnStandardIdDetected += HandleStandardIdDetected;
+            backend.OnStandardIdMissed  += HandleStandardIdMissed;
+
+            diceBtn.interactable = true; 
+            onDone?.Invoke(true, $"{ip}:9001");
+        };
+
+        backend.OnDisconnected += () =>
+        {
+            diceBtn.interactable = false;
+            onDone?.Invoke(false, "Disconnected");
+        };
+    }
+    catch (System.Exception ex) { onDone?.Invoke(false, ex.Message); }
+#else
+            onDone?.Invoke(false, "Not WebGL build");
+#endif
+        }
+
+        private void HandleStandardIdDetected(uint sid)
+        {
+            if (Time.unscaledTime < _guidebookDebounceUntil) return;
+            
+            if (_guidebookLocked) return;
+            _guidebookLocked = true;
+
+            string sym = StandardID.GetCardNameByID(sid);
+            PokemonInfoDisplay.Instance.Show(sym);
+
+            _guidebookDebounceUntil = Time.unscaledTime + 0.8f;
+        }
+
+        private void HandleStandardIdMissed()
+        {
+            _guidebookLocked = false;
+            _guidebookDebounceUntil = Time.unscaledTime + 0.3f;
+        }
+
+
         public void CubeMoveByRoll(int index)
         {
             StartCoroutine(IECubeMoveByRoll(index));
@@ -377,19 +443,22 @@ namespace toio.Samples.Sample_Sensor
                 List<StepInfo> steps = logicalBoard[currentBoxIndex];
                 foreach (var step in steps)
                 {
-                    if (cube != null)
+                    if (backend == null || !backend.IsReady)
                     {
-                        cube.Move(30, -30, 150); // Turn a little
-                        yield return new WaitForSeconds(0.5f);
-                        cube.Move(-30, 30, 150); // Turn back
-                        yield return new WaitForSeconds(0.5f);
-                        cube.Move(30, -30, 150); // Turn a little
-                        yield return new WaitForSeconds(0.5f);
-                        cube.Move(-30, 30, 150); // Turn back
-                        yield return new WaitForSeconds(0.5f);
+                        Debug.LogWarning("backend not ready -> abort movement");
+                        yield break;
                     }
+                    backend.Move(30, -30, 150); // Turn a little
                     yield return new WaitForSeconds(0.5f);
-                    cube?.TargetMove(step.x, step.y, step.angle);
+                    backend.Move(-30, 30, 150); // Turn back
+                    yield return new WaitForSeconds(0.5f);
+                    backend.Move(30, -30, 150); // Turn a little
+                    yield return new WaitForSeconds(0.5f);
+                    backend.Move(-30, 30, 150); // Turn back
+                    yield return new WaitForSeconds(0.5f);
+                    
+                    yield return new WaitForSeconds(0.5f);
+                    backend?.TargetMove(step.x, step.y, step.angle);
                     yield return new WaitForSeconds(timer);
                 }
 
@@ -481,6 +550,11 @@ namespace toio.Samples.Sample_Sensor
 
         private void TriggerEncounterAndRestoreUI()
         {
+            if (!_encounterGate.TryEnter(0.8f)) return;
+            if (currentBoxIndex == _lastEncounterBox) return;
+            if (_encounterHandling) return;
+            _lastEncounterBox = currentBoxIndex;
+            _encounterHandling = true;
             // First, update the GameStateManager with the player's new position.
             GameStateManager.Instance.SetMoveIndex(currentBoxIndex);
             
@@ -520,7 +594,12 @@ namespace toio.Samples.Sample_Sensor
                         {
                             SceneController.Instance.FadeInGameUI(0.5f);
                             diceBtn.interactable = true;
+                            _encounterHandling = false;
                         });
+                    }
+                    else
+                    {
+                        _encounterHandling = false;
                     }
                 });
             }
@@ -528,15 +607,19 @@ namespace toio.Samples.Sample_Sensor
             {
                 // If it's a "None" space (like a Lab Zone), do nothing and just allow the player to roll again.
                 diceBtn.interactable = true;
+                _encounterHandling = false;
             }
         }
         
         public void RefreshPage()
         {
+            _encounterHandling = false;
+            _lastEncounterBox = -1;
+            _encounterGate.Reset();
             HealthController.Instance.HelathsInit();
             currentScene = 0; // Reset scene tracking
             ChangeGameMode.Instance.OpenBtn();
-            cube?.TargetMove(targetX: 380, targetY: 335, targetAngle: 180);
+            backend?.TargetMove( 380, 335, 180);
             currentBoxIndex = 0;//移动过的格子数
             willMoveIndex = 0;//将要移动的格子数
         }
@@ -556,4 +639,18 @@ namespace toio.Samples.Sample_Sensor
         }
 
     }
+}
+
+public class CooldownGate
+{
+    private float nextTime = 0f;
+
+    public bool TryEnter(float cooldownSec)
+    {
+        if (Time.unscaledTime < nextTime) return false;
+        nextTime = Time.unscaledTime + cooldownSec;
+        return true;
+    }
+
+    public void Reset() => nextTime = 0f;
 }

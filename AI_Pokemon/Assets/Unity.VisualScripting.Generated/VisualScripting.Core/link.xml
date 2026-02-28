@@ -1,0 +1,50 @@
+<linker>
+  <assembly fullname="Unity.VisualScripting.Core" preserve="all" />
+  <assembly fullname="Unity.VisualScripting.Flow" preserve="all" />
+  <assembly fullname="Unity.VisualScripting.State" preserve="all" />
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.VisualScriptingConnectCubeUnit" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnMagnetState" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnShake" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnMissedID" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnAttitude" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnCollision" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnMissedStandardID" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnUpdateID" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnDoubleTap" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnMagneticForce" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnSlope" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnPose" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnMotorSpeed" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnUpdateStandardID" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="toio.VisualScript.OnPressButton" preserve="all" />
+  </assembly>
+</linker>
